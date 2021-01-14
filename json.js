@@ -2,3044 +2,1478 @@
   "nodes": [
     {
       "data": {
-        "id": "de.schildbach.wallet.Configuration",
-        "name": "de.schildbach.wallet.data.ExchangeRate"
+        "id": "de.schildbach.wallet.ui.CurrencySymbolDrawable",
+        "name": "de.schildbach.wallet.ui.CurrencySymbolDrawable"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.Constants",
-        "name": "de.schildbach.wallet.Constants$Files"
+        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel",
+        "name": "de.schildbach.wallet.ui.WalletDisclaimerViewModel"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.Constants$Files",
-        "name": "de.schildbach.wallet.Constants"
+        "id": "de.schildbach.wallet.util.Crypto",
+        "name": "de.schildbach.wallet.util.Crypto"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.WalletApplication",
-        "name": "de.schildbach.wallet.Configuration"
+        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener",
+        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.WalletApplication",
-        "name": "de.schildbach.wallet.WalletApplication$OnWalletLoadedListener"
+        "id": "de.schildbach.wallet.util.CryptoTest",
+        "name": "de.schildbach.wallet.util.CryptoTest"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.WalletApplication$OnWalletLoadedListener",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.WalletBalanceWidgetProvider",
-        "name": "de.schildbach.wallet.data.ExchangeRate"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.AbstractWalletLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.AbstractWalletLiveData",
-        "name": "de.schildbach.wallet.WalletApplication$OnWalletLoadedListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.AbstractWalletLiveData",
-        "name": "de.schildbach.wallet.data.ThrottelingLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.AddressBookDao",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.AppDatabase",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.BlockchainStateLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.BlockchainStateLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainState"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.ConfigFormatLiveData",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.ConfigFormatLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.ConfigOwnNameLiveData",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.ConfigOwnNameLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.DynamicFeeLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.DynamicFeeLiveData",
-        "name": "de.schildbach.wallet.ui.send.FeeCategory"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.ExchangeRatesProvider",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.ExchangeRatesProvider",
-        "name": "de.schildbach.wallet.data.ExchangeRate"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.PaymentIntent",
-        "name": "de.schildbach.wallet.data.PaymentIntent$Output"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.PaymentIntent",
-        "name": "de.schildbach.wallet.data.PaymentIntent$Standard"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.PaymentIntent$Output",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.PaymentIntent$Standard",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.SelectedExchangeRateLiveData",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.SelectedExchangeRateLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.SelectedExchangeRateLiveData",
-        "name": "de.schildbach.wallet.data.ExchangeRate"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.TimeLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletBalanceLiveData",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletBalanceLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletBalanceLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletBalanceLiveData",
-        "name": "de.schildbach.wallet.data.WalletBalanceLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletBalanceLiveData$WalletListener",
-        "name": "de.schildbach.wallet.data.WalletBalanceLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.data.WalletLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothService",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothService",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothService",
-        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread",
-        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread",
-        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread$PaymentProtocolThread"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread",
-        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread$PaymentProtocolThread",
-        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask$BluetoothPaymentTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask$HttpPaymentTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask$BluetoothPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask$BluetoothPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask$HttpPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask$HttpPaymentTask",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.offline.DirectPaymentTask$ResultCallback",
-        "name": "de.schildbach.wallet.offline.DirectPaymentTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
+        "id": "de.schildbach.wallet.service.BlockchainService$ImpedimentsLiveData",
         "name": "de.schildbach.wallet.service.BlockchainService$ImpedimentsLiveData"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.service.BlockchainService$LocalBinder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.service.BlockchainService$PeerConnectivityListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService",
-        "name": "de.schildbach.wallet.service.BlockchainState"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$ImpedimentsLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$ImpedimentsLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$ImpedimentsLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainState"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$ImpedimentsLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainState$Impediment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$LocalBinder",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData$WalletListener",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData$WalletListener",
-        "name": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainService$PeerConnectivityListener",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainState",
-        "name": "de.schildbach.wallet.service.BlockchainState$Impediment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.BlockchainState$Impediment",
-        "name": "de.schildbach.wallet.service.BlockchainState"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.InactivityNotificationService",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.InactivityNotificationService",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.service.UpgradeWalletService",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AbstractWalletActivity",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AddressBookActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AddressBookActivity",
-        "name": "de.schildbach.wallet.ui.AddressBookActivity$TwoFragmentAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AddressBookActivity",
-        "name": "de.schildbach.wallet.ui.SendingAddressesFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AddressBookActivity",
-        "name": "de.schildbach.wallet.ui.WalletAddressesFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AddressBookActivity$TwoFragmentAdapter",
-        "name": "de.schildbach.wallet.ui.AddressBookActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AlertDialogsFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AlertDialogsFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AlertDialogsFragment",
-        "name": "de.schildbach.wallet.ui.AlertDialogsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AlertDialogsFragment",
-        "name": "de.schildbach.wallet.util.Installer"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.AlertDialogsViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.CurrencyAmountView",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView$Listener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.CurrencyAmountView",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView$TextViewListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.CurrencyAmountView$Listener",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.CurrencyAmountView$TextViewListener",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.CurrencyCalculatorLink",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.CurrencyCalculatorLink",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView$Listener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EditAddressBookEntryFragment",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EditAddressBookEntryFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment",
-        "name": "de.schildbach.wallet.ui.EncryptKeysDialogFragment$State"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment$State",
-        "name": "de.schildbach.wallet.ui.EncryptKeysDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.Event",
-        "name": "de.schildbach.wallet.ui.Event$Observer"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.Event$Observer",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter",
-        "name": "de.schildbach.wallet.service.BlockchainState"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$OnClickListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ListItem",
-        "name": "de.schildbach.wallet.data.ExchangeRate"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$OnClickListener",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ViewHolder",
-        "name": "de.schildbach.wallet.ui.CurrencyTextView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ViewHolder",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$OnClickListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel",
-        "name": "de.schildbach.wallet.data.BlockchainStateLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel",
-        "name": "de.schildbach.wallet.data.WalletBalanceLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData",
-        "name": "de.schildbach.wallet.ui.ExchangeRatesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser",
-        "name": "de.schildbach.wallet.ui.InputParser$BinaryInputParser"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser",
-        "name": "de.schildbach.wallet.ui.InputParser$StreamInputParser"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser",
-        "name": "de.schildbach.wallet.ui.InputParser$StringInputParser"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser$BinaryInputParser",
-        "name": "de.schildbach.wallet.ui.InputParser"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser$StreamInputParser",
-        "name": "de.schildbach.wallet.ui.InputParser"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.InputParser$StringInputParser",
-        "name": "de.schildbach.wallet.ui.InputParser"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceFragment",
-        "name": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel",
-        "name": "de.schildbach.wallet.data.BlockchainStateLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel",
-        "name": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData",
-        "name": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ProgressDialogFragment",
-        "name": "de.schildbach.wallet.ui.ProgressDialogFragment$Observer"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ProgressDialogFragment$Observer",
-        "name": "de.schildbach.wallet.ui.ProgressDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ReportIssueDialogBuilder",
-        "name": "de.schildbach.wallet.ui.DialogBuilder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ReportIssueDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ReportIssueDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ReportIssueDialogFragment",
-        "name": "de.schildbach.wallet.ui.ReportIssueViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ReportIssueViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.ReportIssueViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsActivity",
-        "name": "de.schildbach.wallet.ui.RequestCoinsActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsActivityViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsFragment",
-        "name": "de.schildbach.wallet.ui.CurrencyCalculatorLink"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsFragment",
-        "name": "de.schildbach.wallet.ui.RequestCoinsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel",
-        "name": "de.schildbach.wallet.data.ConfigOwnNameLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel",
-        "name": "de.schildbach.wallet.data.SelectedExchangeRateLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel",
-        "name": "de.schildbach.wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData",
-        "name": "de.schildbach.wallet.ui.RequestCoinsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesFragment",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesFragment",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesFragment",
-        "name": "de.schildbach.wallet.ui.FancyListFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesFragment",
-        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
-        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
-        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel$ClipLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData",
-        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$ClipLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$ClipLiveData",
-        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ChangeType"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ItemAnimator"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$OnClickListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ChangeType",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ItemAnimator",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$OnClickListener",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder",
-        "name": "de.schildbach.wallet.ui.CircularProgressView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder",
-        "name": "de.schildbach.wallet.ui.CurrencyTextView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.TransactionsAdapter$WarningViewHolder",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActionsFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivity",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivity",
-        "name": "de.schildbach.wallet.ui.WalletActivity$QuickReturnBehavior"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivity",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivity$QuickReturnBehavior",
-        "name": "de.schildbach.wallet.ui.WalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel$EnterAnimationState"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.util.OnFirstPreDraw"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
-        "name": "de.schildbach.wallet.util.OnFirstPreDraw$Callback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$EnterAnimationState",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressFragment",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel",
-        "name": "de.schildbach.wallet.data.ConfigOwnNameLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener",
-        "name": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesAdapter",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
-        "name": "de.schildbach.wallet.ui.FancyListFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
-        "name": "de.schildbach.wallet.ui.WalletAddressesAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
-        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.data.ConfigOwnNameLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
-        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData",
-        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData",
-        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
-        "name": "de.schildbach.wallet.ui.CurrencyTextView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
-        "name": "de.schildbach.wallet.ui.WalletBalanceViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceViewModel",
-        "name": "de.schildbach.wallet.data.BlockchainStateLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceViewModel",
-        "name": "de.schildbach.wallet.data.SelectedExchangeRateLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletBalanceViewModel",
-        "name": "de.schildbach.wallet.data.WalletBalanceLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerFragment",
-        "name": "de.schildbach.wallet.ui.WalletDisclaimerViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel",
-        "name": "de.schildbach.wallet.data.BlockchainStateLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel",
-        "name": "de.schildbach.wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData",
-        "name": "de.schildbach.wallet.ui.WalletDisclaimerViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$OnClickListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.data.ConfigFormatLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$Direction"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$Direction",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener",
-        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.BackupWalletViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.BackupWalletViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment",
-        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel",
-        "name": "de.schildbach.wallet.data.WalletBalanceLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$OnClickListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$OnClickListener",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ViewHolder",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$OnClickListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
-        "name": "de.schildbach.wallet.data.TimeLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel$BlocksLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel$TransactionsLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$BlocksLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$BlocksLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$BlocksLiveData",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$TransactionsLiveData",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity",
-        "name": "de.schildbach.wallet.ui.monitor.BlockListFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity",
-        "name": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ListItem",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ViewHolder",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListFragment",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListFragment",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel$HostnamesLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel$PeersLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$HostnamesLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$HostnamesLiveData",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$PeersLiveData",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$PeersLiveData",
-        "name": "de.schildbach.wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$PeersLiveData",
-        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.AboutFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.AboutFragment",
-        "name": "de.schildbach.wallet.ui.preference.AboutFragment$ApkHashFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.AboutFragment$ApkHashFragment",
-        "name": "de.schildbach.wallet.ui.preference.AboutFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.DiagnosticsFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.DiagnosticsFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.SettingsFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.preference.SettingsFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
-        "name": "de.schildbach.wallet.ui.scan.CameraManager"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
-        "name": "de.schildbach.wallet.ui.scan.ScanActivity$AutoFocusRunnable"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
-        "name": "de.schildbach.wallet.ui.scan.ScanActivity$WarnDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
-        "name": "de.schildbach.wallet.ui.scan.ScanViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
-        "name": "de.schildbach.wallet.ui.scan.ScannerView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity$AutoFocusRunnable",
-        "name": "de.schildbach.wallet.ui.scan.ScanActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanActivity$WarnDialogFragment",
-        "name": "de.schildbach.wallet.ui.scan.ScanActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.scan.ScanViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment",
-        "name": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment$State"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment$State",
-        "name": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment",
-        "name": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment$State"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment",
-        "name": "de.schildbach.wallet.ui.send.RaiseFeeViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment$State",
-        "name": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RaiseFeeViewModel",
-        "name": "de.schildbach.wallet.data.DynamicFeeLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback",
-        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ResultCallback",
-        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsActivity",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsActivity",
-        "name": "de.schildbach.wallet.ui.send.FeeCategory"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsActivity",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsActivityViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsActivityViewModel",
-        "name": "de.schildbach.wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.data.AddressBookDao"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.CurrencyAmountView$Listener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.CurrencyCalculatorLink"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.send.FeeCategory"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressListener"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
+        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter",
         "name": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsViewModel"
+        "id": "de.schildbach.wallet.offline.AcceptBluetoothService",
+        "name": "de.schildbach.wallet.offline.AcceptBluetoothService"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsViewModel$State"
+        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread",
+        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData",
+        "name": "de.schildbach.wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.AppDatabase",
+        "name": "de.schildbach.wallet.data.AppDatabase"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ReportIssueDialogFragment",
+        "name": "de.schildbach.wallet.ui.ReportIssueDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.AlertDialogsViewModel",
+        "name": "de.schildbach.wallet.ui.AlertDialogsViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.WalletUtilsTest",
+        "name": "de.schildbach.wallet.util.WalletUtilsTest"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Installer",
+        "name": "de.schildbach.wallet.util.Installer"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData",
+        "name": "de.schildbach.wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.FormatsTest",
+        "name": "de.schildbach.wallet.util.FormatsTest"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity",
+        "name": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment"
       }
     },
     {
       "data": {
         "id": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressListener",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsFragment"
+        "name": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressListener"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
+        "id": "de.schildbach.wallet.ui.AddressBookActivity",
+        "name": "de.schildbach.wallet.ui.AddressBookActivity"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsFragment"
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ChangeType",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ChangeType"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
+        "id": "de.schildbach.wallet.ui.InputParser$BinaryInputParser",
+        "name": "de.schildbach.wallet.ui.InputParser$BinaryInputParser"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.AddressBookEntry"
+        "id": "de.schildbach.wallet.service.BlockchainService",
+        "name": "de.schildbach.wallet.service.BlockchainService"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.BlockchainStateLiveData"
+        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread$PaymentProtocolThread",
+        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread$PaymentProtocolThread"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.DynamicFeeLiveData"
+        "id": "de.schildbach.wallet.util.GenericUtils",
+        "name": "de.schildbach.wallet.util.GenericUtils"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.PaymentIntent"
+        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.SelectedExchangeRateLiveData"
+        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel",
+        "name": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.WalletBalanceLiveData"
+        "id": "de.schildbach.wallet.ui.ExchangeRatesViewModel",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesViewModel"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.data.WalletLiveData"
+        "id": "de.schildbach.wallet.ui.CurrencyAmountView",
+        "name": "de.schildbach.wallet.ui.CurrencyAmountView"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.ui.AddressAndLabel"
+        "id": "de.schildbach.wallet.ui.WalletAddressesFragment",
+        "name": "de.schildbach.wallet.ui.WalletAddressesFragment"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.ui.send.FeeCategory"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsViewModel$State"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel$State",
-        "name": "de.schildbach.wallet.ui.send.SendCoinsViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletActivity",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.Configuration"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.ui.send.SweepWalletFragment$FakeTransaction"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.ui.send.SweepWalletViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
-        "name": "de.schildbach.wallet.ui.send.SweepWalletViewModel$State"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment$FakeTransaction",
-        "name": "de.schildbach.wallet.ui.send.SweepWalletFragment"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletViewModel",
-        "name": "de.schildbach.wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletViewModel",
-        "name": "de.schildbach.wallet.data.DynamicFeeLiveData"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletViewModel",
-        "name": "de.schildbach.wallet.ui.send.SweepWalletViewModel$State"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.ui.send.SweepWalletViewModel$State",
-        "name": "de.schildbach.wallet.ui.send.SweepWalletViewModel"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.util.CrashReporter",
-        "name": "de.schildbach.wallet.util.CrashReporter$ExceptionHandler"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.util.CrashReporter$ExceptionHandler",
-        "name": "de.schildbach.wallet.util.CrashReporter"
+        "id": "de.schildbach.wallet.ui.send.SendCoinsOfflineTask",
+        "name": "de.schildbach.wallet.ui.send.SendCoinsOfflineTask"
       }
     },
     {
       "data": {
         "id": "de.schildbach.wallet.util.OnFirstPreDraw",
-        "name": "de.schildbach.wallet.util.OnFirstPreDraw$Callback"
-      }
-    },
-    {
-      "data": {
-        "id": "de.schildbach.wallet.util.OnFirstPreDraw$Callback",
         "name": "de.schildbach.wallet.util.OnFirstPreDraw"
       }
     },
     {
       "data": {
-        "id": "de.schildbach.wallet.util.WalletUtils",
-        "name": "de.schildbach.wallet.util.WalletUtils$MonospaceSpan"
+        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel",
+        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.DiagnosticsFragment",
+        "name": "de.schildbach.wallet.ui.preference.DiagnosticsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.InputParser$StringInputParser",
+        "name": "de.schildbach.wallet.ui.InputParser$StringInputParser"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BlockchainState$Impediment",
+        "name": "de.schildbach.wallet.service.BlockchainState$Impediment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.AddressBookDao",
+        "name": "de.schildbach.wallet.data.AddressBookDao"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.HelpDialogFragment",
+        "name": "de.schildbach.wallet.ui.HelpDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.BackupWalletActivity",
+        "name": "de.schildbach.wallet.ui.backup.BackupWalletActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData",
+        "name": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
+        "name": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.CrashReporter$ExceptionHandler",
+        "name": "de.schildbach.wallet.util.CrashReporter$ExceptionHandler"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.DialogBuilder",
+        "name": "de.schildbach.wallet.ui.DialogBuilder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$TransactionViewHolder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.ViewPagerTabs",
+        "name": "de.schildbach.wallet.util.ViewPagerTabs"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.ThrottelingLiveData",
+        "name": "de.schildbach.wallet.data.ThrottelingLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData",
+        "name": "de.schildbach.wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ResultCallback",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ResultCallback"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment",
+        "name": "de.schildbach.wallet.ui.send.SweepWalletFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.offline.DirectPaymentTask",
+        "name": "de.schildbach.wallet.offline.DirectPaymentTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.WalletApplication$OnWalletLoadedListener",
+        "name": "de.schildbach.wallet.WalletApplication$OnWalletLoadedListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletBalanceViewModel",
+        "name": "de.schildbach.wallet.ui.WalletBalanceViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ViewHolder",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ViewHolder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData",
+        "name": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment",
+        "name": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SendCoinsFragment",
+        "name": "de.schildbach.wallet.ui.send.SendCoinsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesFragment",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ViewHolder",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ViewHolder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.scan.ScanViewModel",
+        "name": "de.schildbach.wallet.ui.scan.ScanViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.DecodePrivateKeyTask",
+        "name": "de.schildbach.wallet.ui.send.DecodePrivateKeyTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.InactivityNotificationService",
+        "name": "de.schildbach.wallet.service.InactivityNotificationService"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Iso8601Format",
+        "name": "de.schildbach.wallet.util.Iso8601Format"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SendCoinsActivity",
+        "name": "de.schildbach.wallet.ui.send.SendCoinsActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.Constants",
+        "name": "de.schildbach.wallet.Constants"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData",
+        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.RequestCoinsFragment",
+        "name": "de.schildbach.wallet.ui.RequestCoinsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.WalletBalanceLiveData$WalletListener",
+        "name": "de.schildbach.wallet.data.WalletBalanceLiveData$WalletListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.integration.android.BitcoinIntegration",
+        "name": "de.schildbach.wallet.integration.android.BitcoinIntegration"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$TransactionsLiveData",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel$TransactionsLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Base43Test",
+        "name": "de.schildbach.wallet.util.Base43Test"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel",
+        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Formats",
+        "name": "de.schildbach.wallet.util.Formats"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.AddressAndLabel",
+        "name": "de.schildbach.wallet.ui.AddressAndLabel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.RequestCoinsViewModel",
+        "name": "de.schildbach.wallet.ui.RequestCoinsViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$PeersLiveData",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel$PeersLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.offline.DirectPaymentTask$HttpPaymentTask",
+        "name": "de.schildbach.wallet.offline.DirectPaymentTask$HttpPaymentTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BlockchainService$PeerConnectivityListener",
+        "name": "de.schildbach.wallet.service.BlockchainService$PeerConnectivityListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel",
+        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$WarningViewHolder",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningViewHolder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ViewHolder",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ViewHolder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ProgressDialogFragment",
+        "name": "de.schildbach.wallet.ui.ProgressDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ProgressDialogFragment$Observer",
+        "name": "de.schildbach.wallet.ui.ProgressDialogFragment$Observer"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.SendingAddressesViewModel$ClipLiveData",
+        "name": "de.schildbach.wallet.ui.SendingAddressesViewModel$ClipLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData$WalletListener",
+        "name": "de.schildbach.wallet.service.BlockchainService$NewTransactionLiveData$WalletListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.OnFirstPreDraw$Callback",
+        "name": "de.schildbach.wallet.util.OnFirstPreDraw$Callback"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.WalletLiveData",
+        "name": "de.schildbach.wallet.data.WalletLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressFragment",
+        "name": "de.schildbach.wallet.ui.WalletAddressFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Assets",
+        "name": "de.schildbach.wallet.util.Assets"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.CheatSheet",
+        "name": "de.schildbach.wallet.util.CheatSheet"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.Logging",
+        "name": "de.schildbach.wallet.Logging"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.Event$Observer",
+        "name": "de.schildbach.wallet.ui.Event$Observer"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$OnClickListener",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$OnClickListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.DividerItemDecoration",
+        "name": "de.schildbach.wallet.ui.DividerItemDecoration"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Qr",
+        "name": "de.schildbach.wallet.util.Qr"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$EnterAnimationState",
+        "name": "de.schildbach.wallet.ui.WalletActivityViewModel$EnterAnimationState"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesActivity",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletBalanceFragment",
+        "name": "de.schildbach.wallet.ui.WalletBalanceFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.ImportDialogButtonEnablerListener",
+        "name": "de.schildbach.wallet.ui.backup.ImportDialogButtonEnablerListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.MaybeMaintenanceFragment",
+        "name": "de.schildbach.wallet.ui.MaybeMaintenanceFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment$State",
+        "name": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment$State"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.PaymentIntent$Standard",
+        "name": "de.schildbach.wallet.data.PaymentIntent$Standard"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback",
+        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$ResultCallback"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressesAdapter",
+        "name": "de.schildbach.wallet.ui.WalletAddressesAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.scan.ScanActivity",
+        "name": "de.schildbach.wallet.ui.scan.ScanActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BlockchainState",
+        "name": "de.schildbach.wallet.service.BlockchainState"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.InputParser",
+        "name": "de.schildbach.wallet.ui.InputParser"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error"
       }
     },
     {
       "data": {
         "id": "de.schildbach.wallet.util.WalletUtils$MonospaceSpan",
+        "name": "de.schildbach.wallet.util.WalletUtils$MonospaceSpan"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.FancyListFragment",
+        "name": "de.schildbach.wallet.ui.FancyListFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SweepWalletFragment$FakeTransaction",
+        "name": "de.schildbach.wallet.ui.send.SweepWalletFragment$FakeTransaction"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.WalletBalanceLiveData",
+        "name": "de.schildbach.wallet.data.WalletBalanceLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.Configuration",
+        "name": "de.schildbach.wallet.Configuration"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.ExchangeRatesProvider",
+        "name": "de.schildbach.wallet.data.ExchangeRatesProvider"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.SendCoinsQrActivity",
+        "name": "de.schildbach.wallet.ui.SendCoinsQrActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter",
+        "name": "de.schildbach.wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ReportIssueDialogBuilder",
+        "name": "de.schildbach.wallet.ui.ReportIssueDialogBuilder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.AddressBookEntry",
+        "name": "de.schildbach.wallet.data.AddressBookEntry"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$OnClickListener",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$OnClickListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.scan.ScannerView",
+        "name": "de.schildbach.wallet.ui.scan.ScannerView"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressViewModel",
+        "name": "de.schildbach.wallet.ui.WalletAddressViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.CrashReporter",
+        "name": "de.schildbach.wallet.util.CrashReporter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Base43",
+        "name": "de.schildbach.wallet.util.Base43"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread",
+        "name": "de.schildbach.wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.Event",
+        "name": "de.schildbach.wallet.ui.Event"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Toast",
+        "name": "de.schildbach.wallet.util.Toast"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.WalletBalanceWidgetProvider",
+        "name": "de.schildbach.wallet.WalletBalanceWidgetProvider"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.AbstractWalletLiveData",
+        "name": "de.schildbach.wallet.data.AbstractWalletLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActionsFragment",
+        "name": "de.schildbach.wallet.ui.WalletActionsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.EditAddressBookEntryFragment",
+        "name": "de.schildbach.wallet.ui.EditAddressBookEntryFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.AboutFragment",
+        "name": "de.schildbach.wallet.ui.preference.AboutFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.WholeStringBuilder",
+        "name": "de.schildbach.wallet.util.WholeStringBuilder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask",
+        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.AddressBookActivity$TwoFragmentAdapter",
+        "name": "de.schildbach.wallet.ui.AddressBookActivity$TwoFragmentAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.CurrencyAmountView$Listener",
+        "name": "de.schildbach.wallet.ui.CurrencyAmountView$Listener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SendCoinsActivityViewModel",
+        "name": "de.schildbach.wallet.ui.send.SendCoinsActivityViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.PaymentIntent$Output",
+        "name": "de.schildbach.wallet.data.PaymentIntent$Output"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
+        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActivityViewModel",
+        "name": "de.schildbach.wallet.ui.WalletActivityViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ReportIssueViewModel",
+        "name": "de.schildbach.wallet.ui.ReportIssueViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListFragment",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RaiseFeeViewModel",
+        "name": "de.schildbach.wallet.ui.send.RaiseFeeViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.StickToTopLinearLayoutManager",
+        "name": "de.schildbach.wallet.ui.StickToTopLinearLayoutManager"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener",
+        "name": "de.schildbach.wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask",
+        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ListItem",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListAdapter$ListItem"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData",
+        "name": "de.schildbach.wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.SelectedExchangeRateLiveData",
+        "name": "de.schildbach.wallet.data.SelectedExchangeRateLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.offline.DirectPaymentTask$ResultCallback",
+        "name": "de.schildbach.wallet.offline.DirectPaymentTask$ResultCallback"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.RequestCoinsActivityViewModel",
+        "name": "de.schildbach.wallet.ui.RequestCoinsActivityViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.FeeCategory",
+        "name": "de.schildbach.wallet.ui.send.FeeCategory"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BlockchainService$LocalBinder",
+        "name": "de.schildbach.wallet.service.BlockchainService$LocalBinder"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActivity$QuickReturnBehavior",
+        "name": "de.schildbach.wallet.ui.WalletActivity$QuickReturnBehavior"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.WalletApplication",
+        "name": "de.schildbach.wallet.WalletApplication"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.TimeLiveData",
+        "name": "de.schildbach.wallet.data.TimeLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.scan.CameraManager",
+        "name": "de.schildbach.wallet.ui.scan.CameraManager"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.MonetarySpannable",
+        "name": "de.schildbach.wallet.util.MonetarySpannable"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.RequestCoinsActivity",
+        "name": "de.schildbach.wallet.ui.RequestCoinsActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$WarningType"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment$State",
+        "name": "de.schildbach.wallet.ui.EncryptKeysDialogFragment$State"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel",
+        "name": "de.schildbach.wallet.ui.send.SendCoinsViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.CircularProgressView",
+        "name": "de.schildbach.wallet.ui.CircularProgressView"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ItemAnimator",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ItemAnimator"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment",
+        "name": "de.schildbach.wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SendCoinsViewModel$State",
+        "name": "de.schildbach.wallet.ui.send.SendCoinsViewModel$State"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SweepWalletViewModel$State",
+        "name": "de.schildbach.wallet.ui.send.SweepWalletViewModel$State"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ShowPasswordCheckListener",
+        "name": "de.schildbach.wallet.ui.ShowPasswordCheckListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SweepWalletViewModel",
+        "name": "de.schildbach.wallet.ui.send.SweepWalletViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.SettingsFragment",
+        "name": "de.schildbach.wallet.ui.preference.SettingsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask",
+        "name": "de.schildbach.wallet.ui.send.RequestPaymentRequestTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel$HostnamesLiveData",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel$HostnamesLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.UpgradeWalletService",
+        "name": "de.schildbach.wallet.service.UpgradeWalletService"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.WalletUtils",
         "name": "de.schildbach.wallet.util.WalletUtils"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.PaymentIntent",
+        "name": "de.schildbach.wallet.data.PaymentIntent"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.offline.DirectPaymentTask$BluetoothPaymentTask",
+        "name": "de.schildbach.wallet.offline.DirectPaymentTask$BluetoothPaymentTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.integration.sample.SampleActivity",
+        "name": "de.schildbach.wallet.integration.sample.SampleActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.ResolveDnsTask",
+        "name": "de.schildbach.wallet.ui.preference.ResolveDnsTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.ConfigOwnNameLiveData",
+        "name": "de.schildbach.wallet.data.ConfigOwnNameLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment$State",
+        "name": "de.schildbach.wallet.ui.send.MaintenanceDialogFragment$State"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$ListItem$WarningItem"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListFragment",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.AboutFragment$ApkHashFragment",
+        "name": "de.schildbach.wallet.ui.preference.AboutFragment$ApkHashFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.DynamicFeeLiveData",
+        "name": "de.schildbach.wallet.data.DynamicFeeLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressDialogFragment",
+        "name": "de.schildbach.wallet.ui.WalletAddressDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.BluetoothTest",
+        "name": "de.schildbach.wallet.util.BluetoothTest"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData",
+        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$Direction",
+        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$Direction"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.AlertDialogsFragment",
+        "name": "de.schildbach.wallet.ui.AlertDialogsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.CurrencyTextView",
+        "name": "de.schildbach.wallet.ui.CurrencyTextView"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletDisclaimerFragment",
+        "name": "de.schildbach.wallet.ui.WalletDisclaimerFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.ExtendedPublicKeyFragment",
+        "name": "de.schildbach.wallet.ui.preference.ExtendedPublicKeyFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.DeriveKeyTask",
+        "name": "de.schildbach.wallet.ui.send.DeriveKeyTask"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.BitmapFragment",
+        "name": "de.schildbach.wallet.ui.BitmapFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletActivity",
+        "name": "de.schildbach.wallet.ui.WalletActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.TransactionsAdapter$OnClickListener",
+        "name": "de.schildbach.wallet.ui.TransactionsAdapter$OnClickListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.ExchangeRate",
+        "name": "de.schildbach.wallet.data.ExchangeRate"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.CurrencyAmountView$TextViewListener",
+        "name": "de.schildbach.wallet.ui.CurrencyAmountView$TextViewListener"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.EncryptKeysDialogFragment",
+        "name": "de.schildbach.wallet.ui.EncryptKeysDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.InputParser$StreamInputParser",
+        "name": "de.schildbach.wallet.ui.InputParser$StreamInputParser"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Nfc",
+        "name": "de.schildbach.wallet.util.Nfc"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.PeerListViewModel",
+        "name": "de.schildbach.wallet.ui.monitor.PeerListViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalActivity",
+        "name": "de.schildbach.wallet.ui.backup.RestoreWalletFromExternalActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.SweepWalletActivity",
+        "name": "de.schildbach.wallet.ui.send.SweepWalletActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.SendingAddressesFragment",
+        "name": "de.schildbach.wallet.ui.SendingAddressesFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment",
+        "name": "de.schildbach.wallet.ui.send.RaiseFeeDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListViewModel$BlocksLiveData",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListViewModel$BlocksLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData",
+        "name": "de.schildbach.wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.preference.PreferenceActivity",
+        "name": "de.schildbach.wallet.ui.preference.PreferenceActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
+        "name": "de.schildbach.wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletTransactionsFragment",
+        "name": "de.schildbach.wallet.ui.WalletTransactionsFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.util.Bluetooth",
+        "name": "de.schildbach.wallet.util.Bluetooth"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ListItem",
+        "name": "de.schildbach.wallet.ui.ExchangeRatesAdapter$ListItem"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type",
+        "name": "de.schildbach.wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.CurrencyCalculatorLink",
+        "name": "de.schildbach.wallet.ui.CurrencyCalculatorLink"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.BackupWalletViewModel",
+        "name": "de.schildbach.wallet.ui.backup.BackupWalletViewModel"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.AbstractWalletActivity",
+        "name": "de.schildbach.wallet.ui.AbstractWalletActivity"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData",
+        "name": "de.schildbach.wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.Constants$Files",
+        "name": "de.schildbach.wallet.Constants$Files"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.scan.ScanActivity$AutoFocusRunnable",
+        "name": "de.schildbach.wallet.ui.scan.ScanActivity$AutoFocusRunnable"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.scan.ScanActivity$WarnDialogFragment",
+        "name": "de.schildbach.wallet.ui.scan.ScanActivity$WarnDialogFragment"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.BlockchainStateLiveData",
+        "name": "de.schildbach.wallet.data.BlockchainStateLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.service.BootstrapReceiver",
+        "name": "de.schildbach.wallet.service.BootstrapReceiver"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.data.ConfigFormatLiveData",
+        "name": "de.schildbach.wallet.data.ConfigFormatLiveData"
+      }
+    },
+    {
+      "data": {
+        "id": "de.schildbach.wallet.ui.backup.FileAdapter",
+        "name": "de.schildbach.wallet.ui.backup.FileAdapter"
       }
     }
   ],
