@@ -1598,30 +1598,6 @@
     },
     {
       "data": {
-        "source": "wallet.data.AbstractWalletLiveData",
-        "target": "wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.data.AbstractWalletLiveData",
-        "target": "wallet.WalletApplication$OnWalletLoadedListener"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.data.AbstractWalletLiveData",
-        "target": "wallet.data.ThrottelingLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.data.AbstractWalletLiveData",
-        "target": "wallet.ui.Event"
-      }
-    },
-    {
-      "data": {
         "source": "wallet.data.AddressBookDao",
         "target": "wallet.data.AddressBookEntry"
       }
@@ -1749,12 +1725,6 @@
     {
       "data": {
         "source": "wallet.data.WalletBalanceLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.data.WalletBalanceLiveData",
         "target": "wallet.data.WalletBalanceLiveData$WalletListener"
       }
     },
@@ -1768,12 +1738,6 @@
       "data": {
         "source": "wallet.data.WalletLiveData",
         "target": "wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.data.WalletLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
       }
     },
     {
@@ -1917,12 +1881,6 @@
     {
       "data": {
         "source": "wallet.service.BlockchainService",
-        "target": "wallet.service.BlockchainService$NewTransactionLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.service.BlockchainService",
         "target": "wallet.service.BlockchainService$PeerConnectivityListener"
       }
     },
@@ -1972,24 +1930,6 @@
       "data": {
         "source": "wallet.service.BlockchainService$NewTransactionLiveData",
         "target": "wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.service.BlockchainService$NewTransactionLiveData",
-        "target": "wallet.service.BlockchainService$NewTransactionLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.service.BlockchainService$NewTransactionLiveData$WalletListener",
-        "target": "wallet.service.BlockchainService"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.service.BlockchainService$NewTransactionLiveData$WalletListener",
-        "target": "wallet.service.BlockchainService$NewTransactionLiveData"
       }
     },
     {
@@ -2385,12 +2325,6 @@
     {
       "data": {
         "source": "wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData",
         "target": "wallet.ui.MaybeMaintenanceViewModel"
       }
     },
@@ -2529,12 +2463,6 @@
     {
       "data": {
         "source": "wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData",
         "target": "wallet.ui.RequestCoinsViewModel"
       }
     },
@@ -2613,12 +2541,6 @@
     {
       "data": {
         "source": "wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData",
         "target": "wallet.ui.SendingAddressesViewModel"
       }
     },
@@ -2656,18 +2578,6 @@
       "data": {
         "source": "wallet.ui.TransactionsAdapter",
         "target": "wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter",
-        "target": "wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter",
-        "target": "wallet.ui.TransactionsAdapter$ListItem$WarningItem"
       }
     },
     {
@@ -2714,54 +2624,6 @@
     },
     {
       "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem",
-        "target": "wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem",
-        "target": "wallet.ui.TransactionsAdapter$ListItem$WarningItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
-        "target": "wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
-        "target": "wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem$TransactionItem",
-        "target": "wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem$WarningItem",
-        "target": "wallet.ui.TransactionsAdapter"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem$WarningItem",
-        "target": "wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$ListItem$WarningItem",
-        "target": "wallet.ui.TransactionsAdapter$WarningType"
-      }
-    },
-    {
-      "data": {
         "source": "wallet.ui.TransactionsAdapter$OnClickListener",
         "target": "wallet.ui.TransactionsAdapter"
       }
@@ -2788,12 +2650,6 @@
       "data": {
         "source": "wallet.ui.TransactionsAdapter$TransactionViewHolder",
         "target": "wallet.ui.TransactionsAdapter$ListItem"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.TransactionsAdapter$TransactionViewHolder",
-        "target": "wallet.ui.TransactionsAdapter$ListItem$TransactionItem"
       }
     },
     {
@@ -2901,12 +2757,6 @@
     {
       "data": {
         "source": "wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData",
         "target": "wallet.ui.WalletActivityViewModel"
       }
     },
@@ -2914,12 +2764,6 @@
       "data": {
         "source": "wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData",
         "target": "wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
       }
     },
     {
@@ -2972,12 +2816,6 @@
     },
     {
       "data": {
-        "source": "wallet.ui.WalletAddressViewModel",
-        "target": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
         "source": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
         "target": "wallet.WalletApplication"
       }
@@ -2985,31 +2823,7 @@
     {
       "data": {
         "source": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
         "target": "wallet.ui.WalletAddressViewModel"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData",
-        "target": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener",
-        "target": "wallet.ui.WalletAddressViewModel"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData$WalletListener",
-        "target": "wallet.ui.WalletAddressViewModel$CurrentAddressLiveData"
       }
     },
     {
@@ -3105,12 +2919,6 @@
     {
       "data": {
         "source": "wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData",
         "target": "wallet.ui.WalletAddressesViewModel"
       }
     },
@@ -3118,12 +2926,6 @@
       "data": {
         "source": "wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData",
         "target": "wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
       }
     },
     {
@@ -3362,12 +3164,6 @@
     },
     {
       "data": {
-        "source": "wallet.ui.WalletTransactionsViewModel",
-        "target": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
         "source": "wallet.ui.WalletTransactionsViewModel$Direction",
         "target": "wallet.ui.WalletTransactionsViewModel"
       }
@@ -3381,12 +3177,6 @@
     {
       "data": {
         "source": "wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData",
         "target": "wallet.ui.WalletTransactionsViewModel"
       }
     },
@@ -3399,31 +3189,7 @@
     {
       "data": {
         "source": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
         "target": "wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData",
-        "target": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener",
-        "target": "wallet.ui.WalletTransactionsViewModel"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData$WalletListener",
-        "target": "wallet.ui.WalletTransactionsViewModel$TransactionsLiveData"
       }
     },
     {
@@ -3573,12 +3339,6 @@
     {
       "data": {
         "source": "wallet.ui.monitor.BlockListAdapter",
-        "target": "wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.monitor.BlockListAdapter",
         "target": "wallet.ui.monitor.BlockListAdapter$OnClickListener"
       }
     },
@@ -3598,30 +3358,6 @@
       "data": {
         "source": "wallet.ui.monitor.BlockListAdapter$ListItem",
         "target": "wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.monitor.BlockListAdapter$ListItem",
-        "target": "wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
-        "target": "wallet.data.AddressBookEntry"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
-        "target": "wallet.ui.monitor.BlockListAdapter"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.monitor.BlockListAdapter$ListItem$ListTransaction",
-        "target": "wallet.ui.monitor.BlockListAdapter$ListItem"
       }
     },
     {
@@ -3712,12 +3448,6 @@
       "data": {
         "source": "wallet.ui.monitor.BlockListViewModel$TransactionsLiveData",
         "target": "wallet.WalletApplication"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.monitor.BlockListViewModel$TransactionsLiveData",
-        "target": "wallet.data.AbstractWalletLiveData"
       }
     },
     {
@@ -4048,126 +3778,6 @@
       "data": {
         "source": "wallet.ui.send.RequestPaymentRequestTask$ResultCallback",
         "target": "wallet.ui.send.RequestPaymentRequestTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$ResultCallback"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer$Type",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$ElectrumServer"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Error",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse$Utxo",
-        "target": "wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse"
-      }
-    },
-    {
-      "data": {
-        "source": "wallet.ui.send.RequestWalletBalanceTask$ResultCallback",
-        "target": "wallet.ui.send.RequestWalletBalanceTask"
       }
     },
     {
