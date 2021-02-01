@@ -1,0 +1,968 @@
+version,label,name,role,parent,full
+bitcoin-wallet-7.07-prod,Configuration,Configuration,Information Holder,wallet,wallet.Configuration
+bitcoin-wallet-7.07-prod,Constants,Constants,Information Holder,wallet,wallet.Constants
+bitcoin-wallet-7.07-prod,Constants$Files,Constants$Files,Information Holder,wallet,wallet.Constants$Files
+bitcoin-wallet-7.07-prod,Logging,Logging,Service Provider,wallet,wallet.Logging
+bitcoin-wallet-7.07-prod,WalletApplication,WalletApplication,Controller,wallet,wallet.WalletApplication
+bitcoin-wallet-7.07-prod,WalletApplication$OnWalletLoadedListener,WalletApplication$OnWalletLoadedListener,Service Provider,wallet,wallet.WalletApplication$OnWalletLoadedListener
+bitcoin-wallet-7.07-prod,WalletBalanceWidgetProvider,WalletBalanceWidgetProvider,Interfacer,wallet,wallet.WalletBalanceWidgetProvider
+bitcoin-wallet-7.07-prod,AbstractWalletLiveData,AbstractWalletLiveData,Information Holder,wallet.data,wallet.data.AbstractWalletLiveData
+bitcoin-wallet-7.07-prod,AddressBookDao,AddressBookDao,Service Provider,wallet.data,wallet.data.AddressBookDao
+bitcoin-wallet-7.07-prod,AddressBookEntry,AddressBookEntry,Information Holder,wallet.data,wallet.data.AddressBookEntry
+bitcoin-wallet-7.07-prod,AppDatabase,AppDatabase,Information Holder,wallet.data,wallet.data.AppDatabase
+bitcoin-wallet-7.07-prod,BlockchainStateLiveData,BlockchainStateLiveData,Information Holder,wallet.data,wallet.data.BlockchainStateLiveData
+bitcoin-wallet-7.07-prod,ConfigFormatLiveData,ConfigFormatLiveData,Information Holder,wallet.data,wallet.data.ConfigFormatLiveData
+bitcoin-wallet-7.07-prod,ConfigOwnNameLiveData,ConfigOwnNameLiveData,Information Holder,wallet.data,wallet.data.ConfigOwnNameLiveData
+bitcoin-wallet-7.07-prod,DynamicFeeLiveData,DynamicFeeLiveData,Structurer,wallet.data,wallet.data.DynamicFeeLiveData
+bitcoin-wallet-7.07-prod,ExchangeRate,ExchangeRate,Information Holder,wallet.data,wallet.data.ExchangeRate
+bitcoin-wallet-7.07-prod,ExchangeRatesProvider,ExchangeRatesProvider,Service Provider,wallet.data,wallet.data.ExchangeRatesProvider
+bitcoin-wallet-7.07-prod,PaymentIntent,PaymentIntent,Structurer,wallet.data,wallet.data.PaymentIntent
+bitcoin-wallet-7.07-prod,PaymentIntent$Output,PaymentIntent$Output,Coordinator,wallet.data,wallet.data.PaymentIntent$Output
+bitcoin-wallet-7.07-prod,PaymentIntent$Standard,PaymentIntent$Standard,Information Holder,wallet.data,wallet.data.PaymentIntent$Standard
+bitcoin-wallet-7.07-prod,SelectedExchangeRateLiveData,SelectedExchangeRateLiveData,Coordinator,wallet.data,wallet.data.SelectedExchangeRateLiveData
+bitcoin-wallet-7.07-prod,ThrottelingLiveData,ThrottelingLiveData,Information Holder,wallet.data,wallet.data.ThrottelingLiveData
+bitcoin-wallet-7.07-prod,TimeLiveData,TimeLiveData,Information Holder,wallet.data,wallet.data.TimeLiveData
+bitcoin-wallet-7.07-prod,WalletBalanceLiveData,WalletBalanceLiveData,Structurer,wallet.data,wallet.data.WalletBalanceLiveData
+bitcoin-wallet-7.07-prod,WalletBalanceLiveData$WalletListener,WalletBalanceLiveData$WalletListener,Service Provider,wallet.data,wallet.data.WalletBalanceLiveData$WalletListener
+bitcoin-wallet-7.07-prod,WalletLiveData,WalletLiveData,Service Provider,wallet.data,wallet.data.WalletLiveData
+bitcoin-wallet-7.07-prod,BitcoinIntegration,BitcoinIntegration,Controller,wallet.integration.android,wallet.integration.android.BitcoinIntegration
+bitcoin-wallet-7.07-prod,SampleActivity,SampleActivity,Interfacer,wallet.integration.sample,wallet.integration.sample.SampleActivity
+bitcoin-wallet-7.07-prod,AcceptBluetoothService,AcceptBluetoothService,Interfacer,wallet.offline,wallet.offline.AcceptBluetoothService
+bitcoin-wallet-7.07-prod,AcceptBluetoothThread,AcceptBluetoothThread,Coordinator,wallet.offline,wallet.offline.AcceptBluetoothThread
+bitcoin-wallet-7.07-prod,AcceptBluetoothThread$ClassicBluetoothThread,AcceptBluetoothThread$ClassicBluetoothThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread
+bitcoin-wallet-7.07-prod,AcceptBluetoothThread$PaymentProtocolThread,AcceptBluetoothThread$PaymentProtocolThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$PaymentProtocolThread
+bitcoin-wallet-7.07-prod,DirectPaymentTask,DirectPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask
+bitcoin-wallet-7.07-prod,DirectPaymentTask$BluetoothPaymentTask,DirectPaymentTask$BluetoothPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$BluetoothPaymentTask
+bitcoin-wallet-7.07-prod,DirectPaymentTask$HttpPaymentTask,DirectPaymentTask$HttpPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$HttpPaymentTask
+bitcoin-wallet-7.07-prod,DirectPaymentTask$ResultCallback,DirectPaymentTask$ResultCallback,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$ResultCallback
+bitcoin-wallet-7.07-prod,BlockchainService,BlockchainService,Interfacer,wallet.service,wallet.service.BlockchainService
+bitcoin-wallet-7.07-prod,BlockchainService$ImpedimentsLiveData,BlockchainService$ImpedimentsLiveData,Structurer,wallet.service,wallet.service.BlockchainService$ImpedimentsLiveData
+bitcoin-wallet-7.07-prod,BlockchainService$LocalBinder,BlockchainService$LocalBinder,Information Holder,wallet.service,wallet.service.BlockchainService$LocalBinder
+bitcoin-wallet-7.07-prod,BlockchainService$NewTransactionLiveData,BlockchainService$NewTransactionLiveData,Information Holder,wallet.service,wallet.service.BlockchainService$NewTransactionLiveData
+bitcoin-wallet-7.07-prod,BlockchainService$PeerConnectivityListener,BlockchainService$PeerConnectivityListener,Service Provider,wallet.service,wallet.service.BlockchainService$PeerConnectivityListener
+bitcoin-wallet-7.07-prod,BlockchainState,BlockchainState,Information Holder,wallet.service,wallet.service.BlockchainState
+bitcoin-wallet-7.07-prod,BlockchainState$Impediment,BlockchainState$Impediment,Information Holder,wallet.service,wallet.service.BlockchainState$Impediment
+bitcoin-wallet-7.07-prod,BootstrapReceiver,BootstrapReceiver,Service Provider,wallet.service,wallet.service.BootstrapReceiver
+bitcoin-wallet-7.07-prod,InactivityNotificationService,InactivityNotificationService,Interfacer,wallet.service,wallet.service.InactivityNotificationService
+bitcoin-wallet-7.07-prod,UpgradeWalletService,UpgradeWalletService,Coordinator,wallet.service,wallet.service.UpgradeWalletService
+bitcoin-wallet-7.07-prod,AbstractWalletActivity,AbstractWalletActivity,Coordinator,wallet.ui,wallet.ui.AbstractWalletActivity
+bitcoin-wallet-7.07-prod,AddressAndLabel,AddressAndLabel,Service Provider,wallet.ui,wallet.ui.AddressAndLabel
+bitcoin-wallet-7.07-prod,AddressBookActivity,AddressBookActivity,Coordinator,wallet.ui,wallet.ui.AddressBookActivity
+bitcoin-wallet-7.07-prod,AddressBookActivity$TwoFragmentAdapter,AddressBookActivity$TwoFragmentAdapter,Information Holder,wallet.ui,wallet.ui.AddressBookActivity$TwoFragmentAdapter
+bitcoin-wallet-7.07-prod,AlertDialogsFragment,AlertDialogsFragment,Interfacer,wallet.ui,wallet.ui.AlertDialogsFragment
+bitcoin-wallet-7.07-prod,BitmapFragment,BitmapFragment,Coordinator,wallet.ui,wallet.ui.BitmapFragment
+bitcoin-wallet-7.07-prod,CircularProgressView,CircularProgressView,Interfacer,wallet.ui,wallet.ui.CircularProgressView
+bitcoin-wallet-7.07-prod,CurrencyAmountView,CurrencyAmountView,Interfacer,wallet.ui,wallet.ui.CurrencyAmountView
+bitcoin-wallet-7.07-prod,CurrencyAmountView$Listener,CurrencyAmountView$Listener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$Listener
+bitcoin-wallet-7.07-prod,CurrencyAmountView$TextViewListener,CurrencyAmountView$TextViewListener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$TextViewListener
+bitcoin-wallet-7.07-prod,CurrencyCalculatorLink,CurrencyCalculatorLink,Information Holder,wallet.ui,wallet.ui.CurrencyCalculatorLink
+bitcoin-wallet-7.07-prod,CurrencySymbolDrawable,CurrencySymbolDrawable,Information Holder,wallet.ui,wallet.ui.CurrencySymbolDrawable
+bitcoin-wallet-7.07-prod,CurrencyTextView,CurrencyTextView,Interfacer,wallet.ui,wallet.ui.CurrencyTextView
+bitcoin-wallet-7.07-prod,DialogBuilder,DialogBuilder,Service Provider,wallet.ui,wallet.ui.DialogBuilder
+bitcoin-wallet-7.07-prod,DividerItemDecoration,DividerItemDecoration,Interfacer,wallet.ui,wallet.ui.DividerItemDecoration
+bitcoin-wallet-7.07-prod,EditAddressBookEntryFragment,EditAddressBookEntryFragment,Interfacer,wallet.ui,wallet.ui.EditAddressBookEntryFragment
+bitcoin-wallet-7.07-prod,EncryptKeysDialogFragment,EncryptKeysDialogFragment,Interfacer,wallet.ui,wallet.ui.EncryptKeysDialogFragment
+bitcoin-wallet-7.07-prod,EncryptKeysDialogFragment$State,EncryptKeysDialogFragment$State,Information Holder,wallet.ui,wallet.ui.EncryptKeysDialogFragment$State
+bitcoin-wallet-7.07-prod,Event,Event,Information Holder,wallet.ui,wallet.ui.Event
+bitcoin-wallet-7.07-prod,Event$Observer,Event$Observer,Service Provider,wallet.ui,wallet.ui.Event$Observer
+bitcoin-wallet-7.07-prod,ExchangeRatesActivity,ExchangeRatesActivity,Service Provider,wallet.ui,wallet.ui.ExchangeRatesActivity
+bitcoin-wallet-7.07-prod,ExchangeRatesAdapter,ExchangeRatesAdapter,Structurer,wallet.ui,wallet.ui.ExchangeRatesAdapter
+bitcoin-wallet-7.07-prod,ExchangeRatesAdapter$ListItem,ExchangeRatesAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ListItem
+bitcoin-wallet-7.07-prod,ExchangeRatesAdapter$OnClickListener,ExchangeRatesAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.ExchangeRatesAdapter$OnClickListener
+bitcoin-wallet-7.07-prod,ExchangeRatesAdapter$ViewHolder,ExchangeRatesAdapter$ViewHolder,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ViewHolder
+bitcoin-wallet-7.07-prod,ExchangeRatesFragment,ExchangeRatesFragment,Interfacer,wallet.ui,wallet.ui.ExchangeRatesFragment
+bitcoin-wallet-7.07-prod,ExchangeRatesViewModel,ExchangeRatesViewModel,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel
+bitcoin-wallet-7.07-prod,ExchangeRatesViewModel$ExchangeRatesLiveData,ExchangeRatesViewModel$ExchangeRatesLiveData,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData
+bitcoin-wallet-7.07-prod,FancyListFragment,FancyListFragment,Interfacer,wallet.ui,wallet.ui.FancyListFragment
+bitcoin-wallet-7.07-prod,HelpDialogFragment,HelpDialogFragment,Coordinator,wallet.ui,wallet.ui.HelpDialogFragment
+bitcoin-wallet-7.07-prod,InputParser,InputParser,Service Provider,wallet.ui,wallet.ui.InputParser
+bitcoin-wallet-7.07-prod,InputParser$BinaryInputParser,InputParser$BinaryInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$BinaryInputParser
+bitcoin-wallet-7.07-prod,InputParser$StreamInputParser,InputParser$StreamInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StreamInputParser
+bitcoin-wallet-7.07-prod,InputParser$StringInputParser,InputParser$StringInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StringInputParser
+bitcoin-wallet-7.07-prod,MaybeMaintenanceFragment,MaybeMaintenanceFragment,Coordinator,wallet.ui,wallet.ui.MaybeMaintenanceFragment
+bitcoin-wallet-7.07-prod,MaybeMaintenanceViewModel,MaybeMaintenanceViewModel,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel
+bitcoin-wallet-7.07-prod,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData
+bitcoin-wallet-7.07-prod,ProgressDialogFragment,ProgressDialogFragment,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment
+bitcoin-wallet-7.07-prod,ProgressDialogFragment$Observer,ProgressDialogFragment$Observer,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment$Observer
+bitcoin-wallet-7.07-prod,ReportIssueDialogBuilder,ReportIssueDialogBuilder,Service Provider,wallet.ui,wallet.ui.ReportIssueDialogBuilder
+bitcoin-wallet-7.07-prod,ReportIssueDialogFragment,ReportIssueDialogFragment,Interfacer,wallet.ui,wallet.ui.ReportIssueDialogFragment
+bitcoin-wallet-7.07-prod,ReportIssueViewModel,ReportIssueViewModel,Information Holder,wallet.ui,wallet.ui.ReportIssueViewModel
+bitcoin-wallet-7.07-prod,RequestCoinsActivity,RequestCoinsActivity,Coordinator,wallet.ui,wallet.ui.RequestCoinsActivity
+bitcoin-wallet-7.07-prod,RequestCoinsActivityViewModel,RequestCoinsActivityViewModel,Information Holder,wallet.ui,wallet.ui.RequestCoinsActivityViewModel
+bitcoin-wallet-7.07-prod,RequestCoinsFragment,RequestCoinsFragment,Interfacer,wallet.ui,wallet.ui.RequestCoinsFragment
+bitcoin-wallet-7.07-prod,RequestCoinsViewModel,RequestCoinsViewModel,Interfacer,wallet.ui,wallet.ui.RequestCoinsViewModel
+bitcoin-wallet-7.07-prod,RequestCoinsViewModel$FreshReceiveAddressLiveData,RequestCoinsViewModel$FreshReceiveAddressLiveData,Information Holder,wallet.ui,wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData
+bitcoin-wallet-7.07-prod,SendCoinsQrActivity,SendCoinsQrActivity,Interfacer,wallet.ui,wallet.ui.SendCoinsQrActivity
+bitcoin-wallet-7.07-prod,SendingAddressesFragment,SendingAddressesFragment,Interfacer,wallet.ui,wallet.ui.SendingAddressesFragment
+bitcoin-wallet-7.07-prod,SendingAddressesViewModel,SendingAddressesViewModel,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel
+bitcoin-wallet-7.07-prod,SendingAddressesViewModel$AddressesToExcludeLiveData,SendingAddressesViewModel$AddressesToExcludeLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData
+bitcoin-wallet-7.07-prod,SendingAddressesViewModel$ClipLiveData,SendingAddressesViewModel$ClipLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$ClipLiveData
+bitcoin-wallet-7.07-prod,ShowPasswordCheckListener,ShowPasswordCheckListener,Service Provider,wallet.ui,wallet.ui.ShowPasswordCheckListener
+bitcoin-wallet-7.07-prod,StickToTopLinearLayoutManager,StickToTopLinearLayoutManager,Service Provider,wallet.ui,wallet.ui.StickToTopLinearLayoutManager
+bitcoin-wallet-7.07-prod,TransactionsAdapter,TransactionsAdapter,Controller,wallet.ui,wallet.ui.TransactionsAdapter
+bitcoin-wallet-7.07-prod,TransactionsAdapter$ChangeType,TransactionsAdapter$ChangeType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ChangeType
+bitcoin-wallet-7.07-prod,TransactionsAdapter$ItemAnimator,TransactionsAdapter$ItemAnimator,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$ItemAnimator
+bitcoin-wallet-7.07-prod,TransactionsAdapter$ListItem,TransactionsAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ListItem
+bitcoin-wallet-7.07-prod,TransactionsAdapter$OnClickListener,TransactionsAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$OnClickListener
+bitcoin-wallet-7.07-prod,TransactionsAdapter$TransactionViewHolder,TransactionsAdapter$TransactionViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$TransactionViewHolder
+bitcoin-wallet-7.07-prod,TransactionsAdapter$WarningType,TransactionsAdapter$WarningType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningType
+bitcoin-wallet-7.07-prod,TransactionsAdapter$WarningViewHolder,TransactionsAdapter$WarningViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningViewHolder
+bitcoin-wallet-7.07-prod,WalletActionsFragment,WalletActionsFragment,Coordinator,wallet.ui,wallet.ui.WalletActionsFragment
+bitcoin-wallet-7.07-prod,WalletActivity,WalletActivity,Interfacer,wallet.ui,wallet.ui.WalletActivity
+bitcoin-wallet-7.07-prod,WalletActivity$QuickReturnBehavior,WalletActivity$QuickReturnBehavior,Service Provider,wallet.ui,wallet.ui.WalletActivity$QuickReturnBehavior
+bitcoin-wallet-7.07-prod,WalletActivityViewModel,WalletActivityViewModel,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel
+bitcoin-wallet-7.07-prod,WalletActivityViewModel$EnterAnimationState,WalletActivityViewModel$EnterAnimationState,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$EnterAnimationState
+bitcoin-wallet-7.07-prod,WalletActivityViewModel$WalletEncryptedLiveData,WalletActivityViewModel$WalletEncryptedLiveData,Service Provider,wallet.ui,wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData
+bitcoin-wallet-7.07-prod,WalletActivityViewModel$WalletLegacyFallbackLiveData,WalletActivityViewModel$WalletLegacyFallbackLiveData,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData
+bitcoin-wallet-7.07-prod,WalletAddressDialogFragment,WalletAddressDialogFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressDialogFragment
+bitcoin-wallet-7.07-prod,WalletAddressFragment,WalletAddressFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressFragment
+bitcoin-wallet-7.07-prod,WalletAddressViewModel,WalletAddressViewModel,Service Provider,wallet.ui,wallet.ui.WalletAddressViewModel
+bitcoin-wallet-7.07-prod,WalletAddressViewModel$CurrentAddressLiveData,WalletAddressViewModel$CurrentAddressLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressViewModel$CurrentAddressLiveData
+bitcoin-wallet-7.07-prod,WalletAddressesAdapter,WalletAddressesAdapter,Structurer,wallet.ui,wallet.ui.WalletAddressesAdapter
+bitcoin-wallet-7.07-prod,WalletAddressesFragment,WalletAddressesFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressesFragment
+bitcoin-wallet-7.07-prod,WalletAddressesViewModel,WalletAddressesViewModel,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel
+bitcoin-wallet-7.07-prod,WalletAddressesViewModel$ImportedAddressesLiveData,WalletAddressesViewModel$ImportedAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData
+bitcoin-wallet-7.07-prod,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData
+bitcoin-wallet-7.07-prod,WalletBalanceFragment,WalletBalanceFragment,Interfacer,wallet.ui,wallet.ui.WalletBalanceFragment
+bitcoin-wallet-7.07-prod,WalletBalanceViewModel,WalletBalanceViewModel,Information Holder,wallet.ui,wallet.ui.WalletBalanceViewModel
+bitcoin-wallet-7.07-prod,WalletDisclaimerFragment,WalletDisclaimerFragment,Interfacer,wallet.ui,wallet.ui.WalletDisclaimerFragment
+bitcoin-wallet-7.07-prod,WalletDisclaimerViewModel,WalletDisclaimerViewModel,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel
+bitcoin-wallet-7.07-prod,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData
+bitcoin-wallet-7.07-prod,WalletTransactionsFragment,WalletTransactionsFragment,Interfacer,wallet.ui,wallet.ui.WalletTransactionsFragment
+bitcoin-wallet-7.07-prod,WalletTransactionsViewModel,WalletTransactionsViewModel,Interfacer,wallet.ui,wallet.ui.WalletTransactionsViewModel
+bitcoin-wallet-7.07-prod,WalletTransactionsViewModel$Direction,WalletTransactionsViewModel$Direction,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$Direction
+bitcoin-wallet-7.07-prod,WalletTransactionsViewModel$TransactionsConfidenceLiveData,WalletTransactionsViewModel$TransactionsConfidenceLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData
+bitcoin-wallet-7.07-prod,WalletTransactionsViewModel$TransactionsLiveData,WalletTransactionsViewModel$TransactionsLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsLiveData
+bitcoin-wallet-7.07-prod,BackupWalletActivity,BackupWalletActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.BackupWalletActivity
+bitcoin-wallet-7.07-prod,BackupWalletDialogFragment,BackupWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment
+bitcoin-wallet-7.07-prod,BackupWalletDialogFragment$ErrorDialogFragment,BackupWalletDialogFragment$ErrorDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment
+bitcoin-wallet-7.07-prod,BackupWalletDialogFragment$SuccessDialogFragment,BackupWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.07-prod,BackupWalletViewModel,BackupWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.BackupWalletViewModel
+bitcoin-wallet-7.07-prod,FileAdapter,FileAdapter,Structurer,wallet.ui.backup,wallet.ui.backup.FileAdapter
+bitcoin-wallet-7.07-prod,ImportDialogButtonEnablerListener,ImportDialogButtonEnablerListener,Service Provider,wallet.ui.backup,wallet.ui.backup.ImportDialogButtonEnablerListener
+bitcoin-wallet-7.07-prod,RestoreWalletDialogFragment,RestoreWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletDialogFragment$FailureDialogFragment,RestoreWalletDialogFragment$FailureDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletDialogFragment$PermissionDeniedDialogFragment,RestoreWalletDialogFragment$PermissionDeniedDialogFragment,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletDialogFragment$SuccessDialogFragment,RestoreWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletFromExternalActivity,RestoreWalletFromExternalActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalActivity
+bitcoin-wallet-7.07-prod,RestoreWalletFromExternalDialogFragment,RestoreWalletFromExternalDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletFromExternalDialogFragment$FailureDialogFragment,RestoreWalletFromExternalDialogFragment$FailureDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletFromExternalDialogFragment$SuccessDialogFragment,RestoreWalletFromExternalDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.07-prod,RestoreWalletViewModel,RestoreWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.RestoreWalletViewModel
+bitcoin-wallet-7.07-prod,BlockListAdapter,BlockListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter
+bitcoin-wallet-7.07-prod,BlockListAdapter$ListItem,BlockListAdapter$ListItem,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ListItem
+bitcoin-wallet-7.07-prod,BlockListAdapter$OnClickListener,BlockListAdapter$OnClickListener,Service Provider,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$OnClickListener
+bitcoin-wallet-7.07-prod,BlockListAdapter$ViewHolder,BlockListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ViewHolder
+bitcoin-wallet-7.07-prod,BlockListFragment,BlockListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.BlockListFragment
+bitcoin-wallet-7.07-prod,BlockListViewModel,BlockListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel
+bitcoin-wallet-7.07-prod,BlockListViewModel$BlocksLiveData,BlockListViewModel$BlocksLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$BlocksLiveData
+bitcoin-wallet-7.07-prod,BlockListViewModel$TransactionsLiveData,BlockListViewModel$TransactionsLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$TransactionsLiveData
+bitcoin-wallet-7.07-prod,NetworkMonitorActivity,NetworkMonitorActivity,Interfacer,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity
+bitcoin-wallet-7.07-prod,NetworkMonitorActivity$PagerAdapter,NetworkMonitorActivity$PagerAdapter,Information Holder,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter
+bitcoin-wallet-7.07-prod,PeerListAdapter,PeerListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter
+bitcoin-wallet-7.07-prod,PeerListAdapter$ListItem,PeerListAdapter$ListItem,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ListItem
+bitcoin-wallet-7.07-prod,PeerListAdapter$ViewHolder,PeerListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ViewHolder
+bitcoin-wallet-7.07-prod,PeerListFragment,PeerListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.PeerListFragment
+bitcoin-wallet-7.07-prod,PeerListViewModel,PeerListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel
+bitcoin-wallet-7.07-prod,PeerListViewModel$HostnamesLiveData,PeerListViewModel$HostnamesLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$HostnamesLiveData
+bitcoin-wallet-7.07-prod,PeerListViewModel$PeersLiveData,PeerListViewModel$PeersLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$PeersLiveData
+bitcoin-wallet-7.07-prod,AboutFragment,AboutFragment,Coordinator,wallet.ui.preference,wallet.ui.preference.AboutFragment
+bitcoin-wallet-7.07-prod,DiagnosticsFragment,DiagnosticsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.DiagnosticsFragment
+bitcoin-wallet-7.07-prod,ExtendedPublicKeyFragment,ExtendedPublicKeyFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.ExtendedPublicKeyFragment
+bitcoin-wallet-7.07-prod,PreferenceActivity,PreferenceActivity,Service Provider,wallet.ui.preference,wallet.ui.preference.PreferenceActivity
+bitcoin-wallet-7.07-prod,ResolveDnsTask,ResolveDnsTask,Service Provider,wallet.ui.preference,wallet.ui.preference.ResolveDnsTask
+bitcoin-wallet-7.07-prod,SettingsFragment,SettingsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.SettingsFragment
+bitcoin-wallet-7.07-prod,CameraManager,CameraManager,Information Holder,wallet.ui.scan,wallet.ui.scan.CameraManager
+bitcoin-wallet-7.07-prod,ScanActivity,ScanActivity,Interfacer,wallet.ui.scan,wallet.ui.scan.ScanActivity
+bitcoin-wallet-7.07-prod,ScanActivity$AutoFocusRunnable,ScanActivity$AutoFocusRunnable,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$AutoFocusRunnable
+bitcoin-wallet-7.07-prod,ScanActivity$WarnDialogFragment,ScanActivity$WarnDialogFragment,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$WarnDialogFragment
+bitcoin-wallet-7.07-prod,ScanViewModel,ScanViewModel,Information Holder,wallet.ui.scan,wallet.ui.scan.ScanViewModel
+bitcoin-wallet-7.07-prod,ScannerView,ScannerView,Interfacer,wallet.ui.scan,wallet.ui.scan.ScannerView
+bitcoin-wallet-7.07-prod,DecodePrivateKeyTask,DecodePrivateKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DecodePrivateKeyTask
+bitcoin-wallet-7.07-prod,DeriveKeyTask,DeriveKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DeriveKeyTask
+bitcoin-wallet-7.07-prod,FeeCategory,FeeCategory,Information Holder,wallet.ui.send,wallet.ui.send.FeeCategory
+bitcoin-wallet-7.07-prod,MaintenanceDialogFragment,MaintenanceDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment
+bitcoin-wallet-7.07-prod,MaintenanceDialogFragment$State,MaintenanceDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment$State
+bitcoin-wallet-7.07-prod,RaiseFeeDialogFragment,RaiseFeeDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment
+bitcoin-wallet-7.07-prod,RaiseFeeDialogFragment$State,RaiseFeeDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment$State
+bitcoin-wallet-7.07-prod,RaiseFeeViewModel,RaiseFeeViewModel,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeViewModel
+bitcoin-wallet-7.07-prod,RequestPaymentRequestTask,RequestPaymentRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask
+bitcoin-wallet-7.07-prod,RequestPaymentRequestTask$BluetoothRequestTask,RequestPaymentRequestTask$BluetoothRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask
+bitcoin-wallet-7.07-prod,RequestPaymentRequestTask$HttpRequestTask,RequestPaymentRequestTask$HttpRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask
+bitcoin-wallet-7.07-prod,RequestPaymentRequestTask$ResultCallback,RequestPaymentRequestTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$ResultCallback
+bitcoin-wallet-7.07-prod,RequestWalletBalanceTask,RequestWalletBalanceTask,Interfacer,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask
+bitcoin-wallet-7.07-prod,RequestWalletBalanceTask$ElectrumServer,RequestWalletBalanceTask$ElectrumServer,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$ElectrumServer
+bitcoin-wallet-7.07-prod,RequestWalletBalanceTask$JsonRpcRequest,RequestWalletBalanceTask$JsonRpcRequest,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest
+bitcoin-wallet-7.07-prod,RequestWalletBalanceTask$JsonRpcResponse,RequestWalletBalanceTask$JsonRpcResponse,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse
+bitcoin-wallet-7.07-prod,RequestWalletBalanceTask$ResultCallback,RequestWalletBalanceTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$ResultCallback
+bitcoin-wallet-7.07-prod,SendCoinsActivity,SendCoinsActivity,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsActivity
+bitcoin-wallet-7.07-prod,SendCoinsActivityViewModel,SendCoinsActivityViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsActivityViewModel
+bitcoin-wallet-7.07-prod,SendCoinsFragment,SendCoinsFragment,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsFragment
+bitcoin-wallet-7.07-prod,SendCoinsFragment$ReceivingAddressListener,SendCoinsFragment$ReceivingAddressListener,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressListener
+bitcoin-wallet-7.07-prod,SendCoinsFragment$ReceivingAddressViewAdapter,SendCoinsFragment$ReceivingAddressViewAdapter,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter
+bitcoin-wallet-7.07-prod,SendCoinsOfflineTask,SendCoinsOfflineTask,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsOfflineTask
+bitcoin-wallet-7.07-prod,SendCoinsViewModel,SendCoinsViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel
+bitcoin-wallet-7.07-prod,SendCoinsViewModel$State,SendCoinsViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel$State
+bitcoin-wallet-7.07-prod,SweepWalletActivity,SweepWalletActivity,Service Provider,wallet.ui.send,wallet.ui.send.SweepWalletActivity
+bitcoin-wallet-7.07-prod,SweepWalletFragment,SweepWalletFragment,Interfacer,wallet.ui.send,wallet.ui.send.SweepWalletFragment
+bitcoin-wallet-7.07-prod,SweepWalletFragment$FakeTransaction,SweepWalletFragment$FakeTransaction,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletFragment$FakeTransaction
+bitcoin-wallet-7.07-prod,SweepWalletViewModel,SweepWalletViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel
+bitcoin-wallet-7.07-prod,SweepWalletViewModel$State,SweepWalletViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel$State
+bitcoin-wallet-7.07-prod,Base43,Base43,Service Provider,wallet.util,wallet.util.Base43
+bitcoin-wallet-7.07-prod,Bluetooth,Bluetooth,Service Provider,wallet.util,wallet.util.Bluetooth
+bitcoin-wallet-7.07-prod,CheatSheet,CheatSheet,Service Provider,wallet.util,wallet.util.CheatSheet
+bitcoin-wallet-7.07-prod,CrashReporter,CrashReporter,Service Provider,wallet.util,wallet.util.CrashReporter
+bitcoin-wallet-7.07-prod,CrashReporter$ExceptionHandler,CrashReporter$ExceptionHandler,Service Provider,wallet.util,wallet.util.CrashReporter$ExceptionHandler
+bitcoin-wallet-7.07-prod,Crypto,Crypto,Service Provider,wallet.util,wallet.util.Crypto
+bitcoin-wallet-7.07-prod,Formats,Formats,Service Provider,wallet.util,wallet.util.Formats
+bitcoin-wallet-7.07-prod,GenericUtils,GenericUtils,Service Provider,wallet.util,wallet.util.GenericUtils
+bitcoin-wallet-7.07-prod,Installer,Installer,Service Provider,wallet.util,wallet.util.Installer
+bitcoin-wallet-7.07-prod,Iso8601Format,Iso8601Format,Service Provider,wallet.util,wallet.util.Iso8601Format
+bitcoin-wallet-7.07-prod,MonetarySpannable,MonetarySpannable,Service Provider,wallet.util,wallet.util.MonetarySpannable
+bitcoin-wallet-7.07-prod,Nfc,Nfc,Service Provider,wallet.util,wallet.util.Nfc
+bitcoin-wallet-7.07-prod,OnFirstPreDraw,OnFirstPreDraw,Service Provider,wallet.util,wallet.util.OnFirstPreDraw
+bitcoin-wallet-7.07-prod,OnFirstPreDraw$Callback,OnFirstPreDraw$Callback,Service Provider,wallet.util,wallet.util.OnFirstPreDraw$Callback
+bitcoin-wallet-7.07-prod,Qr,Qr,Service Provider,wallet.util,wallet.util.Qr
+bitcoin-wallet-7.07-prod,Toast,Toast,Service Provider,wallet.util,wallet.util.Toast
+bitcoin-wallet-7.07-prod,ViewPagerTabs,ViewPagerTabs,Interfacer,wallet.util,wallet.util.ViewPagerTabs
+bitcoin-wallet-7.07-prod,WalletUtils,WalletUtils,Service Provider,wallet.util,wallet.util.WalletUtils
+bitcoin-wallet-7.07-prod,WalletUtils$MonospaceSpan,WalletUtils$MonospaceSpan,Service Provider,wallet.util,wallet.util.WalletUtils$MonospaceSpan
+bitcoin-wallet-7.07-prod,WholeStringBuilder,WholeStringBuilder,Service Provider,wallet.util,wallet.util.WholeStringBuilder
+bitcoin-wallet-7.07-prod,data,wallet.data,,wallet,wallet.data
+bitcoin-wallet-7.07-prod,offline,wallet.offline,,wallet,wallet.offline
+bitcoin-wallet-7.07-prod,service,wallet.service,,wallet,wallet.service
+bitcoin-wallet-7.07-prod,wallet,wallet,,,wallet
+bitcoin-wallet-7.07-prod,scan,wallet.ui.scan,,wallet.ui,wallet.ui.scan
+bitcoin-wallet-7.07-prod,preference,wallet.ui.preference,,wallet.ui,wallet.ui.preference
+bitcoin-wallet-7.07-prod,send,wallet.ui.send,,wallet.ui,wallet.ui.send
+bitcoin-wallet-7.07-prod,util,wallet.util,,wallet,wallet.util
+bitcoin-wallet-7.07-prod,backup,wallet.ui.backup,,wallet.ui,wallet.ui.backup
+bitcoin-wallet-7.07-prod,sample,wallet.integration.sample,,wallet.integration,wallet.integration.sample
+bitcoin-wallet-7.07-prod,ui,wallet.ui,,wallet,wallet.ui
+bitcoin-wallet-7.07-prod,monitor,wallet.ui.monitor,,wallet.ui,wallet.ui.monitor
+bitcoin-wallet-7.07-prod,android,wallet.integration.android,,wallet.integration,wallet.integration.android
+version,label,name,role,parent,full
+bitcoin-wallet-7.12-prod,Configuration,Configuration,Information Holder,wallet,wallet.Configuration
+bitcoin-wallet-7.12-prod,Constants,Constants,Information Holder,wallet,wallet.Constants
+bitcoin-wallet-7.12-prod,Constants$Files,Constants$Files,Information Holder,wallet,wallet.Constants$Files
+bitcoin-wallet-7.12-prod,Logging,Logging,Service Provider,wallet,wallet.Logging
+bitcoin-wallet-7.12-prod,WalletApplication,WalletApplication,Controller,wallet,wallet.WalletApplication
+bitcoin-wallet-7.12-prod,WalletApplication$OnWalletLoadedListener,WalletApplication$OnWalletLoadedListener,Service Provider,wallet,wallet.WalletApplication$OnWalletLoadedListener
+bitcoin-wallet-7.12-prod,WalletBalanceWidgetProvider,WalletBalanceWidgetProvider,Interfacer,wallet,wallet.WalletBalanceWidgetProvider
+bitcoin-wallet-7.12-prod,AbstractWalletLiveData,AbstractWalletLiveData,Information Holder,wallet.data,wallet.data.AbstractWalletLiveData
+bitcoin-wallet-7.12-prod,AddressBookDao,AddressBookDao,Service Provider,wallet.data,wallet.data.AddressBookDao
+bitcoin-wallet-7.12-prod,AddressBookEntry,AddressBookEntry,Information Holder,wallet.data,wallet.data.AddressBookEntry
+bitcoin-wallet-7.12-prod,AppDatabase,AppDatabase,Information Holder,wallet.data,wallet.data.AppDatabase
+bitcoin-wallet-7.12-prod,BlockchainStateLiveData,BlockchainStateLiveData,Information Holder,wallet.data,wallet.data.BlockchainStateLiveData
+bitcoin-wallet-7.12-prod,ConfigFormatLiveData,ConfigFormatLiveData,Information Holder,wallet.data,wallet.data.ConfigFormatLiveData
+bitcoin-wallet-7.12-prod,ConfigOwnNameLiveData,ConfigOwnNameLiveData,Information Holder,wallet.data,wallet.data.ConfigOwnNameLiveData
+bitcoin-wallet-7.12-prod,DynamicFeeLiveData,DynamicFeeLiveData,Structurer,wallet.data,wallet.data.DynamicFeeLiveData
+bitcoin-wallet-7.12-prod,ExchangeRate,ExchangeRate,Information Holder,wallet.data,wallet.data.ExchangeRate
+bitcoin-wallet-7.12-prod,ExchangeRatesProvider,ExchangeRatesProvider,Service Provider,wallet.data,wallet.data.ExchangeRatesProvider
+bitcoin-wallet-7.12-prod,PaymentIntent,PaymentIntent,Structurer,wallet.data,wallet.data.PaymentIntent
+bitcoin-wallet-7.12-prod,PaymentIntent$Output,PaymentIntent$Output,Coordinator,wallet.data,wallet.data.PaymentIntent$Output
+bitcoin-wallet-7.12-prod,PaymentIntent$Standard,PaymentIntent$Standard,Information Holder,wallet.data,wallet.data.PaymentIntent$Standard
+bitcoin-wallet-7.12-prod,SelectedExchangeRateLiveData,SelectedExchangeRateLiveData,Coordinator,wallet.data,wallet.data.SelectedExchangeRateLiveData
+bitcoin-wallet-7.12-prod,ThrottelingLiveData,ThrottelingLiveData,Information Holder,wallet.data,wallet.data.ThrottelingLiveData
+bitcoin-wallet-7.12-prod,TimeLiveData,TimeLiveData,Information Holder,wallet.data,wallet.data.TimeLiveData
+bitcoin-wallet-7.12-prod,WalletBalanceLiveData,WalletBalanceLiveData,Structurer,wallet.data,wallet.data.WalletBalanceLiveData
+bitcoin-wallet-7.12-prod,WalletBalanceLiveData$WalletListener,WalletBalanceLiveData$WalletListener,Service Provider,wallet.data,wallet.data.WalletBalanceLiveData$WalletListener
+bitcoin-wallet-7.12-prod,WalletLiveData,WalletLiveData,Service Provider,wallet.data,wallet.data.WalletLiveData
+bitcoin-wallet-7.12-prod,BitcoinIntegration,BitcoinIntegration,Controller,wallet.integration.android,wallet.integration.android.BitcoinIntegration
+bitcoin-wallet-7.12-prod,SampleActivity,SampleActivity,Interfacer,wallet.integration.sample,wallet.integration.sample.SampleActivity
+bitcoin-wallet-7.12-prod,AcceptBluetoothService,AcceptBluetoothService,Interfacer,wallet.offline,wallet.offline.AcceptBluetoothService
+bitcoin-wallet-7.12-prod,AcceptBluetoothThread,AcceptBluetoothThread,Coordinator,wallet.offline,wallet.offline.AcceptBluetoothThread
+bitcoin-wallet-7.12-prod,AcceptBluetoothThread$ClassicBluetoothThread,AcceptBluetoothThread$ClassicBluetoothThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread
+bitcoin-wallet-7.12-prod,AcceptBluetoothThread$PaymentProtocolThread,AcceptBluetoothThread$PaymentProtocolThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$PaymentProtocolThread
+bitcoin-wallet-7.12-prod,DirectPaymentTask,DirectPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask
+bitcoin-wallet-7.12-prod,DirectPaymentTask$BluetoothPaymentTask,DirectPaymentTask$BluetoothPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$BluetoothPaymentTask
+bitcoin-wallet-7.12-prod,DirectPaymentTask$HttpPaymentTask,DirectPaymentTask$HttpPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$HttpPaymentTask
+bitcoin-wallet-7.12-prod,DirectPaymentTask$ResultCallback,DirectPaymentTask$ResultCallback,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$ResultCallback
+bitcoin-wallet-7.12-prod,BlockchainService,BlockchainService,Interfacer,wallet.service,wallet.service.BlockchainService
+bitcoin-wallet-7.12-prod,BlockchainService$ImpedimentsLiveData,BlockchainService$ImpedimentsLiveData,Structurer,wallet.service,wallet.service.BlockchainService$ImpedimentsLiveData
+bitcoin-wallet-7.12-prod,BlockchainService$LocalBinder,BlockchainService$LocalBinder,Information Holder,wallet.service,wallet.service.BlockchainService$LocalBinder
+bitcoin-wallet-7.12-prod,BlockchainService$NewTransactionLiveData,BlockchainService$NewTransactionLiveData,Information Holder,wallet.service,wallet.service.BlockchainService$NewTransactionLiveData
+bitcoin-wallet-7.12-prod,BlockchainService$PeerConnectivityListener,BlockchainService$PeerConnectivityListener,Service Provider,wallet.service,wallet.service.BlockchainService$PeerConnectivityListener
+bitcoin-wallet-7.12-prod,BlockchainState,BlockchainState,Information Holder,wallet.service,wallet.service.BlockchainState
+bitcoin-wallet-7.12-prod,BlockchainState$Impediment,BlockchainState$Impediment,Information Holder,wallet.service,wallet.service.BlockchainState$Impediment
+bitcoin-wallet-7.12-prod,BootstrapReceiver,BootstrapReceiver,Service Provider,wallet.service,wallet.service.BootstrapReceiver
+bitcoin-wallet-7.12-prod,InactivityNotificationService,InactivityNotificationService,Interfacer,wallet.service,wallet.service.InactivityNotificationService
+bitcoin-wallet-7.12-prod,UpgradeWalletService,UpgradeWalletService,Coordinator,wallet.service,wallet.service.UpgradeWalletService
+bitcoin-wallet-7.12-prod,AbstractWalletActivity,AbstractWalletActivity,Coordinator,wallet.ui,wallet.ui.AbstractWalletActivity
+bitcoin-wallet-7.12-prod,AddressAndLabel,AddressAndLabel,Service Provider,wallet.ui,wallet.ui.AddressAndLabel
+bitcoin-wallet-7.12-prod,AddressBookActivity,AddressBookActivity,Coordinator,wallet.ui,wallet.ui.AddressBookActivity
+bitcoin-wallet-7.12-prod,AddressBookActivity$TwoFragmentAdapter,AddressBookActivity$TwoFragmentAdapter,Information Holder,wallet.ui,wallet.ui.AddressBookActivity$TwoFragmentAdapter
+bitcoin-wallet-7.12-prod,AlertDialogsFragment,AlertDialogsFragment,Interfacer,wallet.ui,wallet.ui.AlertDialogsFragment
+bitcoin-wallet-7.12-prod,AlertDialogsViewModel,AlertDialogsViewModel,Information Holder,wallet.ui,wallet.ui.AlertDialogsViewModel
+bitcoin-wallet-7.12-prod,BitmapFragment,BitmapFragment,Coordinator,wallet.ui,wallet.ui.BitmapFragment
+bitcoin-wallet-7.12-prod,CircularProgressView,CircularProgressView,Interfacer,wallet.ui,wallet.ui.CircularProgressView
+bitcoin-wallet-7.12-prod,CurrencyAmountView,CurrencyAmountView,Interfacer,wallet.ui,wallet.ui.CurrencyAmountView
+bitcoin-wallet-7.12-prod,CurrencyAmountView$Listener,CurrencyAmountView$Listener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$Listener
+bitcoin-wallet-7.12-prod,CurrencyAmountView$TextViewListener,CurrencyAmountView$TextViewListener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$TextViewListener
+bitcoin-wallet-7.12-prod,CurrencyCalculatorLink,CurrencyCalculatorLink,Information Holder,wallet.ui,wallet.ui.CurrencyCalculatorLink
+bitcoin-wallet-7.12-prod,CurrencySymbolDrawable,CurrencySymbolDrawable,Information Holder,wallet.ui,wallet.ui.CurrencySymbolDrawable
+bitcoin-wallet-7.12-prod,CurrencyTextView,CurrencyTextView,Interfacer,wallet.ui,wallet.ui.CurrencyTextView
+bitcoin-wallet-7.12-prod,DialogBuilder,DialogBuilder,Service Provider,wallet.ui,wallet.ui.DialogBuilder
+bitcoin-wallet-7.12-prod,DividerItemDecoration,DividerItemDecoration,Interfacer,wallet.ui,wallet.ui.DividerItemDecoration
+bitcoin-wallet-7.12-prod,EditAddressBookEntryFragment,EditAddressBookEntryFragment,Interfacer,wallet.ui,wallet.ui.EditAddressBookEntryFragment
+bitcoin-wallet-7.12-prod,EncryptKeysDialogFragment,EncryptKeysDialogFragment,Interfacer,wallet.ui,wallet.ui.EncryptKeysDialogFragment
+bitcoin-wallet-7.12-prod,EncryptKeysDialogFragment$State,EncryptKeysDialogFragment$State,Information Holder,wallet.ui,wallet.ui.EncryptKeysDialogFragment$State
+bitcoin-wallet-7.12-prod,Event,Event,Information Holder,wallet.ui,wallet.ui.Event
+bitcoin-wallet-7.12-prod,Event$Observer,Event$Observer,Service Provider,wallet.ui,wallet.ui.Event$Observer
+bitcoin-wallet-7.12-prod,ExchangeRatesActivity,ExchangeRatesActivity,Service Provider,wallet.ui,wallet.ui.ExchangeRatesActivity
+bitcoin-wallet-7.12-prod,ExchangeRatesAdapter,ExchangeRatesAdapter,Structurer,wallet.ui,wallet.ui.ExchangeRatesAdapter
+bitcoin-wallet-7.12-prod,ExchangeRatesAdapter$ListItem,ExchangeRatesAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ListItem
+bitcoin-wallet-7.12-prod,ExchangeRatesAdapter$OnClickListener,ExchangeRatesAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.ExchangeRatesAdapter$OnClickListener
+bitcoin-wallet-7.12-prod,ExchangeRatesAdapter$ViewHolder,ExchangeRatesAdapter$ViewHolder,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ViewHolder
+bitcoin-wallet-7.12-prod,ExchangeRatesFragment,ExchangeRatesFragment,Interfacer,wallet.ui,wallet.ui.ExchangeRatesFragment
+bitcoin-wallet-7.12-prod,ExchangeRatesViewModel,ExchangeRatesViewModel,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel
+bitcoin-wallet-7.12-prod,ExchangeRatesViewModel$ExchangeRatesLiveData,ExchangeRatesViewModel$ExchangeRatesLiveData,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData
+bitcoin-wallet-7.12-prod,FancyListFragment,FancyListFragment,Interfacer,wallet.ui,wallet.ui.FancyListFragment
+bitcoin-wallet-7.12-prod,HelpDialogFragment,HelpDialogFragment,Coordinator,wallet.ui,wallet.ui.HelpDialogFragment
+bitcoin-wallet-7.12-prod,InputParser,InputParser,Service Provider,wallet.ui,wallet.ui.InputParser
+bitcoin-wallet-7.12-prod,InputParser$BinaryInputParser,InputParser$BinaryInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$BinaryInputParser
+bitcoin-wallet-7.12-prod,InputParser$StreamInputParser,InputParser$StreamInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StreamInputParser
+bitcoin-wallet-7.12-prod,InputParser$StringInputParser,InputParser$StringInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StringInputParser
+bitcoin-wallet-7.12-prod,MaybeMaintenanceFragment,MaybeMaintenanceFragment,Coordinator,wallet.ui,wallet.ui.MaybeMaintenanceFragment
+bitcoin-wallet-7.12-prod,MaybeMaintenanceViewModel,MaybeMaintenanceViewModel,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel
+bitcoin-wallet-7.12-prod,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData
+bitcoin-wallet-7.12-prod,ProgressDialogFragment,ProgressDialogFragment,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment
+bitcoin-wallet-7.12-prod,ProgressDialogFragment$Observer,ProgressDialogFragment$Observer,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment$Observer
+bitcoin-wallet-7.12-prod,ReportIssueDialogBuilder,ReportIssueDialogBuilder,Service Provider,wallet.ui,wallet.ui.ReportIssueDialogBuilder
+bitcoin-wallet-7.12-prod,ReportIssueDialogFragment,ReportIssueDialogFragment,Interfacer,wallet.ui,wallet.ui.ReportIssueDialogFragment
+bitcoin-wallet-7.12-prod,ReportIssueViewModel,ReportIssueViewModel,Information Holder,wallet.ui,wallet.ui.ReportIssueViewModel
+bitcoin-wallet-7.12-prod,RequestCoinsActivity,RequestCoinsActivity,Coordinator,wallet.ui,wallet.ui.RequestCoinsActivity
+bitcoin-wallet-7.12-prod,RequestCoinsActivityViewModel,RequestCoinsActivityViewModel,Information Holder,wallet.ui,wallet.ui.RequestCoinsActivityViewModel
+bitcoin-wallet-7.12-prod,RequestCoinsFragment,RequestCoinsFragment,Interfacer,wallet.ui,wallet.ui.RequestCoinsFragment
+bitcoin-wallet-7.12-prod,RequestCoinsViewModel,RequestCoinsViewModel,Interfacer,wallet.ui,wallet.ui.RequestCoinsViewModel
+bitcoin-wallet-7.12-prod,RequestCoinsViewModel$FreshReceiveAddressLiveData,RequestCoinsViewModel$FreshReceiveAddressLiveData,Information Holder,wallet.ui,wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData
+bitcoin-wallet-7.12-prod,SendCoinsQrActivity,SendCoinsQrActivity,Interfacer,wallet.ui,wallet.ui.SendCoinsQrActivity
+bitcoin-wallet-7.12-prod,SendingAddressesFragment,SendingAddressesFragment,Interfacer,wallet.ui,wallet.ui.SendingAddressesFragment
+bitcoin-wallet-7.12-prod,SendingAddressesViewModel,SendingAddressesViewModel,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel
+bitcoin-wallet-7.12-prod,SendingAddressesViewModel$AddressesToExcludeLiveData,SendingAddressesViewModel$AddressesToExcludeLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData
+bitcoin-wallet-7.12-prod,SendingAddressesViewModel$ClipLiveData,SendingAddressesViewModel$ClipLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$ClipLiveData
+bitcoin-wallet-7.12-prod,ShowPasswordCheckListener,ShowPasswordCheckListener,Service Provider,wallet.ui,wallet.ui.ShowPasswordCheckListener
+bitcoin-wallet-7.12-prod,StickToTopLinearLayoutManager,StickToTopLinearLayoutManager,Service Provider,wallet.ui,wallet.ui.StickToTopLinearLayoutManager
+bitcoin-wallet-7.12-prod,TransactionsAdapter,TransactionsAdapter,Controller,wallet.ui,wallet.ui.TransactionsAdapter
+bitcoin-wallet-7.12-prod,TransactionsAdapter$ChangeType,TransactionsAdapter$ChangeType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ChangeType
+bitcoin-wallet-7.12-prod,TransactionsAdapter$ItemAnimator,TransactionsAdapter$ItemAnimator,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$ItemAnimator
+bitcoin-wallet-7.12-prod,TransactionsAdapter$ListItem,TransactionsAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ListItem
+bitcoin-wallet-7.12-prod,TransactionsAdapter$OnClickListener,TransactionsAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$OnClickListener
+bitcoin-wallet-7.12-prod,TransactionsAdapter$TransactionViewHolder,TransactionsAdapter$TransactionViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$TransactionViewHolder
+bitcoin-wallet-7.12-prod,TransactionsAdapter$WarningType,TransactionsAdapter$WarningType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningType
+bitcoin-wallet-7.12-prod,TransactionsAdapter$WarningViewHolder,TransactionsAdapter$WarningViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningViewHolder
+bitcoin-wallet-7.12-prod,WalletActionsFragment,WalletActionsFragment,Coordinator,wallet.ui,wallet.ui.WalletActionsFragment
+bitcoin-wallet-7.12-prod,WalletActivity,WalletActivity,Interfacer,wallet.ui,wallet.ui.WalletActivity
+bitcoin-wallet-7.12-prod,WalletActivity$QuickReturnBehavior,WalletActivity$QuickReturnBehavior,Service Provider,wallet.ui,wallet.ui.WalletActivity$QuickReturnBehavior
+bitcoin-wallet-7.12-prod,WalletActivityViewModel,WalletActivityViewModel,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel
+bitcoin-wallet-7.12-prod,WalletActivityViewModel$EnterAnimationState,WalletActivityViewModel$EnterAnimationState,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$EnterAnimationState
+bitcoin-wallet-7.12-prod,WalletActivityViewModel$WalletEncryptedLiveData,WalletActivityViewModel$WalletEncryptedLiveData,Service Provider,wallet.ui,wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData
+bitcoin-wallet-7.12-prod,WalletActivityViewModel$WalletLegacyFallbackLiveData,WalletActivityViewModel$WalletLegacyFallbackLiveData,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData
+bitcoin-wallet-7.12-prod,WalletAddressDialogFragment,WalletAddressDialogFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressDialogFragment
+bitcoin-wallet-7.12-prod,WalletAddressFragment,WalletAddressFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressFragment
+bitcoin-wallet-7.12-prod,WalletAddressViewModel,WalletAddressViewModel,Service Provider,wallet.ui,wallet.ui.WalletAddressViewModel
+bitcoin-wallet-7.12-prod,WalletAddressViewModel$CurrentAddressLiveData,WalletAddressViewModel$CurrentAddressLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressViewModel$CurrentAddressLiveData
+bitcoin-wallet-7.12-prod,WalletAddressesAdapter,WalletAddressesAdapter,Structurer,wallet.ui,wallet.ui.WalletAddressesAdapter
+bitcoin-wallet-7.12-prod,WalletAddressesFragment,WalletAddressesFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressesFragment
+bitcoin-wallet-7.12-prod,WalletAddressesViewModel,WalletAddressesViewModel,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel
+bitcoin-wallet-7.12-prod,WalletAddressesViewModel$ImportedAddressesLiveData,WalletAddressesViewModel$ImportedAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData
+bitcoin-wallet-7.12-prod,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData
+bitcoin-wallet-7.12-prod,WalletBalanceFragment,WalletBalanceFragment,Interfacer,wallet.ui,wallet.ui.WalletBalanceFragment
+bitcoin-wallet-7.12-prod,WalletBalanceViewModel,WalletBalanceViewModel,Information Holder,wallet.ui,wallet.ui.WalletBalanceViewModel
+bitcoin-wallet-7.12-prod,WalletDisclaimerFragment,WalletDisclaimerFragment,Interfacer,wallet.ui,wallet.ui.WalletDisclaimerFragment
+bitcoin-wallet-7.12-prod,WalletDisclaimerViewModel,WalletDisclaimerViewModel,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel
+bitcoin-wallet-7.12-prod,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData
+bitcoin-wallet-7.12-prod,WalletTransactionsFragment,WalletTransactionsFragment,Interfacer,wallet.ui,wallet.ui.WalletTransactionsFragment
+bitcoin-wallet-7.12-prod,WalletTransactionsViewModel,WalletTransactionsViewModel,Interfacer,wallet.ui,wallet.ui.WalletTransactionsViewModel
+bitcoin-wallet-7.12-prod,WalletTransactionsViewModel$Direction,WalletTransactionsViewModel$Direction,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$Direction
+bitcoin-wallet-7.12-prod,WalletTransactionsViewModel$TransactionsConfidenceLiveData,WalletTransactionsViewModel$TransactionsConfidenceLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData
+bitcoin-wallet-7.12-prod,WalletTransactionsViewModel$TransactionsLiveData,WalletTransactionsViewModel$TransactionsLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsLiveData
+bitcoin-wallet-7.12-prod,BackupWalletActivity,BackupWalletActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.BackupWalletActivity
+bitcoin-wallet-7.12-prod,BackupWalletDialogFragment,BackupWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment
+bitcoin-wallet-7.12-prod,BackupWalletDialogFragment$ErrorDialogFragment,BackupWalletDialogFragment$ErrorDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment
+bitcoin-wallet-7.12-prod,BackupWalletDialogFragment$SuccessDialogFragment,BackupWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.12-prod,BackupWalletViewModel,BackupWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.BackupWalletViewModel
+bitcoin-wallet-7.12-prod,FileAdapter,FileAdapter,Structurer,wallet.ui.backup,wallet.ui.backup.FileAdapter
+bitcoin-wallet-7.12-prod,ImportDialogButtonEnablerListener,ImportDialogButtonEnablerListener,Service Provider,wallet.ui.backup,wallet.ui.backup.ImportDialogButtonEnablerListener
+bitcoin-wallet-7.12-prod,RestoreWalletDialogFragment,RestoreWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletDialogFragment$FailureDialogFragment,RestoreWalletDialogFragment$FailureDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletDialogFragment$PermissionDeniedDialogFragment,RestoreWalletDialogFragment$PermissionDeniedDialogFragment,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletDialogFragment$SuccessDialogFragment,RestoreWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletFromExternalActivity,RestoreWalletFromExternalActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalActivity
+bitcoin-wallet-7.12-prod,RestoreWalletFromExternalDialogFragment,RestoreWalletFromExternalDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletFromExternalDialogFragment$FailureDialogFragment,RestoreWalletFromExternalDialogFragment$FailureDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletFromExternalDialogFragment$SuccessDialogFragment,RestoreWalletFromExternalDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.12-prod,RestoreWalletViewModel,RestoreWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.RestoreWalletViewModel
+bitcoin-wallet-7.12-prod,BlockListAdapter,BlockListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter
+bitcoin-wallet-7.12-prod,BlockListAdapter$ListItem,BlockListAdapter$ListItem,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ListItem
+bitcoin-wallet-7.12-prod,BlockListAdapter$OnClickListener,BlockListAdapter$OnClickListener,Service Provider,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$OnClickListener
+bitcoin-wallet-7.12-prod,BlockListAdapter$ViewHolder,BlockListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ViewHolder
+bitcoin-wallet-7.12-prod,BlockListFragment,BlockListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.BlockListFragment
+bitcoin-wallet-7.12-prod,BlockListViewModel,BlockListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel
+bitcoin-wallet-7.12-prod,BlockListViewModel$BlocksLiveData,BlockListViewModel$BlocksLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$BlocksLiveData
+bitcoin-wallet-7.12-prod,BlockListViewModel$TransactionsLiveData,BlockListViewModel$TransactionsLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$TransactionsLiveData
+bitcoin-wallet-7.12-prod,NetworkMonitorActivity,NetworkMonitorActivity,Interfacer,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity
+bitcoin-wallet-7.12-prod,NetworkMonitorActivity$PagerAdapter,NetworkMonitorActivity$PagerAdapter,Information Holder,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter
+bitcoin-wallet-7.12-prod,PeerListAdapter,PeerListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter
+bitcoin-wallet-7.12-prod,PeerListAdapter$ListItem,PeerListAdapter$ListItem,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ListItem
+bitcoin-wallet-7.12-prod,PeerListAdapter$ViewHolder,PeerListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ViewHolder
+bitcoin-wallet-7.12-prod,PeerListFragment,PeerListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.PeerListFragment
+bitcoin-wallet-7.12-prod,PeerListViewModel,PeerListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel
+bitcoin-wallet-7.12-prod,PeerListViewModel$HostnamesLiveData,PeerListViewModel$HostnamesLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$HostnamesLiveData
+bitcoin-wallet-7.12-prod,PeerListViewModel$PeersLiveData,PeerListViewModel$PeersLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$PeersLiveData
+bitcoin-wallet-7.12-prod,AboutFragment,AboutFragment,Coordinator,wallet.ui.preference,wallet.ui.preference.AboutFragment
+bitcoin-wallet-7.12-prod,DiagnosticsFragment,DiagnosticsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.DiagnosticsFragment
+bitcoin-wallet-7.12-prod,ExtendedPublicKeyFragment,ExtendedPublicKeyFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.ExtendedPublicKeyFragment
+bitcoin-wallet-7.12-prod,PreferenceActivity,PreferenceActivity,Service Provider,wallet.ui.preference,wallet.ui.preference.PreferenceActivity
+bitcoin-wallet-7.12-prod,ResolveDnsTask,ResolveDnsTask,Service Provider,wallet.ui.preference,wallet.ui.preference.ResolveDnsTask
+bitcoin-wallet-7.12-prod,SettingsFragment,SettingsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.SettingsFragment
+bitcoin-wallet-7.12-prod,CameraManager,CameraManager,Information Holder,wallet.ui.scan,wallet.ui.scan.CameraManager
+bitcoin-wallet-7.12-prod,ScanActivity,ScanActivity,Interfacer,wallet.ui.scan,wallet.ui.scan.ScanActivity
+bitcoin-wallet-7.12-prod,ScanActivity$AutoFocusRunnable,ScanActivity$AutoFocusRunnable,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$AutoFocusRunnable
+bitcoin-wallet-7.12-prod,ScanActivity$WarnDialogFragment,ScanActivity$WarnDialogFragment,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$WarnDialogFragment
+bitcoin-wallet-7.12-prod,ScanViewModel,ScanViewModel,Information Holder,wallet.ui.scan,wallet.ui.scan.ScanViewModel
+bitcoin-wallet-7.12-prod,ScannerView,ScannerView,Interfacer,wallet.ui.scan,wallet.ui.scan.ScannerView
+bitcoin-wallet-7.12-prod,DecodePrivateKeyTask,DecodePrivateKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DecodePrivateKeyTask
+bitcoin-wallet-7.12-prod,DeriveKeyTask,DeriveKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DeriveKeyTask
+bitcoin-wallet-7.12-prod,FeeCategory,FeeCategory,Information Holder,wallet.ui.send,wallet.ui.send.FeeCategory
+bitcoin-wallet-7.12-prod,MaintenanceDialogFragment,MaintenanceDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment
+bitcoin-wallet-7.12-prod,MaintenanceDialogFragment$State,MaintenanceDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment$State
+bitcoin-wallet-7.12-prod,RaiseFeeDialogFragment,RaiseFeeDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment
+bitcoin-wallet-7.12-prod,RaiseFeeDialogFragment$State,RaiseFeeDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment$State
+bitcoin-wallet-7.12-prod,RaiseFeeViewModel,RaiseFeeViewModel,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeViewModel
+bitcoin-wallet-7.12-prod,RequestPaymentRequestTask,RequestPaymentRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask
+bitcoin-wallet-7.12-prod,RequestPaymentRequestTask$BluetoothRequestTask,RequestPaymentRequestTask$BluetoothRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask
+bitcoin-wallet-7.12-prod,RequestPaymentRequestTask$HttpRequestTask,RequestPaymentRequestTask$HttpRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask
+bitcoin-wallet-7.12-prod,RequestPaymentRequestTask$ResultCallback,RequestPaymentRequestTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$ResultCallback
+bitcoin-wallet-7.12-prod,RequestWalletBalanceTask,RequestWalletBalanceTask,Interfacer,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask
+bitcoin-wallet-7.12-prod,RequestWalletBalanceTask$ElectrumServer,RequestWalletBalanceTask$ElectrumServer,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$ElectrumServer
+bitcoin-wallet-7.12-prod,RequestWalletBalanceTask$JsonRpcRequest,RequestWalletBalanceTask$JsonRpcRequest,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest
+bitcoin-wallet-7.12-prod,RequestWalletBalanceTask$JsonRpcResponse,RequestWalletBalanceTask$JsonRpcResponse,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse
+bitcoin-wallet-7.12-prod,RequestWalletBalanceTask$ResultCallback,RequestWalletBalanceTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$ResultCallback
+bitcoin-wallet-7.12-prod,SendCoinsActivity,SendCoinsActivity,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsActivity
+bitcoin-wallet-7.12-prod,SendCoinsActivityViewModel,SendCoinsActivityViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsActivityViewModel
+bitcoin-wallet-7.12-prod,SendCoinsFragment,SendCoinsFragment,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsFragment
+bitcoin-wallet-7.12-prod,SendCoinsFragment$ReceivingAddressListener,SendCoinsFragment$ReceivingAddressListener,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressListener
+bitcoin-wallet-7.12-prod,SendCoinsFragment$ReceivingAddressViewAdapter,SendCoinsFragment$ReceivingAddressViewAdapter,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter
+bitcoin-wallet-7.12-prod,SendCoinsOfflineTask,SendCoinsOfflineTask,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsOfflineTask
+bitcoin-wallet-7.12-prod,SendCoinsViewModel,SendCoinsViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel
+bitcoin-wallet-7.12-prod,SendCoinsViewModel$State,SendCoinsViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel$State
+bitcoin-wallet-7.12-prod,SweepWalletActivity,SweepWalletActivity,Service Provider,wallet.ui.send,wallet.ui.send.SweepWalletActivity
+bitcoin-wallet-7.12-prod,SweepWalletFragment,SweepWalletFragment,Interfacer,wallet.ui.send,wallet.ui.send.SweepWalletFragment
+bitcoin-wallet-7.12-prod,SweepWalletFragment$FakeTransaction,SweepWalletFragment$FakeTransaction,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletFragment$FakeTransaction
+bitcoin-wallet-7.12-prod,SweepWalletViewModel,SweepWalletViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel
+bitcoin-wallet-7.12-prod,SweepWalletViewModel$State,SweepWalletViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel$State
+bitcoin-wallet-7.12-prod,Assets,Assets,Service Provider,wallet.util,wallet.util.Assets
+bitcoin-wallet-7.12-prod,Base43,Base43,Service Provider,wallet.util,wallet.util.Base43
+bitcoin-wallet-7.12-prod,Bluetooth,Bluetooth,Service Provider,wallet.util,wallet.util.Bluetooth
+bitcoin-wallet-7.12-prod,CheatSheet,CheatSheet,Service Provider,wallet.util,wallet.util.CheatSheet
+bitcoin-wallet-7.12-prod,CrashReporter,CrashReporter,Service Provider,wallet.util,wallet.util.CrashReporter
+bitcoin-wallet-7.12-prod,CrashReporter$ExceptionHandler,CrashReporter$ExceptionHandler,Service Provider,wallet.util,wallet.util.CrashReporter$ExceptionHandler
+bitcoin-wallet-7.12-prod,Crypto,Crypto,Service Provider,wallet.util,wallet.util.Crypto
+bitcoin-wallet-7.12-prod,Formats,Formats,Service Provider,wallet.util,wallet.util.Formats
+bitcoin-wallet-7.12-prod,GenericUtils,GenericUtils,Service Provider,wallet.util,wallet.util.GenericUtils
+bitcoin-wallet-7.12-prod,Installer,Installer,Service Provider,wallet.util,wallet.util.Installer
+bitcoin-wallet-7.12-prod,Iso8601Format,Iso8601Format,Service Provider,wallet.util,wallet.util.Iso8601Format
+bitcoin-wallet-7.12-prod,MonetarySpannable,MonetarySpannable,Service Provider,wallet.util,wallet.util.MonetarySpannable
+bitcoin-wallet-7.12-prod,Nfc,Nfc,Service Provider,wallet.util,wallet.util.Nfc
+bitcoin-wallet-7.12-prod,OnFirstPreDraw,OnFirstPreDraw,Service Provider,wallet.util,wallet.util.OnFirstPreDraw
+bitcoin-wallet-7.12-prod,OnFirstPreDraw$Callback,OnFirstPreDraw$Callback,Service Provider,wallet.util,wallet.util.OnFirstPreDraw$Callback
+bitcoin-wallet-7.12-prod,Qr,Qr,Service Provider,wallet.util,wallet.util.Qr
+bitcoin-wallet-7.12-prod,Toast,Toast,Service Provider,wallet.util,wallet.util.Toast
+bitcoin-wallet-7.12-prod,ViewPagerTabs,ViewPagerTabs,Interfacer,wallet.util,wallet.util.ViewPagerTabs
+bitcoin-wallet-7.12-prod,WalletUtils,WalletUtils,Service Provider,wallet.util,wallet.util.WalletUtils
+bitcoin-wallet-7.12-prod,WalletUtils$MonospaceSpan,WalletUtils$MonospaceSpan,Service Provider,wallet.util,wallet.util.WalletUtils$MonospaceSpan
+bitcoin-wallet-7.12-prod,WholeStringBuilder,WholeStringBuilder,Service Provider,wallet.util,wallet.util.WholeStringBuilder
+bitcoin-wallet-7.12-prod,data,wallet.data,,wallet,wallet.data
+bitcoin-wallet-7.12-prod,offline,wallet.offline,,wallet,wallet.offline
+bitcoin-wallet-7.12-prod,service,wallet.service,,wallet,wallet.service
+bitcoin-wallet-7.12-prod,wallet,wallet,,,wallet
+bitcoin-wallet-7.12-prod,scan,wallet.ui.scan,,wallet.ui,wallet.ui.scan
+bitcoin-wallet-7.12-prod,preference,wallet.ui.preference,,wallet.ui,wallet.ui.preference
+bitcoin-wallet-7.12-prod,send,wallet.ui.send,,wallet.ui,wallet.ui.send
+bitcoin-wallet-7.12-prod,util,wallet.util,,wallet,wallet.util
+bitcoin-wallet-7.12-prod,backup,wallet.ui.backup,,wallet.ui,wallet.ui.backup
+bitcoin-wallet-7.12-prod,sample,wallet.integration.sample,,wallet.integration,wallet.integration.sample
+bitcoin-wallet-7.12-prod,ui,wallet.ui,,wallet,wallet.ui
+bitcoin-wallet-7.12-prod,monitor,wallet.ui.monitor,,wallet.ui,wallet.ui.monitor
+bitcoin-wallet-7.12-prod,android,wallet.integration.android,,wallet.integration,wallet.integration.android
+version,label,name,role,parent,full
+bitcoin-wallet-7.22-prod,Configuration,Configuration,Information Holder,wallet,wallet.Configuration
+bitcoin-wallet-7.22-prod,Constants,Constants,Information Holder,wallet,wallet.Constants
+bitcoin-wallet-7.22-prod,Constants$Files,Constants$Files,Information Holder,wallet,wallet.Constants$Files
+bitcoin-wallet-7.22-prod,Logging,Logging,Service Provider,wallet,wallet.Logging
+bitcoin-wallet-7.22-prod,WalletApplication,WalletApplication,Controller,wallet,wallet.WalletApplication
+bitcoin-wallet-7.22-prod,WalletApplication$OnWalletLoadedListener,WalletApplication$OnWalletLoadedListener,Service Provider,wallet,wallet.WalletApplication$OnWalletLoadedListener
+bitcoin-wallet-7.22-prod,WalletBalanceWidgetProvider,WalletBalanceWidgetProvider,Interfacer,wallet,wallet.WalletBalanceWidgetProvider
+bitcoin-wallet-7.22-prod,AbstractWalletLiveData,AbstractWalletLiveData,Information Holder,wallet.data,wallet.data.AbstractWalletLiveData
+bitcoin-wallet-7.22-prod,AddressBookDao,AddressBookDao,Service Provider,wallet.data,wallet.data.AddressBookDao
+bitcoin-wallet-7.22-prod,AddressBookEntry,AddressBookEntry,Information Holder,wallet.data,wallet.data.AddressBookEntry
+bitcoin-wallet-7.22-prod,AppDatabase,AppDatabase,Information Holder,wallet.data,wallet.data.AppDatabase
+bitcoin-wallet-7.22-prod,BlockchainStateLiveData,BlockchainStateLiveData,Information Holder,wallet.data,wallet.data.BlockchainStateLiveData
+bitcoin-wallet-7.22-prod,ConfigFormatLiveData,ConfigFormatLiveData,Information Holder,wallet.data,wallet.data.ConfigFormatLiveData
+bitcoin-wallet-7.22-prod,ConfigOwnNameLiveData,ConfigOwnNameLiveData,Information Holder,wallet.data,wallet.data.ConfigOwnNameLiveData
+bitcoin-wallet-7.22-prod,DynamicFeeLiveData,DynamicFeeLiveData,Structurer,wallet.data,wallet.data.DynamicFeeLiveData
+bitcoin-wallet-7.22-prod,ExchangeRate,ExchangeRate,Information Holder,wallet.data,wallet.data.ExchangeRate
+bitcoin-wallet-7.22-prod,ExchangeRatesProvider,ExchangeRatesProvider,Service Provider,wallet.data,wallet.data.ExchangeRatesProvider
+bitcoin-wallet-7.22-prod,PaymentIntent,PaymentIntent,Structurer,wallet.data,wallet.data.PaymentIntent
+bitcoin-wallet-7.22-prod,PaymentIntent$Output,PaymentIntent$Output,Coordinator,wallet.data,wallet.data.PaymentIntent$Output
+bitcoin-wallet-7.22-prod,PaymentIntent$Standard,PaymentIntent$Standard,Information Holder,wallet.data,wallet.data.PaymentIntent$Standard
+bitcoin-wallet-7.22-prod,SelectedExchangeRateLiveData,SelectedExchangeRateLiveData,Coordinator,wallet.data,wallet.data.SelectedExchangeRateLiveData
+bitcoin-wallet-7.22-prod,ThrottelingLiveData,ThrottelingLiveData,Information Holder,wallet.data,wallet.data.ThrottelingLiveData
+bitcoin-wallet-7.22-prod,TimeLiveData,TimeLiveData,Information Holder,wallet.data,wallet.data.TimeLiveData
+bitcoin-wallet-7.22-prod,WalletBalanceLiveData,WalletBalanceLiveData,Structurer,wallet.data,wallet.data.WalletBalanceLiveData
+bitcoin-wallet-7.22-prod,WalletBalanceLiveData$WalletListener,WalletBalanceLiveData$WalletListener,Service Provider,wallet.data,wallet.data.WalletBalanceLiveData$WalletListener
+bitcoin-wallet-7.22-prod,WalletLiveData,WalletLiveData,Service Provider,wallet.data,wallet.data.WalletLiveData
+bitcoin-wallet-7.22-prod,BitcoinIntegration,BitcoinIntegration,Controller,wallet.integration.android,wallet.integration.android.BitcoinIntegration
+bitcoin-wallet-7.22-prod,SampleActivity,SampleActivity,Interfacer,wallet.integration.sample,wallet.integration.sample.SampleActivity
+bitcoin-wallet-7.22-prod,AcceptBluetoothService,AcceptBluetoothService,Interfacer,wallet.offline,wallet.offline.AcceptBluetoothService
+bitcoin-wallet-7.22-prod,AcceptBluetoothThread,AcceptBluetoothThread,Coordinator,wallet.offline,wallet.offline.AcceptBluetoothThread
+bitcoin-wallet-7.22-prod,AcceptBluetoothThread$ClassicBluetoothThread,AcceptBluetoothThread$ClassicBluetoothThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread
+bitcoin-wallet-7.22-prod,AcceptBluetoothThread$PaymentProtocolThread,AcceptBluetoothThread$PaymentProtocolThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$PaymentProtocolThread
+bitcoin-wallet-7.22-prod,DirectPaymentTask,DirectPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask
+bitcoin-wallet-7.22-prod,DirectPaymentTask$BluetoothPaymentTask,DirectPaymentTask$BluetoothPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$BluetoothPaymentTask
+bitcoin-wallet-7.22-prod,DirectPaymentTask$HttpPaymentTask,DirectPaymentTask$HttpPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$HttpPaymentTask
+bitcoin-wallet-7.22-prod,DirectPaymentTask$ResultCallback,DirectPaymentTask$ResultCallback,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$ResultCallback
+bitcoin-wallet-7.22-prod,BlockchainService,BlockchainService,Interfacer,wallet.service,wallet.service.BlockchainService
+bitcoin-wallet-7.22-prod,BlockchainService$ImpedimentsLiveData,BlockchainService$ImpedimentsLiveData,Structurer,wallet.service,wallet.service.BlockchainService$ImpedimentsLiveData
+bitcoin-wallet-7.22-prod,BlockchainService$LocalBinder,BlockchainService$LocalBinder,Information Holder,wallet.service,wallet.service.BlockchainService$LocalBinder
+bitcoin-wallet-7.22-prod,BlockchainService$NewTransactionLiveData,BlockchainService$NewTransactionLiveData,Information Holder,wallet.service,wallet.service.BlockchainService$NewTransactionLiveData
+bitcoin-wallet-7.22-prod,BlockchainService$PeerConnectivityListener,BlockchainService$PeerConnectivityListener,Service Provider,wallet.service,wallet.service.BlockchainService$PeerConnectivityListener
+bitcoin-wallet-7.22-prod,BlockchainState,BlockchainState,Information Holder,wallet.service,wallet.service.BlockchainState
+bitcoin-wallet-7.22-prod,BlockchainState$Impediment,BlockchainState$Impediment,Information Holder,wallet.service,wallet.service.BlockchainState$Impediment
+bitcoin-wallet-7.22-prod,BootstrapReceiver,BootstrapReceiver,Service Provider,wallet.service,wallet.service.BootstrapReceiver
+bitcoin-wallet-7.22-prod,InactivityNotificationService,InactivityNotificationService,Interfacer,wallet.service,wallet.service.InactivityNotificationService
+bitcoin-wallet-7.22-prod,UpgradeWalletService,UpgradeWalletService,Coordinator,wallet.service,wallet.service.UpgradeWalletService
+bitcoin-wallet-7.22-prod,AbstractWalletActivity,AbstractWalletActivity,Coordinator,wallet.ui,wallet.ui.AbstractWalletActivity
+bitcoin-wallet-7.22-prod,AddressAndLabel,AddressAndLabel,Service Provider,wallet.ui,wallet.ui.AddressAndLabel
+bitcoin-wallet-7.22-prod,AddressBookActivity,AddressBookActivity,Coordinator,wallet.ui,wallet.ui.AddressBookActivity
+bitcoin-wallet-7.22-prod,AddressBookActivity$TwoFragmentAdapter,AddressBookActivity$TwoFragmentAdapter,Information Holder,wallet.ui,wallet.ui.AddressBookActivity$TwoFragmentAdapter
+bitcoin-wallet-7.22-prod,AlertDialogsFragment,AlertDialogsFragment,Interfacer,wallet.ui,wallet.ui.AlertDialogsFragment
+bitcoin-wallet-7.22-prod,AlertDialogsViewModel,AlertDialogsViewModel,Information Holder,wallet.ui,wallet.ui.AlertDialogsViewModel
+bitcoin-wallet-7.22-prod,BitmapFragment,BitmapFragment,Coordinator,wallet.ui,wallet.ui.BitmapFragment
+bitcoin-wallet-7.22-prod,CircularProgressView,CircularProgressView,Interfacer,wallet.ui,wallet.ui.CircularProgressView
+bitcoin-wallet-7.22-prod,CurrencyAmountView,CurrencyAmountView,Interfacer,wallet.ui,wallet.ui.CurrencyAmountView
+bitcoin-wallet-7.22-prod,CurrencyAmountView$Listener,CurrencyAmountView$Listener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$Listener
+bitcoin-wallet-7.22-prod,CurrencyAmountView$TextViewListener,CurrencyAmountView$TextViewListener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$TextViewListener
+bitcoin-wallet-7.22-prod,CurrencyCalculatorLink,CurrencyCalculatorLink,Information Holder,wallet.ui,wallet.ui.CurrencyCalculatorLink
+bitcoin-wallet-7.22-prod,CurrencySymbolDrawable,CurrencySymbolDrawable,Information Holder,wallet.ui,wallet.ui.CurrencySymbolDrawable
+bitcoin-wallet-7.22-prod,CurrencyTextView,CurrencyTextView,Interfacer,wallet.ui,wallet.ui.CurrencyTextView
+bitcoin-wallet-7.22-prod,DialogBuilder,DialogBuilder,Service Provider,wallet.ui,wallet.ui.DialogBuilder
+bitcoin-wallet-7.22-prod,DividerItemDecoration,DividerItemDecoration,Interfacer,wallet.ui,wallet.ui.DividerItemDecoration
+bitcoin-wallet-7.22-prod,EditAddressBookEntryFragment,EditAddressBookEntryFragment,Interfacer,wallet.ui,wallet.ui.EditAddressBookEntryFragment
+bitcoin-wallet-7.22-prod,EncryptKeysDialogFragment,EncryptKeysDialogFragment,Interfacer,wallet.ui,wallet.ui.EncryptKeysDialogFragment
+bitcoin-wallet-7.22-prod,EncryptKeysDialogFragment$State,EncryptKeysDialogFragment$State,Information Holder,wallet.ui,wallet.ui.EncryptKeysDialogFragment$State
+bitcoin-wallet-7.22-prod,Event,Event,Information Holder,wallet.ui,wallet.ui.Event
+bitcoin-wallet-7.22-prod,Event$Observer,Event$Observer,Service Provider,wallet.ui,wallet.ui.Event$Observer
+bitcoin-wallet-7.22-prod,ExchangeRatesActivity,ExchangeRatesActivity,Service Provider,wallet.ui,wallet.ui.ExchangeRatesActivity
+bitcoin-wallet-7.22-prod,ExchangeRatesAdapter,ExchangeRatesAdapter,Structurer,wallet.ui,wallet.ui.ExchangeRatesAdapter
+bitcoin-wallet-7.22-prod,ExchangeRatesAdapter$ListItem,ExchangeRatesAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ListItem
+bitcoin-wallet-7.22-prod,ExchangeRatesAdapter$OnClickListener,ExchangeRatesAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.ExchangeRatesAdapter$OnClickListener
+bitcoin-wallet-7.22-prod,ExchangeRatesAdapter$ViewHolder,ExchangeRatesAdapter$ViewHolder,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ViewHolder
+bitcoin-wallet-7.22-prod,ExchangeRatesFragment,ExchangeRatesFragment,Interfacer,wallet.ui,wallet.ui.ExchangeRatesFragment
+bitcoin-wallet-7.22-prod,ExchangeRatesViewModel,ExchangeRatesViewModel,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel
+bitcoin-wallet-7.22-prod,ExchangeRatesViewModel$ExchangeRatesLiveData,ExchangeRatesViewModel$ExchangeRatesLiveData,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData
+bitcoin-wallet-7.22-prod,FancyListFragment,FancyListFragment,Interfacer,wallet.ui,wallet.ui.FancyListFragment
+bitcoin-wallet-7.22-prod,HelpDialogFragment,HelpDialogFragment,Coordinator,wallet.ui,wallet.ui.HelpDialogFragment
+bitcoin-wallet-7.22-prod,InputParser,InputParser,Service Provider,wallet.ui,wallet.ui.InputParser
+bitcoin-wallet-7.22-prod,InputParser$BinaryInputParser,InputParser$BinaryInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$BinaryInputParser
+bitcoin-wallet-7.22-prod,InputParser$StreamInputParser,InputParser$StreamInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StreamInputParser
+bitcoin-wallet-7.22-prod,InputParser$StringInputParser,InputParser$StringInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StringInputParser
+bitcoin-wallet-7.22-prod,MaybeMaintenanceFragment,MaybeMaintenanceFragment,Coordinator,wallet.ui,wallet.ui.MaybeMaintenanceFragment
+bitcoin-wallet-7.22-prod,MaybeMaintenanceViewModel,MaybeMaintenanceViewModel,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel
+bitcoin-wallet-7.22-prod,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData
+bitcoin-wallet-7.22-prod,ProgressDialogFragment,ProgressDialogFragment,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment
+bitcoin-wallet-7.22-prod,ProgressDialogFragment$Observer,ProgressDialogFragment$Observer,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment$Observer
+bitcoin-wallet-7.22-prod,ReportIssueDialogBuilder,ReportIssueDialogBuilder,Service Provider,wallet.ui,wallet.ui.ReportIssueDialogBuilder
+bitcoin-wallet-7.22-prod,ReportIssueDialogFragment,ReportIssueDialogFragment,Interfacer,wallet.ui,wallet.ui.ReportIssueDialogFragment
+bitcoin-wallet-7.22-prod,ReportIssueViewModel,ReportIssueViewModel,Information Holder,wallet.ui,wallet.ui.ReportIssueViewModel
+bitcoin-wallet-7.22-prod,RequestCoinsActivity,RequestCoinsActivity,Coordinator,wallet.ui,wallet.ui.RequestCoinsActivity
+bitcoin-wallet-7.22-prod,RequestCoinsActivityViewModel,RequestCoinsActivityViewModel,Information Holder,wallet.ui,wallet.ui.RequestCoinsActivityViewModel
+bitcoin-wallet-7.22-prod,RequestCoinsFragment,RequestCoinsFragment,Interfacer,wallet.ui,wallet.ui.RequestCoinsFragment
+bitcoin-wallet-7.22-prod,RequestCoinsViewModel,RequestCoinsViewModel,Interfacer,wallet.ui,wallet.ui.RequestCoinsViewModel
+bitcoin-wallet-7.22-prod,RequestCoinsViewModel$FreshReceiveAddressLiveData,RequestCoinsViewModel$FreshReceiveAddressLiveData,Information Holder,wallet.ui,wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData
+bitcoin-wallet-7.22-prod,SendCoinsQrActivity,SendCoinsQrActivity,Interfacer,wallet.ui,wallet.ui.SendCoinsQrActivity
+bitcoin-wallet-7.22-prod,SendingAddressesFragment,SendingAddressesFragment,Interfacer,wallet.ui,wallet.ui.SendingAddressesFragment
+bitcoin-wallet-7.22-prod,SendingAddressesViewModel,SendingAddressesViewModel,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel
+bitcoin-wallet-7.22-prod,SendingAddressesViewModel$AddressesToExcludeLiveData,SendingAddressesViewModel$AddressesToExcludeLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData
+bitcoin-wallet-7.22-prod,SendingAddressesViewModel$ClipLiveData,SendingAddressesViewModel$ClipLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$ClipLiveData
+bitcoin-wallet-7.22-prod,ShowPasswordCheckListener,ShowPasswordCheckListener,Service Provider,wallet.ui,wallet.ui.ShowPasswordCheckListener
+bitcoin-wallet-7.22-prod,StickToTopLinearLayoutManager,StickToTopLinearLayoutManager,Service Provider,wallet.ui,wallet.ui.StickToTopLinearLayoutManager
+bitcoin-wallet-7.22-prod,TransactionsAdapter,TransactionsAdapter,Controller,wallet.ui,wallet.ui.TransactionsAdapter
+bitcoin-wallet-7.22-prod,TransactionsAdapter$ChangeType,TransactionsAdapter$ChangeType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ChangeType
+bitcoin-wallet-7.22-prod,TransactionsAdapter$ItemAnimator,TransactionsAdapter$ItemAnimator,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$ItemAnimator
+bitcoin-wallet-7.22-prod,TransactionsAdapter$ListItem,TransactionsAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ListItem
+bitcoin-wallet-7.22-prod,TransactionsAdapter$OnClickListener,TransactionsAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$OnClickListener
+bitcoin-wallet-7.22-prod,TransactionsAdapter$TransactionViewHolder,TransactionsAdapter$TransactionViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$TransactionViewHolder
+bitcoin-wallet-7.22-prod,TransactionsAdapter$WarningType,TransactionsAdapter$WarningType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningType
+bitcoin-wallet-7.22-prod,TransactionsAdapter$WarningViewHolder,TransactionsAdapter$WarningViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningViewHolder
+bitcoin-wallet-7.22-prod,WalletActionsFragment,WalletActionsFragment,Coordinator,wallet.ui,wallet.ui.WalletActionsFragment
+bitcoin-wallet-7.22-prod,WalletActivity,WalletActivity,Interfacer,wallet.ui,wallet.ui.WalletActivity
+bitcoin-wallet-7.22-prod,WalletActivity$QuickReturnBehavior,WalletActivity$QuickReturnBehavior,Service Provider,wallet.ui,wallet.ui.WalletActivity$QuickReturnBehavior
+bitcoin-wallet-7.22-prod,WalletActivityViewModel,WalletActivityViewModel,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel
+bitcoin-wallet-7.22-prod,WalletActivityViewModel$EnterAnimationState,WalletActivityViewModel$EnterAnimationState,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$EnterAnimationState
+bitcoin-wallet-7.22-prod,WalletActivityViewModel$WalletEncryptedLiveData,WalletActivityViewModel$WalletEncryptedLiveData,Service Provider,wallet.ui,wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData
+bitcoin-wallet-7.22-prod,WalletActivityViewModel$WalletLegacyFallbackLiveData,WalletActivityViewModel$WalletLegacyFallbackLiveData,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData
+bitcoin-wallet-7.22-prod,WalletAddressDialogFragment,WalletAddressDialogFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressDialogFragment
+bitcoin-wallet-7.22-prod,WalletAddressFragment,WalletAddressFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressFragment
+bitcoin-wallet-7.22-prod,WalletAddressViewModel,WalletAddressViewModel,Service Provider,wallet.ui,wallet.ui.WalletAddressViewModel
+bitcoin-wallet-7.22-prod,WalletAddressViewModel$CurrentAddressLiveData,WalletAddressViewModel$CurrentAddressLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressViewModel$CurrentAddressLiveData
+bitcoin-wallet-7.22-prod,WalletAddressesAdapter,WalletAddressesAdapter,Structurer,wallet.ui,wallet.ui.WalletAddressesAdapter
+bitcoin-wallet-7.22-prod,WalletAddressesFragment,WalletAddressesFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressesFragment
+bitcoin-wallet-7.22-prod,WalletAddressesViewModel,WalletAddressesViewModel,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel
+bitcoin-wallet-7.22-prod,WalletAddressesViewModel$ImportedAddressesLiveData,WalletAddressesViewModel$ImportedAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData
+bitcoin-wallet-7.22-prod,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData
+bitcoin-wallet-7.22-prod,WalletBalanceFragment,WalletBalanceFragment,Interfacer,wallet.ui,wallet.ui.WalletBalanceFragment
+bitcoin-wallet-7.22-prod,WalletBalanceViewModel,WalletBalanceViewModel,Information Holder,wallet.ui,wallet.ui.WalletBalanceViewModel
+bitcoin-wallet-7.22-prod,WalletDisclaimerFragment,WalletDisclaimerFragment,Interfacer,wallet.ui,wallet.ui.WalletDisclaimerFragment
+bitcoin-wallet-7.22-prod,WalletDisclaimerViewModel,WalletDisclaimerViewModel,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel
+bitcoin-wallet-7.22-prod,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData
+bitcoin-wallet-7.22-prod,WalletTransactionsFragment,WalletTransactionsFragment,Interfacer,wallet.ui,wallet.ui.WalletTransactionsFragment
+bitcoin-wallet-7.22-prod,WalletTransactionsViewModel,WalletTransactionsViewModel,Interfacer,wallet.ui,wallet.ui.WalletTransactionsViewModel
+bitcoin-wallet-7.22-prod,WalletTransactionsViewModel$Direction,WalletTransactionsViewModel$Direction,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$Direction
+bitcoin-wallet-7.22-prod,WalletTransactionsViewModel$TransactionsConfidenceLiveData,WalletTransactionsViewModel$TransactionsConfidenceLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData
+bitcoin-wallet-7.22-prod,WalletTransactionsViewModel$TransactionsLiveData,WalletTransactionsViewModel$TransactionsLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsLiveData
+bitcoin-wallet-7.22-prod,BackupWalletActivity,BackupWalletActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.BackupWalletActivity
+bitcoin-wallet-7.22-prod,BackupWalletDialogFragment,BackupWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment
+bitcoin-wallet-7.22-prod,BackupWalletDialogFragment$ErrorDialogFragment,BackupWalletDialogFragment$ErrorDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment
+bitcoin-wallet-7.22-prod,BackupWalletDialogFragment$SuccessDialogFragment,BackupWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.22-prod,BackupWalletViewModel,BackupWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.BackupWalletViewModel
+bitcoin-wallet-7.22-prod,FileAdapter,FileAdapter,Structurer,wallet.ui.backup,wallet.ui.backup.FileAdapter
+bitcoin-wallet-7.22-prod,ImportDialogButtonEnablerListener,ImportDialogButtonEnablerListener,Service Provider,wallet.ui.backup,wallet.ui.backup.ImportDialogButtonEnablerListener
+bitcoin-wallet-7.22-prod,RestoreWalletDialogFragment,RestoreWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletDialogFragment$FailureDialogFragment,RestoreWalletDialogFragment$FailureDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletDialogFragment$PermissionDeniedDialogFragment,RestoreWalletDialogFragment$PermissionDeniedDialogFragment,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$PermissionDeniedDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletDialogFragment$SuccessDialogFragment,RestoreWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletFromExternalActivity,RestoreWalletFromExternalActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalActivity
+bitcoin-wallet-7.22-prod,RestoreWalletFromExternalDialogFragment,RestoreWalletFromExternalDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletFromExternalDialogFragment$FailureDialogFragment,RestoreWalletFromExternalDialogFragment$FailureDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletFromExternalDialogFragment$SuccessDialogFragment,RestoreWalletFromExternalDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.22-prod,RestoreWalletViewModel,RestoreWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.RestoreWalletViewModel
+bitcoin-wallet-7.22-prod,BlockListAdapter,BlockListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter
+bitcoin-wallet-7.22-prod,BlockListAdapter$ListItem,BlockListAdapter$ListItem,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ListItem
+bitcoin-wallet-7.22-prod,BlockListAdapter$OnClickListener,BlockListAdapter$OnClickListener,Service Provider,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$OnClickListener
+bitcoin-wallet-7.22-prod,BlockListAdapter$ViewHolder,BlockListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ViewHolder
+bitcoin-wallet-7.22-prod,BlockListFragment,BlockListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.BlockListFragment
+bitcoin-wallet-7.22-prod,BlockListViewModel,BlockListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel
+bitcoin-wallet-7.22-prod,BlockListViewModel$BlocksLiveData,BlockListViewModel$BlocksLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$BlocksLiveData
+bitcoin-wallet-7.22-prod,BlockListViewModel$TransactionsLiveData,BlockListViewModel$TransactionsLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$TransactionsLiveData
+bitcoin-wallet-7.22-prod,NetworkMonitorActivity,NetworkMonitorActivity,Interfacer,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity
+bitcoin-wallet-7.22-prod,NetworkMonitorActivity$PagerAdapter,NetworkMonitorActivity$PagerAdapter,Information Holder,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter
+bitcoin-wallet-7.22-prod,PeerListAdapter,PeerListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter
+bitcoin-wallet-7.22-prod,PeerListAdapter$ListItem,PeerListAdapter$ListItem,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ListItem
+bitcoin-wallet-7.22-prod,PeerListAdapter$ViewHolder,PeerListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ViewHolder
+bitcoin-wallet-7.22-prod,PeerListFragment,PeerListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.PeerListFragment
+bitcoin-wallet-7.22-prod,PeerListViewModel,PeerListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel
+bitcoin-wallet-7.22-prod,PeerListViewModel$HostnamesLiveData,PeerListViewModel$HostnamesLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$HostnamesLiveData
+bitcoin-wallet-7.22-prod,PeerListViewModel$PeersLiveData,PeerListViewModel$PeersLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$PeersLiveData
+bitcoin-wallet-7.22-prod,AboutFragment,AboutFragment,Coordinator,wallet.ui.preference,wallet.ui.preference.AboutFragment
+bitcoin-wallet-7.22-prod,AboutFragment$ApkHashFragment,AboutFragment$ApkHashFragment,Service Provider,wallet.ui.preference,wallet.ui.preference.AboutFragment$ApkHashFragment
+bitcoin-wallet-7.22-prod,DiagnosticsFragment,DiagnosticsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.DiagnosticsFragment
+bitcoin-wallet-7.22-prod,ExtendedPublicKeyFragment,ExtendedPublicKeyFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.ExtendedPublicKeyFragment
+bitcoin-wallet-7.22-prod,PreferenceActivity,PreferenceActivity,Service Provider,wallet.ui.preference,wallet.ui.preference.PreferenceActivity
+bitcoin-wallet-7.22-prod,ResolveDnsTask,ResolveDnsTask,Service Provider,wallet.ui.preference,wallet.ui.preference.ResolveDnsTask
+bitcoin-wallet-7.22-prod,SettingsFragment,SettingsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.SettingsFragment
+bitcoin-wallet-7.22-prod,CameraManager,CameraManager,Information Holder,wallet.ui.scan,wallet.ui.scan.CameraManager
+bitcoin-wallet-7.22-prod,ScanActivity,ScanActivity,Interfacer,wallet.ui.scan,wallet.ui.scan.ScanActivity
+bitcoin-wallet-7.22-prod,ScanActivity$AutoFocusRunnable,ScanActivity$AutoFocusRunnable,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$AutoFocusRunnable
+bitcoin-wallet-7.22-prod,ScanActivity$WarnDialogFragment,ScanActivity$WarnDialogFragment,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$WarnDialogFragment
+bitcoin-wallet-7.22-prod,ScanViewModel,ScanViewModel,Information Holder,wallet.ui.scan,wallet.ui.scan.ScanViewModel
+bitcoin-wallet-7.22-prod,ScannerView,ScannerView,Interfacer,wallet.ui.scan,wallet.ui.scan.ScannerView
+bitcoin-wallet-7.22-prod,DecodePrivateKeyTask,DecodePrivateKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DecodePrivateKeyTask
+bitcoin-wallet-7.22-prod,DeriveKeyTask,DeriveKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DeriveKeyTask
+bitcoin-wallet-7.22-prod,FeeCategory,FeeCategory,Information Holder,wallet.ui.send,wallet.ui.send.FeeCategory
+bitcoin-wallet-7.22-prod,MaintenanceDialogFragment,MaintenanceDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment
+bitcoin-wallet-7.22-prod,MaintenanceDialogFragment$State,MaintenanceDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment$State
+bitcoin-wallet-7.22-prod,RaiseFeeDialogFragment,RaiseFeeDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment
+bitcoin-wallet-7.22-prod,RaiseFeeDialogFragment$State,RaiseFeeDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment$State
+bitcoin-wallet-7.22-prod,RaiseFeeViewModel,RaiseFeeViewModel,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeViewModel
+bitcoin-wallet-7.22-prod,RequestPaymentRequestTask,RequestPaymentRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask
+bitcoin-wallet-7.22-prod,RequestPaymentRequestTask$BluetoothRequestTask,RequestPaymentRequestTask$BluetoothRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask
+bitcoin-wallet-7.22-prod,RequestPaymentRequestTask$HttpRequestTask,RequestPaymentRequestTask$HttpRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask
+bitcoin-wallet-7.22-prod,RequestPaymentRequestTask$ResultCallback,RequestPaymentRequestTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$ResultCallback
+bitcoin-wallet-7.22-prod,RequestWalletBalanceTask,RequestWalletBalanceTask,Interfacer,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask
+bitcoin-wallet-7.22-prod,RequestWalletBalanceTask$ElectrumServer,RequestWalletBalanceTask$ElectrumServer,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$ElectrumServer
+bitcoin-wallet-7.22-prod,RequestWalletBalanceTask$JsonRpcRequest,RequestWalletBalanceTask$JsonRpcRequest,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$JsonRpcRequest
+bitcoin-wallet-7.22-prod,RequestWalletBalanceTask$JsonRpcResponse,RequestWalletBalanceTask$JsonRpcResponse,Information Holder,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$JsonRpcResponse
+bitcoin-wallet-7.22-prod,RequestWalletBalanceTask$ResultCallback,RequestWalletBalanceTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestWalletBalanceTask$ResultCallback
+bitcoin-wallet-7.22-prod,SendCoinsActivity,SendCoinsActivity,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsActivity
+bitcoin-wallet-7.22-prod,SendCoinsActivityViewModel,SendCoinsActivityViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsActivityViewModel
+bitcoin-wallet-7.22-prod,SendCoinsFragment,SendCoinsFragment,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsFragment
+bitcoin-wallet-7.22-prod,SendCoinsFragment$ReceivingAddressListener,SendCoinsFragment$ReceivingAddressListener,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressListener
+bitcoin-wallet-7.22-prod,SendCoinsFragment$ReceivingAddressViewAdapter,SendCoinsFragment$ReceivingAddressViewAdapter,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter
+bitcoin-wallet-7.22-prod,SendCoinsOfflineTask,SendCoinsOfflineTask,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsOfflineTask
+bitcoin-wallet-7.22-prod,SendCoinsViewModel,SendCoinsViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel
+bitcoin-wallet-7.22-prod,SendCoinsViewModel$State,SendCoinsViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel$State
+bitcoin-wallet-7.22-prod,SweepWalletActivity,SweepWalletActivity,Service Provider,wallet.ui.send,wallet.ui.send.SweepWalletActivity
+bitcoin-wallet-7.22-prod,SweepWalletFragment,SweepWalletFragment,Interfacer,wallet.ui.send,wallet.ui.send.SweepWalletFragment
+bitcoin-wallet-7.22-prod,SweepWalletFragment$FakeTransaction,SweepWalletFragment$FakeTransaction,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletFragment$FakeTransaction
+bitcoin-wallet-7.22-prod,SweepWalletViewModel,SweepWalletViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel
+bitcoin-wallet-7.22-prod,SweepWalletViewModel$State,SweepWalletViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel$State
+bitcoin-wallet-7.22-prod,Assets,Assets,Service Provider,wallet.util,wallet.util.Assets
+bitcoin-wallet-7.22-prod,Base43,Base43,Service Provider,wallet.util,wallet.util.Base43
+bitcoin-wallet-7.22-prod,Bluetooth,Bluetooth,Service Provider,wallet.util,wallet.util.Bluetooth
+bitcoin-wallet-7.22-prod,CheatSheet,CheatSheet,Service Provider,wallet.util,wallet.util.CheatSheet
+bitcoin-wallet-7.22-prod,CrashReporter,CrashReporter,Service Provider,wallet.util,wallet.util.CrashReporter
+bitcoin-wallet-7.22-prod,CrashReporter$ExceptionHandler,CrashReporter$ExceptionHandler,Service Provider,wallet.util,wallet.util.CrashReporter$ExceptionHandler
+bitcoin-wallet-7.22-prod,Crypto,Crypto,Service Provider,wallet.util,wallet.util.Crypto
+bitcoin-wallet-7.22-prod,Formats,Formats,Service Provider,wallet.util,wallet.util.Formats
+bitcoin-wallet-7.22-prod,GenericUtils,GenericUtils,Service Provider,wallet.util,wallet.util.GenericUtils
+bitcoin-wallet-7.22-prod,Installer,Installer,Service Provider,wallet.util,wallet.util.Installer
+bitcoin-wallet-7.22-prod,Iso8601Format,Iso8601Format,Service Provider,wallet.util,wallet.util.Iso8601Format
+bitcoin-wallet-7.22-prod,MonetarySpannable,MonetarySpannable,Service Provider,wallet.util,wallet.util.MonetarySpannable
+bitcoin-wallet-7.22-prod,Nfc,Nfc,Service Provider,wallet.util,wallet.util.Nfc
+bitcoin-wallet-7.22-prod,OnFirstPreDraw,OnFirstPreDraw,Service Provider,wallet.util,wallet.util.OnFirstPreDraw
+bitcoin-wallet-7.22-prod,OnFirstPreDraw$Callback,OnFirstPreDraw$Callback,Service Provider,wallet.util,wallet.util.OnFirstPreDraw$Callback
+bitcoin-wallet-7.22-prod,Qr,Qr,Service Provider,wallet.util,wallet.util.Qr
+bitcoin-wallet-7.22-prod,Toast,Toast,Service Provider,wallet.util,wallet.util.Toast
+bitcoin-wallet-7.22-prod,ViewPagerTabs,ViewPagerTabs,Interfacer,wallet.util,wallet.util.ViewPagerTabs
+bitcoin-wallet-7.22-prod,WalletUtils,WalletUtils,Service Provider,wallet.util,wallet.util.WalletUtils
+bitcoin-wallet-7.22-prod,WalletUtils$MonospaceSpan,WalletUtils$MonospaceSpan,Service Provider,wallet.util,wallet.util.WalletUtils$MonospaceSpan
+bitcoin-wallet-7.22-prod,WholeStringBuilder,WholeStringBuilder,Service Provider,wallet.util,wallet.util.WholeStringBuilder
+bitcoin-wallet-7.22-prod,data,wallet.data,,wallet,wallet.data
+bitcoin-wallet-7.22-prod,offline,wallet.offline,,wallet,wallet.offline
+bitcoin-wallet-7.22-prod,service,wallet.service,,wallet,wallet.service
+bitcoin-wallet-7.22-prod,wallet,wallet,,,wallet
+bitcoin-wallet-7.22-prod,scan,wallet.ui.scan,,wallet.ui,wallet.ui.scan
+bitcoin-wallet-7.22-prod,preference,wallet.ui.preference,,wallet.ui,wallet.ui.preference
+bitcoin-wallet-7.22-prod,send,wallet.ui.send,,wallet.ui,wallet.ui.send
+bitcoin-wallet-7.22-prod,util,wallet.util,,wallet,wallet.util
+bitcoin-wallet-7.22-prod,backup,wallet.ui.backup,,wallet.ui,wallet.ui.backup
+bitcoin-wallet-7.22-prod,sample,wallet.integration.sample,,wallet.integration,wallet.integration.sample
+bitcoin-wallet-7.22-prod,ui,wallet.ui,,wallet,wallet.ui
+bitcoin-wallet-7.22-prod,monitor,wallet.ui.monitor,,wallet.ui,wallet.ui.monitor
+bitcoin-wallet-7.22-prod,android,wallet.integration.android,,wallet.integration,wallet.integration.android
+version,label,name,role,parent,full
+bitcoin-wallet-7.44,Configuration,Configuration,Information Holder,wallet,wallet.Configuration
+bitcoin-wallet-7.44,Constants,Constants,Information Holder,wallet,wallet.Constants
+bitcoin-wallet-7.44,Constants$Files,Constants$Files,Information Holder,wallet,wallet.Constants$Files
+bitcoin-wallet-7.44,Logging,Logging,Service Provider,wallet,wallet.Logging
+bitcoin-wallet-7.44,WalletApplication,WalletApplication,Controller,wallet,wallet.WalletApplication
+bitcoin-wallet-7.44,WalletApplication$OnWalletLoadedListener,WalletApplication$OnWalletLoadedListener,Service Provider,wallet,wallet.WalletApplication$OnWalletLoadedListener
+bitcoin-wallet-7.44,WalletBalanceWidgetProvider,WalletBalanceWidgetProvider,Interfacer,wallet,wallet.WalletBalanceWidgetProvider
+bitcoin-wallet-7.44,AddressBookDao,AddressBookDao,Service Provider,wallet.data,wallet.data.AddressBookDao
+bitcoin-wallet-7.44,AddressBookEntry,AddressBookEntry,Information Holder,wallet.data,wallet.data.AddressBookEntry
+bitcoin-wallet-7.44,AppDatabase,AppDatabase,Information Holder,wallet.data,wallet.data.AppDatabase
+bitcoin-wallet-7.44,BlockchainServiceLiveData,BlockchainServiceLiveData,Information Holder,wallet.data,wallet.data.BlockchainServiceLiveData
+bitcoin-wallet-7.44,ConfigFormatLiveData,ConfigFormatLiveData,Information Holder,wallet.data,wallet.data.ConfigFormatLiveData
+bitcoin-wallet-7.44,ConfigOwnNameLiveData,ConfigOwnNameLiveData,Information Holder,wallet.data,wallet.data.ConfigOwnNameLiveData
+bitcoin-wallet-7.44,DynamicFeeLiveData,DynamicFeeLiveData,Interfacer,wallet.data,wallet.data.DynamicFeeLiveData
+bitcoin-wallet-7.44,ExchangeRate,ExchangeRate,Information Holder,wallet.data,wallet.data.ExchangeRate
+bitcoin-wallet-7.44,ExchangeRatesProvider,ExchangeRatesProvider,Service Provider,wallet.data,wallet.data.ExchangeRatesProvider
+bitcoin-wallet-7.44,PaymentIntent,PaymentIntent,Structurer,wallet.data,wallet.data.PaymentIntent
+bitcoin-wallet-7.44,PaymentIntent$Output,PaymentIntent$Output,Coordinator,wallet.data,wallet.data.PaymentIntent$Output
+bitcoin-wallet-7.44,PaymentIntent$Standard,PaymentIntent$Standard,Information Holder,wallet.data,wallet.data.PaymentIntent$Standard
+bitcoin-wallet-7.44,SelectedExchangeRateLiveData,SelectedExchangeRateLiveData,Coordinator,wallet.data,wallet.data.SelectedExchangeRateLiveData
+bitcoin-wallet-7.44,ThrottelingLiveData,ThrottelingLiveData,Information Holder,wallet.data,wallet.data.ThrottelingLiveData
+bitcoin-wallet-7.44,TimeLiveData,TimeLiveData,Information Holder,wallet.data,wallet.data.TimeLiveData
+bitcoin-wallet-7.44,WalletBalanceLiveData,WalletBalanceLiveData,Structurer,wallet.data,wallet.data.WalletBalanceLiveData
+bitcoin-wallet-7.44,WalletBalanceLiveData$WalletListener,WalletBalanceLiveData$WalletListener,Service Provider,wallet.data,wallet.data.WalletBalanceLiveData$WalletListener
+bitcoin-wallet-7.44,WalletLiveData,WalletLiveData,Service Provider,wallet.data,wallet.data.WalletLiveData
+bitcoin-wallet-7.44,BitcoinIntegration,BitcoinIntegration,Controller,wallet.integration.android,wallet.integration.android.BitcoinIntegration
+bitcoin-wallet-7.44,SampleActivity,SampleActivity,Interfacer,wallet.integration.sample,wallet.integration.sample.SampleActivity
+bitcoin-wallet-7.44,AcceptBluetoothService,AcceptBluetoothService,Interfacer,wallet.offline,wallet.offline.AcceptBluetoothService
+bitcoin-wallet-7.44,AcceptBluetoothThread,AcceptBluetoothThread,Coordinator,wallet.offline,wallet.offline.AcceptBluetoothThread
+bitcoin-wallet-7.44,AcceptBluetoothThread$ClassicBluetoothThread,AcceptBluetoothThread$ClassicBluetoothThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$ClassicBluetoothThread
+bitcoin-wallet-7.44,AcceptBluetoothThread$PaymentProtocolThread,AcceptBluetoothThread$PaymentProtocolThread,Service Provider,wallet.offline,wallet.offline.AcceptBluetoothThread$PaymentProtocolThread
+bitcoin-wallet-7.44,DirectPaymentTask,DirectPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask
+bitcoin-wallet-7.44,DirectPaymentTask$BluetoothPaymentTask,DirectPaymentTask$BluetoothPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$BluetoothPaymentTask
+bitcoin-wallet-7.44,DirectPaymentTask$HttpPaymentTask,DirectPaymentTask$HttpPaymentTask,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$HttpPaymentTask
+bitcoin-wallet-7.44,DirectPaymentTask$ResultCallback,DirectPaymentTask$ResultCallback,Service Provider,wallet.offline,wallet.offline.DirectPaymentTask$ResultCallback
+bitcoin-wallet-7.44,BlockchainService,BlockchainService,Interfacer,wallet.service,wallet.service.BlockchainService
+bitcoin-wallet-7.44,BlockchainService$BlockchainDownloadListener,BlockchainService$BlockchainDownloadListener,Service Provider,wallet.service,wallet.service.BlockchainService$BlockchainDownloadListener
+bitcoin-wallet-7.44,BlockchainService$ImpedimentsLiveData,BlockchainService$ImpedimentsLiveData,Structurer,wallet.service,wallet.service.BlockchainService$ImpedimentsLiveData
+bitcoin-wallet-7.44,BlockchainService$LocalBinder,BlockchainService$LocalBinder,Information Holder,wallet.service,wallet.service.BlockchainService$LocalBinder
+bitcoin-wallet-7.44,BlockchainService$NewTransactionLiveData,BlockchainService$NewTransactionLiveData,Information Holder,wallet.service,wallet.service.BlockchainService$NewTransactionLiveData
+bitcoin-wallet-7.44,BlockchainService$PeerConnectivityListener,BlockchainService$PeerConnectivityListener,Service Provider,wallet.service,wallet.service.BlockchainService$PeerConnectivityListener
+bitcoin-wallet-7.44,BlockchainState,BlockchainState,Information Holder,wallet.service,wallet.service.BlockchainState
+bitcoin-wallet-7.44,BlockchainState$Impediment,BlockchainState$Impediment,Information Holder,wallet.service,wallet.service.BlockchainState$Impediment
+bitcoin-wallet-7.44,BootstrapReceiver,BootstrapReceiver,Service Provider,wallet.service,wallet.service.BootstrapReceiver
+bitcoin-wallet-7.44,StartBlockchainService,StartBlockchainService,Service Provider,wallet.service,wallet.service.StartBlockchainService
+bitcoin-wallet-7.44,AbstractWalletActivity,AbstractWalletActivity,Coordinator,wallet.ui,wallet.ui.AbstractWalletActivity
+bitcoin-wallet-7.44,AddressAndLabel,AddressAndLabel,Service Provider,wallet.ui,wallet.ui.AddressAndLabel
+bitcoin-wallet-7.44,AddressBookActivity,AddressBookActivity,Coordinator,wallet.ui,wallet.ui.AddressBookActivity
+bitcoin-wallet-7.44,AddressBookActivity$TwoFragmentAdapter,AddressBookActivity$TwoFragmentAdapter,Information Holder,wallet.ui,wallet.ui.AddressBookActivity$TwoFragmentAdapter
+bitcoin-wallet-7.44,AlertDialogsFragment,AlertDialogsFragment,Interfacer,wallet.ui,wallet.ui.AlertDialogsFragment
+bitcoin-wallet-7.44,AlertDialogsViewModel,AlertDialogsViewModel,Information Holder,wallet.ui,wallet.ui.AlertDialogsViewModel
+bitcoin-wallet-7.44,BitmapFragment,BitmapFragment,Coordinator,wallet.ui,wallet.ui.BitmapFragment
+bitcoin-wallet-7.44,CircularProgressView,CircularProgressView,Interfacer,wallet.ui,wallet.ui.CircularProgressView
+bitcoin-wallet-7.44,CurrencyAmountView,CurrencyAmountView,Interfacer,wallet.ui,wallet.ui.CurrencyAmountView
+bitcoin-wallet-7.44,CurrencyAmountView$Listener,CurrencyAmountView$Listener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$Listener
+bitcoin-wallet-7.44,CurrencyAmountView$TextViewListener,CurrencyAmountView$TextViewListener,Service Provider,wallet.ui,wallet.ui.CurrencyAmountView$TextViewListener
+bitcoin-wallet-7.44,CurrencyCalculatorLink,CurrencyCalculatorLink,Information Holder,wallet.ui,wallet.ui.CurrencyCalculatorLink
+bitcoin-wallet-7.44,CurrencySymbolDrawable,CurrencySymbolDrawable,Information Holder,wallet.ui,wallet.ui.CurrencySymbolDrawable
+bitcoin-wallet-7.44,CurrencyTextView,CurrencyTextView,Interfacer,wallet.ui,wallet.ui.CurrencyTextView
+bitcoin-wallet-7.44,DialogBuilder,DialogBuilder,Service Provider,wallet.ui,wallet.ui.DialogBuilder
+bitcoin-wallet-7.44,DividerItemDecoration,DividerItemDecoration,Interfacer,wallet.ui,wallet.ui.DividerItemDecoration
+bitcoin-wallet-7.44,EditAddressBookEntryFragment,EditAddressBookEntryFragment,Interfacer,wallet.ui,wallet.ui.EditAddressBookEntryFragment
+bitcoin-wallet-7.44,EncryptKeysDialogFragment,EncryptKeysDialogFragment,Interfacer,wallet.ui,wallet.ui.EncryptKeysDialogFragment
+bitcoin-wallet-7.44,EncryptKeysDialogFragment$State,EncryptKeysDialogFragment$State,Information Holder,wallet.ui,wallet.ui.EncryptKeysDialogFragment$State
+bitcoin-wallet-7.44,Event,Event,Information Holder,wallet.ui,wallet.ui.Event
+bitcoin-wallet-7.44,Event$Observer,Event$Observer,Service Provider,wallet.ui,wallet.ui.Event$Observer
+bitcoin-wallet-7.44,ExchangeRatesActivity,ExchangeRatesActivity,Service Provider,wallet.ui,wallet.ui.ExchangeRatesActivity
+bitcoin-wallet-7.44,ExchangeRatesAdapter,ExchangeRatesAdapter,Structurer,wallet.ui,wallet.ui.ExchangeRatesAdapter
+bitcoin-wallet-7.44,ExchangeRatesAdapter$ListItem,ExchangeRatesAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ListItem
+bitcoin-wallet-7.44,ExchangeRatesAdapter$OnClickListener,ExchangeRatesAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.ExchangeRatesAdapter$OnClickListener
+bitcoin-wallet-7.44,ExchangeRatesAdapter$ViewHolder,ExchangeRatesAdapter$ViewHolder,Information Holder,wallet.ui,wallet.ui.ExchangeRatesAdapter$ViewHolder
+bitcoin-wallet-7.44,ExchangeRatesFragment,ExchangeRatesFragment,Interfacer,wallet.ui,wallet.ui.ExchangeRatesFragment
+bitcoin-wallet-7.44,ExchangeRatesViewModel,ExchangeRatesViewModel,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel
+bitcoin-wallet-7.44,ExchangeRatesViewModel$ExchangeRatesLiveData,ExchangeRatesViewModel$ExchangeRatesLiveData,Information Holder,wallet.ui,wallet.ui.ExchangeRatesViewModel$ExchangeRatesLiveData
+bitcoin-wallet-7.44,FancyListFragment,FancyListFragment,Interfacer,wallet.ui,wallet.ui.FancyListFragment
+bitcoin-wallet-7.44,HelpDialogFragment,HelpDialogFragment,Coordinator,wallet.ui,wallet.ui.HelpDialogFragment
+bitcoin-wallet-7.44,InputParser,InputParser,Service Provider,wallet.ui,wallet.ui.InputParser
+bitcoin-wallet-7.44,InputParser$BinaryInputParser,InputParser$BinaryInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$BinaryInputParser
+bitcoin-wallet-7.44,InputParser$StreamInputParser,InputParser$StreamInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StreamInputParser
+bitcoin-wallet-7.44,InputParser$StringInputParser,InputParser$StringInputParser,Service Provider,wallet.ui,wallet.ui.InputParser$StringInputParser
+bitcoin-wallet-7.44,MaybeMaintenanceFragment,MaybeMaintenanceFragment,Service Provider,wallet.ui,wallet.ui.MaybeMaintenanceFragment
+bitcoin-wallet-7.44,MaybeMaintenanceViewModel,MaybeMaintenanceViewModel,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel
+bitcoin-wallet-7.44,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData,Information Holder,wallet.ui,wallet.ui.MaybeMaintenanceViewModel$WalletMaintenanceRecommendedLiveData
+bitcoin-wallet-7.44,ProgressDialogFragment,ProgressDialogFragment,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment
+bitcoin-wallet-7.44,ProgressDialogFragment$Observer,ProgressDialogFragment$Observer,Service Provider,wallet.ui,wallet.ui.ProgressDialogFragment$Observer
+bitcoin-wallet-7.44,ReportIssueDialogBuilder,ReportIssueDialogBuilder,Service Provider,wallet.ui,wallet.ui.ReportIssueDialogBuilder
+bitcoin-wallet-7.44,ReportIssueDialogFragment,ReportIssueDialogFragment,Interfacer,wallet.ui,wallet.ui.ReportIssueDialogFragment
+bitcoin-wallet-7.44,ReportIssueViewModel,ReportIssueViewModel,Information Holder,wallet.ui,wallet.ui.ReportIssueViewModel
+bitcoin-wallet-7.44,RequestCoinsActivity,RequestCoinsActivity,Coordinator,wallet.ui,wallet.ui.RequestCoinsActivity
+bitcoin-wallet-7.44,RequestCoinsActivityViewModel,RequestCoinsActivityViewModel,Information Holder,wallet.ui,wallet.ui.RequestCoinsActivityViewModel
+bitcoin-wallet-7.44,RequestCoinsFragment,RequestCoinsFragment,Interfacer,wallet.ui,wallet.ui.RequestCoinsFragment
+bitcoin-wallet-7.44,RequestCoinsViewModel,RequestCoinsViewModel,Interfacer,wallet.ui,wallet.ui.RequestCoinsViewModel
+bitcoin-wallet-7.44,RequestCoinsViewModel$FreshReceiveAddressLiveData,RequestCoinsViewModel$FreshReceiveAddressLiveData,Information Holder,wallet.ui,wallet.ui.RequestCoinsViewModel$FreshReceiveAddressLiveData
+bitcoin-wallet-7.44,SendCoinsQrActivity,SendCoinsQrActivity,Interfacer,wallet.ui,wallet.ui.SendCoinsQrActivity
+bitcoin-wallet-7.44,SendingAddressesFragment,SendingAddressesFragment,Interfacer,wallet.ui,wallet.ui.SendingAddressesFragment
+bitcoin-wallet-7.44,SendingAddressesViewModel,SendingAddressesViewModel,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel
+bitcoin-wallet-7.44,SendingAddressesViewModel$AddressesToExcludeLiveData,SendingAddressesViewModel$AddressesToExcludeLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$AddressesToExcludeLiveData
+bitcoin-wallet-7.44,SendingAddressesViewModel$ClipLiveData,SendingAddressesViewModel$ClipLiveData,Information Holder,wallet.ui,wallet.ui.SendingAddressesViewModel$ClipLiveData
+bitcoin-wallet-7.44,ShowPasswordCheckListener,ShowPasswordCheckListener,Service Provider,wallet.ui,wallet.ui.ShowPasswordCheckListener
+bitcoin-wallet-7.44,StickToTopLinearLayoutManager,StickToTopLinearLayoutManager,Service Provider,wallet.ui,wallet.ui.StickToTopLinearLayoutManager
+bitcoin-wallet-7.44,TransactionsAdapter,TransactionsAdapter,Controller,wallet.ui,wallet.ui.TransactionsAdapter
+bitcoin-wallet-7.44,TransactionsAdapter$ChangeType,TransactionsAdapter$ChangeType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ChangeType
+bitcoin-wallet-7.44,TransactionsAdapter$ItemAnimator,TransactionsAdapter$ItemAnimator,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$ItemAnimator
+bitcoin-wallet-7.44,TransactionsAdapter$ListItem,TransactionsAdapter$ListItem,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$ListItem
+bitcoin-wallet-7.44,TransactionsAdapter$OnClickListener,TransactionsAdapter$OnClickListener,Service Provider,wallet.ui,wallet.ui.TransactionsAdapter$OnClickListener
+bitcoin-wallet-7.44,TransactionsAdapter$TransactionViewHolder,TransactionsAdapter$TransactionViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$TransactionViewHolder
+bitcoin-wallet-7.44,TransactionsAdapter$WarningType,TransactionsAdapter$WarningType,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningType
+bitcoin-wallet-7.44,TransactionsAdapter$WarningViewHolder,TransactionsAdapter$WarningViewHolder,Information Holder,wallet.ui,wallet.ui.TransactionsAdapter$WarningViewHolder
+bitcoin-wallet-7.44,WalletActionsFragment,WalletActionsFragment,Coordinator,wallet.ui,wallet.ui.WalletActionsFragment
+bitcoin-wallet-7.44,WalletActivity,WalletActivity,Interfacer,wallet.ui,wallet.ui.WalletActivity
+bitcoin-wallet-7.44,WalletActivity$QuickReturnBehavior,WalletActivity$QuickReturnBehavior,Service Provider,wallet.ui,wallet.ui.WalletActivity$QuickReturnBehavior
+bitcoin-wallet-7.44,WalletActivityViewModel,WalletActivityViewModel,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel
+bitcoin-wallet-7.44,WalletActivityViewModel$EnterAnimationState,WalletActivityViewModel$EnterAnimationState,Information Holder,wallet.ui,wallet.ui.WalletActivityViewModel$EnterAnimationState
+bitcoin-wallet-7.44,WalletActivityViewModel$WalletEncryptedLiveData,WalletActivityViewModel$WalletEncryptedLiveData,Service Provider,wallet.ui,wallet.ui.WalletActivityViewModel$WalletEncryptedLiveData
+bitcoin-wallet-7.44,WalletActivityViewModel$WalletLegacyFallbackLiveData,WalletActivityViewModel$WalletLegacyFallbackLiveData,Service Provider,wallet.ui,wallet.ui.WalletActivityViewModel$WalletLegacyFallbackLiveData
+bitcoin-wallet-7.44,WalletAddressDialogFragment,WalletAddressDialogFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressDialogFragment
+bitcoin-wallet-7.44,WalletAddressFragment,WalletAddressFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressFragment
+bitcoin-wallet-7.44,WalletAddressViewModel,WalletAddressViewModel,Service Provider,wallet.ui,wallet.ui.WalletAddressViewModel
+bitcoin-wallet-7.44,WalletAddressViewModel$CurrentAddressLiveData,WalletAddressViewModel$CurrentAddressLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressViewModel$CurrentAddressLiveData
+bitcoin-wallet-7.44,WalletAddressesAdapter,WalletAddressesAdapter,Structurer,wallet.ui,wallet.ui.WalletAddressesAdapter
+bitcoin-wallet-7.44,WalletAddressesFragment,WalletAddressesFragment,Interfacer,wallet.ui,wallet.ui.WalletAddressesFragment
+bitcoin-wallet-7.44,WalletAddressesViewModel,WalletAddressesViewModel,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel
+bitcoin-wallet-7.44,WalletAddressesViewModel$ImportedAddressesLiveData,WalletAddressesViewModel$ImportedAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$ImportedAddressesLiveData
+bitcoin-wallet-7.44,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,WalletAddressesViewModel$IssuedReceiveAddressesLiveData,Information Holder,wallet.ui,wallet.ui.WalletAddressesViewModel$IssuedReceiveAddressesLiveData
+bitcoin-wallet-7.44,WalletBalanceFragment,WalletBalanceFragment,Interfacer,wallet.ui,wallet.ui.WalletBalanceFragment
+bitcoin-wallet-7.44,WalletBalanceViewModel,WalletBalanceViewModel,Information Holder,wallet.ui,wallet.ui.WalletBalanceViewModel
+bitcoin-wallet-7.44,WalletDisclaimerFragment,WalletDisclaimerFragment,Interfacer,wallet.ui,wallet.ui.WalletDisclaimerFragment
+bitcoin-wallet-7.44,WalletDisclaimerViewModel,WalletDisclaimerViewModel,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel
+bitcoin-wallet-7.44,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,WalletDisclaimerViewModel$DisclaimerEnabledLiveData,Information Holder,wallet.ui,wallet.ui.WalletDisclaimerViewModel$DisclaimerEnabledLiveData
+bitcoin-wallet-7.44,WalletTransactionsFragment,WalletTransactionsFragment,Interfacer,wallet.ui,wallet.ui.WalletTransactionsFragment
+bitcoin-wallet-7.44,WalletTransactionsViewModel,WalletTransactionsViewModel,Interfacer,wallet.ui,wallet.ui.WalletTransactionsViewModel
+bitcoin-wallet-7.44,WalletTransactionsViewModel$Direction,WalletTransactionsViewModel$Direction,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$Direction
+bitcoin-wallet-7.44,WalletTransactionsViewModel$TransactionsConfidenceLiveData,WalletTransactionsViewModel$TransactionsConfidenceLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsConfidenceLiveData
+bitcoin-wallet-7.44,WalletTransactionsViewModel$TransactionsLiveData,WalletTransactionsViewModel$TransactionsLiveData,Information Holder,wallet.ui,wallet.ui.WalletTransactionsViewModel$TransactionsLiveData
+bitcoin-wallet-7.44,BackupWalletActivity,BackupWalletActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.BackupWalletActivity
+bitcoin-wallet-7.44,BackupWalletDialogFragment,BackupWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment
+bitcoin-wallet-7.44,BackupWalletDialogFragment$ErrorDialogFragment,BackupWalletDialogFragment$ErrorDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$ErrorDialogFragment
+bitcoin-wallet-7.44,BackupWalletDialogFragment$SuccessDialogFragment,BackupWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.BackupWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.44,BackupWalletViewModel,BackupWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.BackupWalletViewModel
+bitcoin-wallet-7.44,FileAdapter,FileAdapter,Structurer,wallet.ui.backup,wallet.ui.backup.FileAdapter
+bitcoin-wallet-7.44,ImportDialogButtonEnablerListener,ImportDialogButtonEnablerListener,Service Provider,wallet.ui.backup,wallet.ui.backup.ImportDialogButtonEnablerListener
+bitcoin-wallet-7.44,RestoreWalletDialogFragment,RestoreWalletDialogFragment,Interfacer,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment
+bitcoin-wallet-7.44,RestoreWalletDialogFragment$FailureDialogFragment,RestoreWalletDialogFragment$FailureDialogFragment,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$FailureDialogFragment
+bitcoin-wallet-7.44,RestoreWalletDialogFragment$SuccessDialogFragment,RestoreWalletDialogFragment$SuccessDialogFragment,Coordinator,wallet.ui.backup,wallet.ui.backup.RestoreWalletDialogFragment$SuccessDialogFragment
+bitcoin-wallet-7.44,RestoreWalletFromExternalActivity,RestoreWalletFromExternalActivity,Service Provider,wallet.ui.backup,wallet.ui.backup.RestoreWalletFromExternalActivity
+bitcoin-wallet-7.44,RestoreWalletViewModel,RestoreWalletViewModel,Information Holder,wallet.ui.backup,wallet.ui.backup.RestoreWalletViewModel
+bitcoin-wallet-7.44,BlockListAdapter,BlockListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter
+bitcoin-wallet-7.44,BlockListAdapter$ListItem,BlockListAdapter$ListItem,Structurer,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ListItem
+bitcoin-wallet-7.44,BlockListAdapter$OnClickListener,BlockListAdapter$OnClickListener,Service Provider,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$OnClickListener
+bitcoin-wallet-7.44,BlockListAdapter$ViewHolder,BlockListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListAdapter$ViewHolder
+bitcoin-wallet-7.44,BlockListFragment,BlockListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.BlockListFragment
+bitcoin-wallet-7.44,BlockListViewModel,BlockListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel
+bitcoin-wallet-7.44,BlockListViewModel$TransactionsLiveData,BlockListViewModel$TransactionsLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.BlockListViewModel$TransactionsLiveData
+bitcoin-wallet-7.44,NetworkMonitorActivity,NetworkMonitorActivity,Interfacer,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity
+bitcoin-wallet-7.44,NetworkMonitorActivity$PagerAdapter,NetworkMonitorActivity$PagerAdapter,Information Holder,wallet.ui.monitor,wallet.ui.monitor.NetworkMonitorActivity$PagerAdapter
+bitcoin-wallet-7.44,PeerListAdapter,PeerListAdapter,Structurer,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter
+bitcoin-wallet-7.44,PeerListAdapter$ListItem,PeerListAdapter$ListItem,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ListItem
+bitcoin-wallet-7.44,PeerListAdapter$ViewHolder,PeerListAdapter$ViewHolder,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListAdapter$ViewHolder
+bitcoin-wallet-7.44,PeerListFragment,PeerListFragment,Interfacer,wallet.ui.monitor,wallet.ui.monitor.PeerListFragment
+bitcoin-wallet-7.44,PeerListViewModel,PeerListViewModel,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel
+bitcoin-wallet-7.44,PeerListViewModel$HostnamesLiveData,PeerListViewModel$HostnamesLiveData,Information Holder,wallet.ui.monitor,wallet.ui.monitor.PeerListViewModel$HostnamesLiveData
+bitcoin-wallet-7.44,AboutFragment,AboutFragment,Coordinator,wallet.ui.preference,wallet.ui.preference.AboutFragment
+bitcoin-wallet-7.44,AboutFragment$ApkHashFragment,AboutFragment$ApkHashFragment,Service Provider,wallet.ui.preference,wallet.ui.preference.AboutFragment$ApkHashFragment
+bitcoin-wallet-7.44,DiagnosticsFragment,DiagnosticsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.DiagnosticsFragment
+bitcoin-wallet-7.44,ExtendedPublicKeyFragment,ExtendedPublicKeyFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.ExtendedPublicKeyFragment
+bitcoin-wallet-7.44,PreferenceActivity,PreferenceActivity,Service Provider,wallet.ui.preference,wallet.ui.preference.PreferenceActivity
+bitcoin-wallet-7.44,ResolveDnsTask,ResolveDnsTask,Service Provider,wallet.ui.preference,wallet.ui.preference.ResolveDnsTask
+bitcoin-wallet-7.44,SettingsFragment,SettingsFragment,Interfacer,wallet.ui.preference,wallet.ui.preference.SettingsFragment
+bitcoin-wallet-7.44,CameraManager,CameraManager,Information Holder,wallet.ui.scan,wallet.ui.scan.CameraManager
+bitcoin-wallet-7.44,ScanActivity,ScanActivity,Interfacer,wallet.ui.scan,wallet.ui.scan.ScanActivity
+bitcoin-wallet-7.44,ScanActivity$AutoFocusRunnable,ScanActivity$AutoFocusRunnable,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$AutoFocusRunnable
+bitcoin-wallet-7.44,ScanActivity$WarnDialogFragment,ScanActivity$WarnDialogFragment,Service Provider,wallet.ui.scan,wallet.ui.scan.ScanActivity$WarnDialogFragment
+bitcoin-wallet-7.44,ScanViewModel,ScanViewModel,Information Holder,wallet.ui.scan,wallet.ui.scan.ScanViewModel
+bitcoin-wallet-7.44,ScannerView,ScannerView,Interfacer,wallet.ui.scan,wallet.ui.scan.ScannerView
+bitcoin-wallet-7.44,DecodePrivateKeyTask,DecodePrivateKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DecodePrivateKeyTask
+bitcoin-wallet-7.44,DeriveKeyTask,DeriveKeyTask,Service Provider,wallet.ui.send,wallet.ui.send.DeriveKeyTask
+bitcoin-wallet-7.44,FeeCategory,FeeCategory,Information Holder,wallet.ui.send,wallet.ui.send.FeeCategory
+bitcoin-wallet-7.44,MaintenanceDialogFragment,MaintenanceDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment
+bitcoin-wallet-7.44,MaintenanceDialogFragment$State,MaintenanceDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.MaintenanceDialogFragment$State
+bitcoin-wallet-7.44,RaiseFeeDialogFragment,RaiseFeeDialogFragment,Interfacer,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment
+bitcoin-wallet-7.44,RaiseFeeDialogFragment$State,RaiseFeeDialogFragment$State,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeDialogFragment$State
+bitcoin-wallet-7.44,RaiseFeeViewModel,RaiseFeeViewModel,Information Holder,wallet.ui.send,wallet.ui.send.RaiseFeeViewModel
+bitcoin-wallet-7.44,RequestPaymentRequestTask,RequestPaymentRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask
+bitcoin-wallet-7.44,RequestPaymentRequestTask$BluetoothRequestTask,RequestPaymentRequestTask$BluetoothRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$BluetoothRequestTask
+bitcoin-wallet-7.44,RequestPaymentRequestTask$HttpRequestTask,RequestPaymentRequestTask$HttpRequestTask,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$HttpRequestTask
+bitcoin-wallet-7.44,RequestPaymentRequestTask$ResultCallback,RequestPaymentRequestTask$ResultCallback,Service Provider,wallet.ui.send,wallet.ui.send.RequestPaymentRequestTask$ResultCallback
+bitcoin-wallet-7.44,SendCoinsActivity,SendCoinsActivity,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsActivity
+bitcoin-wallet-7.44,SendCoinsActivityViewModel,SendCoinsActivityViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsActivityViewModel
+bitcoin-wallet-7.44,SendCoinsFragment,SendCoinsFragment,Interfacer,wallet.ui.send,wallet.ui.send.SendCoinsFragment
+bitcoin-wallet-7.44,SendCoinsFragment$ReceivingAddressListener,SendCoinsFragment$ReceivingAddressListener,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressListener
+bitcoin-wallet-7.44,SendCoinsFragment$ReceivingAddressViewAdapter,SendCoinsFragment$ReceivingAddressViewAdapter,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsFragment$ReceivingAddressViewAdapter
+bitcoin-wallet-7.44,SendCoinsOfflineTask,SendCoinsOfflineTask,Service Provider,wallet.ui.send,wallet.ui.send.SendCoinsOfflineTask
+bitcoin-wallet-7.44,SendCoinsViewModel,SendCoinsViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel
+bitcoin-wallet-7.44,SendCoinsViewModel$State,SendCoinsViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SendCoinsViewModel$State
+bitcoin-wallet-7.44,SweepWalletActivity,SweepWalletActivity,Service Provider,wallet.ui.send,wallet.ui.send.SweepWalletActivity
+bitcoin-wallet-7.44,SweepWalletFragment,SweepWalletFragment,Interfacer,wallet.ui.send,wallet.ui.send.SweepWalletFragment
+bitcoin-wallet-7.44,SweepWalletFragment$FakeTransaction,SweepWalletFragment$FakeTransaction,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletFragment$FakeTransaction
+bitcoin-wallet-7.44,SweepWalletViewModel,SweepWalletViewModel,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel
+bitcoin-wallet-7.44,SweepWalletViewModel$State,SweepWalletViewModel$State,Information Holder,wallet.ui.send,wallet.ui.send.SweepWalletViewModel$State
+bitcoin-wallet-7.44,Assets,Assets,Service Provider,wallet.util,wallet.util.Assets
+bitcoin-wallet-7.44,Base43,Base43,Service Provider,wallet.util,wallet.util.Base43
+bitcoin-wallet-7.44,Bluetooth,Bluetooth,Service Provider,wallet.util,wallet.util.Bluetooth
+bitcoin-wallet-7.44,CheatSheet,CheatSheet,Service Provider,wallet.util,wallet.util.CheatSheet
+bitcoin-wallet-7.44,CrashReporter,CrashReporter,Service Provider,wallet.util,wallet.util.CrashReporter
+bitcoin-wallet-7.44,CrashReporter$ExceptionHandler,CrashReporter$ExceptionHandler,Service Provider,wallet.util,wallet.util.CrashReporter$ExceptionHandler
+bitcoin-wallet-7.44,Crypto,Crypto,Service Provider,wallet.util,wallet.util.Crypto
+bitcoin-wallet-7.44,Formats,Formats,Service Provider,wallet.util,wallet.util.Formats
+bitcoin-wallet-7.44,GenericUtils,GenericUtils,Service Provider,wallet.util,wallet.util.GenericUtils
+bitcoin-wallet-7.44,Installer,Installer,Service Provider,wallet.util,wallet.util.Installer
+bitcoin-wallet-7.44,Iso8601Format,Iso8601Format,Service Provider,wallet.util,wallet.util.Iso8601Format
+bitcoin-wallet-7.44,MonetarySpannable,MonetarySpannable,Service Provider,wallet.util,wallet.util.MonetarySpannable
+bitcoin-wallet-7.44,Nfc,Nfc,Service Provider,wallet.util,wallet.util.Nfc
+bitcoin-wallet-7.44,OnFirstPreDraw,OnFirstPreDraw,Service Provider,wallet.util,wallet.util.OnFirstPreDraw
+bitcoin-wallet-7.44,OnFirstPreDraw$Callback,OnFirstPreDraw$Callback,Service Provider,wallet.util,wallet.util.OnFirstPreDraw$Callback
+bitcoin-wallet-7.44,Qr,Qr,Service Provider,wallet.util,wallet.util.Qr
+bitcoin-wallet-7.44,Toast,Toast,Service Provider,wallet.util,wallet.util.Toast
+bitcoin-wallet-7.44,ViewPagerTabs,ViewPagerTabs,Interfacer,wallet.util,wallet.util.ViewPagerTabs
+bitcoin-wallet-7.44,WalletUtils,WalletUtils,Service Provider,wallet.util,wallet.util.WalletUtils
+bitcoin-wallet-7.44,WalletUtils$MonospaceSpan,WalletUtils$MonospaceSpan,Service Provider,wallet.util,wallet.util.WalletUtils$MonospaceSpan
+bitcoin-wallet-7.44,WholeStringBuilder,WholeStringBuilder,Service Provider,wallet.util,wallet.util.WholeStringBuilder
+bitcoin-wallet-7.44,data,wallet.data,,wallet,wallet.data
+bitcoin-wallet-7.44,offline,wallet.offline,,wallet,wallet.offline
+bitcoin-wallet-7.44,service,wallet.service,,wallet,wallet.service
+bitcoin-wallet-7.44,wallet,wallet,,,wallet
+bitcoin-wallet-7.44,scan,wallet.ui.scan,,wallet.ui,wallet.ui.scan
+bitcoin-wallet-7.44,preference,wallet.ui.preference,,wallet.ui,wallet.ui.preference
+bitcoin-wallet-7.44,send,wallet.ui.send,,wallet.ui,wallet.ui.send
+bitcoin-wallet-7.44,util,wallet.util,,wallet,wallet.util
+bitcoin-wallet-7.44,backup,wallet.ui.backup,,wallet.ui,wallet.ui.backup
+bitcoin-wallet-7.44,sample,wallet.integration.sample,,wallet.integration,wallet.integration.sample
+bitcoin-wallet-7.44,ui,wallet.ui,,wallet,wallet.ui
+bitcoin-wallet-7.44,monitor,wallet.ui.monitor,,wallet.ui,wallet.ui.monitor
+bitcoin-wallet-7.44,android,wallet.integration.android,,wallet.integration,wallet.integration.android
