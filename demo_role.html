@@ -1,0 +1,360 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.1/cytoscape.min.js"></script>
+<script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+<!--<script src="cytoscape-klay.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-klay@3.1.4/cytoscape-klay.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-expand-collapse@4.0.0/cytoscape-expand-collapse.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+<style>
+    #cy {
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 70;
+    }
+</style>
+
+<body>
+    <img src="role.png" style="max-height: 26px;padding-top: 8px;">
+    <div id="preferences">
+        <button id="collapseAll">Collapse All</button>
+<!--        <button id="showChart">Show Chart</button>-->
+    </div>
+    <div id="cy"></div>
+    
+    <!-- modal -->
+    <div class="modal fade" id="modal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Number of Roles</h4>
+            </div>
+            <div class="modal-body">
+              <div id="chart">1</div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</body>
+    
+<script>
+    var original; // original data
+    var expandCollapseApi;
+    
+    $.getJSON('https://raw.githubusercontent.com/kathrynleee/demo/main/bitcoin-wallet-7.07-prod_json.js', function (data) {
+        original = data;
+        var cy = cytoscape({
+            container: $('#cy'),
+            layout:{
+              name: 'klay',
+              nodeDimensionsIncludeLabels: true, 
+              fit: true, 
+              padding: 20,
+              transform: function( node, pos ){ return pos; }, 
+              klay: {
+                addUnnecessaryBendpoints: false,
+                aspectRatio: 1.6,
+                borderSpacing: 20,
+                compactComponents: true,
+                crossingMinimization: 'LAYER_SWEEP',
+                cycleBreaking: 'GREEDY',
+                direction: 'UNDEFINED',
+                edgeRouting: 'ORTHOGONAL',
+                edgeSpacingFactor: 0.5,
+                feedbackEdges: true,
+                fixedAlignment: 'NONE',
+                mergeEdges: false,
+                nodeLayering:'NETWORK_SIMPLEX',
+                nodePlacement:'SIMPLE',
+                spacing: 10,
+                thoroughness: 7
+              }
+            },
+            boxSelectionEnabled: true,
+            style: cytoscape.stylesheet()
+                .selector('node')
+                .css({
+                    'label': 'data(name)',
+                    'background-color': '#97bbc9',
+                    'text-valign': 'top',
+                    'text-halign': 'center',
+                    'color': '#3368a1',
+                    'font-size' : '20',
+                    'text-wrap': 'wrap',
+                    'text-max-width': '20',
+                    'width' : '30',
+                    'height': '30'
+                })
+                .selector('edge')
+                .css({
+                    'line-color': '#97bbc9',
+                    'width': 3,
+                    'target-arrow-color': '#97bbc9',
+                    'target-arrow-shape': 'triangle',
+                    'arrow-scale': 1,
+                    'curve-style': 'bezier',
+                    'opacity': 0.7
+                })
+                .selector('node[role="Controller"]')
+                .css({
+                    'shape': 'round-diamond'
+                })
+                .selector('node[role="Coordinator"]')
+                .css({
+                    'shape': 'round-pentagon'
+                })
+                .selector('node[role="Interfacer"]')
+                .css({
+                    'shape': 'round-octagon'
+                })
+                .selector('node[role="Information Holder"]')
+                .css({
+                    'shape': 'round-rectangle',
+                    'background-color': 'white',
+                    'border-color': '#97bbc9',
+                    'border-width': 3,
+                    'width' : '27',
+                    'height': '27'
+                })
+                .selector('node[role="Service Provider"]')
+                .css({
+                    'shape': 'ellipse',
+                    'background-color': 'white',
+                    'border-color': '#97bbc9',
+                    'border-width': 3,
+                    'width' : '27',
+                    'height': '27'
+                })
+                .selector('node[role="Structurer"]')
+                .css({
+                    'shape': 'round-tag'
+                })
+                .selector('node:parent, node:parent.highlight, node:parent.target')
+                .css({
+                    'text-valign': 'top',
+                    'text-halign': 'center',
+                    'background-color': 'white',
+                    'color': '#97bbc9',
+                    'border-color': '#97bbc9',
+                    'border-width': 2
+                })
+                .selector('node.cy-expand-collapse-collapsed-node')
+                .css({
+                    'background-color': '#656bb5',
+                    'border-color': '#cbcde6',
+                    'border-width': 5,
+                    'color': '#656bb5'
+                })     
+                .selector('edge.cy-expand-collapse-collapsed-edge')
+                .css({
+                    'line-color': '#cbcde6',
+                    'target-arrow-color': '#cbcde6',
+                    'target-arrow-shape': 'triangle',
+                    'arrow-scale': 1,
+                    'curve-style': 'bezier',
+                    'width': function (edge) {
+                        var size = edge.data("collapsedEdges").length;
+                        var width = _.round((Math.log(size) / Math.log(1.5) + Number.EPSILON)) + 1;
+                        return width;
+                    }
+                })
+                .selector('edge.cy-expand-collapse-meta-edge')
+                .css({
+                    'line-color': '#cbcde6',
+                    'target-arrow-color': '#cbcde6',
+                    'target-arrow-shape': 'triangle',
+                    'arrow-scale': 1,
+                    'curve-style': 'bezier',
+                    'width': 3
+                })
+                .selector('node.highlight')
+                .css({
+                    'color': '#3368a1'
+                })
+                .selector('edge.highlight')
+                .css({
+                    'target-arrow-color': '#3368a1',
+                    'line-color': '#3368a1'
+                })
+                .selector('node.target')
+                .css({
+                    'background-color': '#ed5e53',
+                    'color': '#ed5e53'
+                })
+                .selector('edge.hover')
+                .css({
+                    'target-arrow-color': '#a9b3cf',
+                    'line-color': '#a9b3cf'
+                })
+                .selector('node.hover')
+                .css({
+                    'background-color': '#a9b3cf',
+                    'color': '#a9b3cf'
+                })
+                .selector('.hide')
+                .css({
+                    'opacity': 0
+                })
+                ,
+            elements: data,
+//            elements: fetch('json.json', {mode: 'no-cors'})
+//              .then(function(res) {
+//                return res.json()
+//              }),
+            ready: function() {
+//                this.elements('node:parent').descendants().addClass('hide');
+//                setLayout();
+                
+                // expand child nodes
+                expandCollapseApi = this.expandCollapse({
+					layoutBy: {
+				        name: 'klay',
+                        nodeDimensionsIncludeLabels: true, 
+                        fit: true, 
+                        padding: 20,
+                        transform: function( node, pos ){ return pos; }, 
+                        klay: {
+                            addUnnecessaryBendpoints: false,
+                            aspectRatio: 1.6,
+                            borderSpacing: 20,
+                            compactComponents: true,
+                            crossingMinimization: 'LAYER_SWEEP',
+                            cycleBreaking: 'GREEDY',
+                            direction: 'UNDEFINED',
+                            edgeRouting: 'ORTHOGONAL',
+                            edgeSpacingFactor: 0.5,
+                            feedbackEdges: true,
+                            fixedAlignment: 'NONE',
+                            mergeEdges: false,
+                            nodeLayering:'NETWORK_SIMPLEX',
+                            nodePlacement:'SIMPLE',
+                            spacing: 10,
+                            thoroughness: 7
+					   }
+                    },
+					animate: true,
+					undoable: false
+				});
+                
+                // collapse child nodes 
+                expandCollapseApi.collapseAll({
+                    layoutBy: {
+                        name: 'circle',
+                        avoidOverlap: true
+                    },
+                }); 
+                
+                // collapse child edges to single edge
+                expandCollapseApi.collapseAllEdges(); 
+            }
+        });
+        
+        var collapseAll = function() {
+            expandCollapseApi.collapseAll({
+                layoutBy: {
+                    name: 'circle',
+                    avoidOverlap: true
+                }
+            }); 
+        }
+        
+        var expandAllNodesAndEdges = function() {
+            expandCollapseApi.expandAll({
+                layoutBy: {
+                    name: 'klay',
+                    nodeDimensionsIncludeLabels: true, 
+                    fit: true, 
+                    padding: 20,
+                    transform: function( node, pos ){ return pos; }, 
+                    klay: {
+                        addUnnecessaryBendpoints: false,
+                        aspectRatio: 1.6,
+                        borderSpacing: 20,
+                        compactComponents: true,
+                        crossingMinimization: 'LAYER_SWEEP',
+                        cycleBreaking: 'GREEDY',
+                        direction: 'UNDEFINED',
+                        edgeRouting: 'ORTHOGONAL',
+                        edgeSpacingFactor: 0.5,
+                        feedbackEdges: true,
+                        fixedAlignment: 'NONE',
+                        mergeEdges: false,
+                        nodeLayering:'NETWORK_SIMPLEX',
+                        nodePlacement:'SIMPLE',
+                        spacing: 10,
+                        thoroughness: 7
+                   }
+                }
+            });
+            expandCollapseApi.expandAllEdges();
+        }
+        
+        $('#collapseAll').on('click', function(e) {
+            collapseAll();
+        });
+
+        var selected; // store selected node
+//        $('#showChart').on('click', function(e) {
+//            if(selected != undefined && expandCollapseApi.isExpandable(selected)) {
+//                $('#modal').modal('show');
+//            }
+//        });
+        
+        var remove;
+        cy.on('tap', 'node', function(e) {
+            cy.elements().removeClass('target');
+            var target = e.target;
+            selected = target;
+            if(target.isChild()) {
+                expandAllNodesAndEdges();
+                selected = target;
+                var nodes = target.union(target.predecessors()).union(target.successors()).union(target.parent()).union(target.predecessors().parent()).union(target.successors().parent());
+                var all = cy.elements().remove();
+                cy.add(nodes);
+                setLayout();
+               target.union(target.predecessors()).union(target.successors()).addClass('highlight');
+                target.addClass('target');
+            }
+        });
+
+        var setLayout = function() {
+            var layout = cy.layout({
+                name: 'klay',
+                nodeDimensionsIncludeLabels: true, 
+                fit: true, 
+                padding: 20,
+                transform: function( node, pos ){ return pos; }, 
+                klay: {
+                    addUnnecessaryBendpoints: false,
+                    aspectRatio: 1.6,
+                    borderSpacing: 20,
+                    compactComponents: true,
+                    crossingMinimization: 'LAYER_SWEEP',
+                    cycleBreaking: 'GREEDY',
+                    direction: 'UNDEFINED',
+                    edgeRouting: 'ORTHOGONAL',
+                    edgeSpacingFactor: 0.5,
+                    feedbackEdges: true,
+                    fixedAlignment: 'NONE',
+                    mergeEdges: false,
+                    nodeLayering:'NETWORK_SIMPLEX',
+                    nodePlacement:'SIMPLE',
+                    spacing: 10,
+                    thoroughness: 7
+                }
+            });
+
+            layout.run();
+        }
+        
+    }); // on dom ready
+</script>
+</html>

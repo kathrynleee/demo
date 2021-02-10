@@ -1,0 +1,416 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.1/cytoscape.min.js"></script>
+<script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-klay@3.1.4/cytoscape-klay.js"></script>
+
+<style>
+    #cy {
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 70;
+    }
+</style>
+
+<body>
+    <div>
+        <button id="reset">Reset</button>
+        <button id="in">in</button>
+        <button id="out">out</button>
+        <button id="inout">in & out</button>
+        <select name="role" id="role">
+            <option value="">All roles</option>
+            <option value="ServiceProvider">Service Provider</option>
+            <option value="InformationHolder">Information Holder</option>
+            <option value="Coordinator">Coordinator</option>
+            <option value="Interfacer">Interfacer</option>
+            <option value="Controller">Controller</option>
+            <option value="Structurer">Structurer</option>
+        </select>
+        <select name="version" id="version">
+            <option value="7.07-prod" selected>7.07-prod</option>
+            <option value="7.44">7.44</option>
+        </select>
+        <input type="text" id="search" name="search" placeholder="search class">
+        <button id="confirm">Search</button>
+    </div>
+    <img src="role.png" style="max-height: 26px;padding-top: 8px;">
+    <div id="cy"></div>
+</body>
+    
+<script>
+    var original; // original data
+    var selected; // store selected node
+    var cy;
+    var path = 'https://raw.githubusercontent.com/kathrynleee/demo/main/bitcoin-wallet-' + $('#version').val() + '_json.js';
+
+    var createGraph = function(path){
+        $.getJSON(path, function (data) {
+        original = data;
+        cy = cytoscape({
+            container: $('#cy'),
+            layout:{
+                 name: 'klay',
+                nodeDimensionsIncludeLabels: true, 
+                fit: true, 
+                padding: 20,
+                transform: function( node, pos ){ return pos; }, 
+                klay: {
+                    addUnnecessaryBendpoints: false,
+                    aspectRatio: 1.6,
+                    borderSpacing: 20,
+                    compactComponents: true,
+                    crossingMinimization: 'LAYER_SWEEP',
+                    cycleBreaking: 'GREEDY',
+                    direction: 'UNDEFINED',
+                    edgeRouting: 'ORTHOGONAL',
+                    edgeSpacingFactor: 0.5,
+                    feedbackEdges: true,
+                    fixedAlignment: 'NONE',
+                    mergeEdges: false,
+                    nodeLayering:'NETWORK_SIMPLEX',
+                    nodePlacement:'SIMPLE',
+                    spacing: 10,
+                    thoroughness: 7
+                }
+            },
+            boxSelectionEnabled: true,
+            style: cytoscape.stylesheet()
+                .selector('node')
+                .css({
+                    'label': 'data(name)',
+                    'background-color': '#97bbc9',
+                    'text-valign': 'top',
+                    'text-halign': 'center',
+                    'color': '#3368a1',
+                    'font-size' : '20',
+                    'text-wrap': 'wrap',
+                    'text-max-width': '20',
+                    'width' : '30',
+                    'height': '30'
+                })
+                .selector('node[role="Controller"]')
+                .css({
+                    'shape': 'round-diamond'
+                })
+                .selector('node[role="Coordinator"]')
+                .css({
+                    'shape': 'round-pentagon'
+                })
+                .selector('node[role="Interfacer"]')
+                .css({
+                    'shape': 'round-octagon'
+                })
+                .selector('node[role="Information Holder"]')
+                .css({
+                    'shape': 'round-rectangle',
+                    'background-color': 'white',
+                    'border-color': '#97bbc9',
+                    'border-width': 3,
+                    'width' : '27',
+                    'height': '27'
+                })
+                .selector('node[role="Service Provider"]')
+                .css({
+                    'shape': 'ellipse',
+                    'background-color': 'white',
+                    'border-color': '#97bbc9',
+                    'border-width': 3,
+                    'width' : '27',
+                    'height': '27'
+                })
+                .selector('node[role="Structurer"]')
+                .css({
+                    'shape': 'round-tag'
+                })
+                .selector('node:parent')
+                .css({
+                    'text-valign': 'top',
+                    'text-halign': 'center',
+                    'background-color': 'white',
+                    'color': '#97bbc9',
+                    'border-color': '#97bbc9',
+                    'border-width': 2
+                })
+                .selector('edge')
+                .css({
+                    'line-color': '#97bbc9',
+                    'width': 3,
+                    'target-arrow-color': '#97bbc9',
+                    'target-arrow-shape': 'triangle',
+                    'arrow-scale': 2,
+                    'curve-style': 'bezier',
+                    'opacity': 0.7
+                })
+                .selector('node.highlight')
+                .css({
+                    'background-color': '#3368a1',
+                    'color': '#3368a1'
+                })
+                .selector('node[role="Information Holder"].highlight')
+                .css({
+                    'background-color': 'white',
+                    'border-color': '#3368a1'
+                })
+                .selector('node[role="Service Provider"].highlight')
+                .css({
+                    'background-color': 'white',
+                    'border-color': '#3368a1'
+                })
+                .selector('edge.highlight')
+                .css({
+                    'target-arrow-color': '#3368a1',
+                    'line-color': '#3368a1'
+                })
+                .selector('node.third')
+                .css({
+                    'background-color': '#eaedc5',
+                    'color': '#eaedc5'
+                })
+                .selector('node[role="Information Holder"].third')
+                .css({
+                    'background-color': 'white',
+                    'border-color': '#eaedc5'
+                })
+                .selector('node[role="Service Provider"].third')
+                .css({
+                    'background-color': 'white',
+                    'border-color': '#eaedc5'
+                })
+                .selector('edge.third')
+                .css({
+                    'target-arrow-color': '#eaedc5',
+                    'line-color': '#eaedc5'
+                })
+                .selector('node.target')
+                .css({
+                    'background-color': '#ed5e53',
+                    'color': '#ed5e53'
+                })
+                .selector('node[role="Information Holder"].target')
+                .css({
+                    'background-color': 'white',
+                    'border-color': '#ed5e53'
+                })
+                .selector('node[role="Service Provider"].target')
+                .css({
+                    'background-color': 'white',
+                    'border-color': '#ed5e53'
+                })
+                .selector('edge.hover')
+                .css({
+                    'target-arrow-color': '#a9b3cf',
+                    'line-color': '#a9b3cf'
+                })
+                .selector('node.hover')
+                .css({
+                    'background-color': '#a9b3cf',
+                    'color': '#a9b3cf'
+                })
+                .selector('.hide')
+                .css({
+                    'opacity': 0
+                })
+                .selector('.remove')
+                .css({
+                    'display': 'none'
+                })
+                ,
+            elements: data,
+            ready: function() {
+                this.on('tap', 'node', function(e) {
+                    var target = e.target;
+                    remove();
+                    setLayout();
+
+                    // is parent node
+                    if(target.isParent()) {
+
+                        var nodes = target.union(target.children().predecessors()).union(target.children().successors()).union(target.children());
+
+                    } else {
+                        selected = target;
+                        var nodes = target.union(target.predecessors()).union(target.successors());
+                        var parents = nodes.parent();
+                        cy.elements().not(nodes).not(parents).addClass('remove');
+                        target.addClass('target');
+                    }
+                    setLayout();
+                });
+
+                // click on background
+                this.on('click', function(e) {
+                    if (e.target === cy) {
+                        reset();
+                    }
+                });
+            }
+        });
+    });
+  }
+
+    createGraph(path);
+
+    var reset = function() {
+        selected = undefined;
+        var all = cy.elements();
+        cy.remove(all);
+        cy.add(original);
+        setLayout();
+    }
+
+    $('#version').on('change', function() {
+        cy.destroy();
+        var path = 'https://raw.githubusercontent.com/kathrynleee/demo/main/bitcoin-wallet-' + this.value + '_json.js';
+        createGraph(path);
+    });
+
+    $('#role').on('change', function() {
+        if(this.value == 'ServiceProvider') {
+            reset();
+            var nodes = cy.elements('node[role="Service Provider"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            setLayout();
+        } else if(this.value == 'InformationHolder') {
+            reset();
+            var nodes = cy.elements('node[role="Information Holder"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            setLayout();
+        } else if(this.value == 'Controller') {
+            reset();
+            var nodes = cy.elements('node[role="Controller"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            setLayout();
+        } else if(this.value == 'Coordinator') {
+            reset();
+            var nodes = cy.elements('node[role="Coordinator"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            setLayout();
+        } else if(this.value == 'Interfacer') {
+            reset();
+            var nodes = cy.elements('node[role="Interfacer"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            setLayout();
+        } else if(this.value == 'Structurer') {
+            reset();
+            var nodes = cy.elements('node[role="Structurer"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            setLayout();
+        } else if(this.value == '') {
+            reset();
+        } 
+    });
+
+    function remove(){
+        cy.elements().removeClass(['target','highlight', 'third', 'remove']);
+    }
+
+    $('#reset').click(function() {
+        reset();
+    });
+
+    $('#confirm').click(function(){
+        var input = $("#search").val();
+        selected = cy.elements('node[name="'+ input + '"]'); 
+        if(selected.length == 0) {
+            alert("not found!");
+        } else {
+            var nodes = selected.union(selected.predecessors()).union(selected.successors());
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            selected.addClass('target');
+        }
+    });
+
+    $('#in').click(function() {
+        remove();
+        setLayout();
+        var firstLvlNodes = selected.incomers();
+        var secondLvlNodes = firstLvlNodes.incomers();
+        var thirdLvlNodes = secondLvlNodes.incomers();
+
+         var parents = cy.elements(selected).union(firstLvlNodes).union(secondLvlNodes).union(thirdLvlNodes).parent();
+        cy.elements().not(selected).not(firstLvlNodes).not(secondLvlNodes).not(thirdLvlNodes).not(parents).addClass('remove');
+        firstLvlNodes.addClass('highlight');
+        thirdLvlNodes.not(selected).not(firstLvlNodes).not(secondLvlNodes).addClass('third');
+        selected.addClass('target');
+        setLayout();
+    });
+
+    $('#out').click(function() {
+        remove();
+        setLayout();
+        var firstLvlNodes = selected.outgoers();
+        var secondLvlNodes = firstLvlNodes.outgoers();
+        var thirdLvlNodes = secondLvlNodes.outgoers();
+
+         var parents = cy.elements(selected).union(firstLvlNodes).union(secondLvlNodes).union(thirdLvlNodes).parent();
+        cy.elements().not(selected).not(firstLvlNodes).not(secondLvlNodes).not(thirdLvlNodes).not(parents).addClass('remove');
+
+        firstLvlNodes.addClass('highlight');
+        thirdLvlNodes.not(selected).not(firstLvlNodes).not(secondLvlNodes).addClass('third');
+        selected.addClass('target');
+        setLayout();
+    });
+
+    $('#inout').click(function() {
+        remove();
+        setLayout();
+        var firstLvlNodes = selected.outgoers().union(selected.incomers());
+        var secondLvlNodes = firstLvlNodes.outgoers().union(firstLvlNodes.incomers());
+        var thirdLvlNodes = secondLvlNodes.outgoers().union(secondLvlNodes.incomers());
+
+        var nodes = cy.elements(selected).union(firstLvlNodes).union(secondLvlNodes).union(thirdLvlNodes);
+         var parents = nodes.parent();
+        cy.elements().not(nodes).not(parents).addClass('remove');
+
+        firstLvlNodes.addClass('highlight');
+        thirdLvlNodes.not(selected).not(firstLvlNodes).not(secondLvlNodes).addClass('third');
+        selected.addClass('target');
+        setLayout();
+    });
+
+    var removeAll = function() {
+        var all = cy.elements();
+        cy.remove(all);
+    }
+
+    var setLayout = function() {
+        var layout = cy.layout({
+             name: 'klay',
+            nodeDimensionsIncludeLabels: true, 
+            fit: true, 
+            padding: 20,
+            transform: function( node, pos ){ return pos; }, 
+            klay: {
+                addUnnecessaryBendpoints: false,
+                aspectRatio: 1.6,
+                borderSpacing: 20,
+                compactComponents: true,
+                crossingMinimization: 'LAYER_SWEEP',
+                cycleBreaking: 'GREEDY',
+                direction: 'UNDEFINED',
+                edgeRouting: 'ORTHOGONAL',
+                edgeSpacingFactor: 0.5,
+                feedbackEdges: true,
+                fixedAlignment: 'NONE',
+                mergeEdges: false,
+                nodeLayering:'NETWORK_SIMPLEX',
+                nodePlacement:'SIMPLE',
+                spacing: 10,
+                thoroughness: 7
+            }
+        });
+
+        layout.run();
+    }
+</script>
+</html>
