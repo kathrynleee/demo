@@ -250,10 +250,12 @@
 
     $('#reset').click(function() {
         reset();
+        $('#show, #get').removeAttr("disabled");
+        $("#search").val('');
     });
 
     $('#show').click(function() {
-        
+        $('#show').attr("disabled", true);
         var from = $("#from").val();
         var to = $("#to").val();
         
@@ -332,13 +334,14 @@
             cy.elements('[status="added"]').addClass('added');
             cy.elements('[status="removed"]').addClass('removed');
             
-            cy.layout(options).run();
+//            cy.layout(options).run();
         } else {
             alert("not found!");
         }
     });
     
     $('#get').click(function(){
+        $('#get').attr("disabled", true);
         remove();
         var input = $("#search").val();
         var from = $("#from").val();
