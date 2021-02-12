@@ -48,7 +48,7 @@
 </body>
     
 <script>
-    var original; // original data
+    var original; // all data
     var selected; // store selected node
     var cy;
     var v1 = { nodes: [], edges: [] };
@@ -309,10 +309,10 @@
         var input = $("#search").val();
         
         var node = _.find(eval(from).nodes, function(d){
-            return d.data.id == input;
+            return d.data.name == input;
         });
         if(node != undefined) { 
-            var n = cy.elements('node[id="'+ node.data.id + '"]');
+            var n = cy.elements('node[name="'+ node.data.name + '"]');
             var nodes = n.union(n.predecessors()).union(n.successors());
             cy.elements().not(nodes).not(nodes.parent()).addClass('remove');
             n.addClass('target');
@@ -348,12 +348,12 @@
         var to = $("#to").val();
         
         var node = _.find(eval(from).nodes, function(d){
-            return d.data.id == input;
+            return d.data.name == input;
         });
 
         if(node != undefined) {
             addElements(eval(from));
-            var n = cy.elements('node[id="'+ node.data.id + '"]');
+            var n = cy.elements('node[name="'+ node.data.name + '"]');
             var nodes = n.union(n.predecessors()).union(n.successors());
             var parents = nodes.parent();
             cy.elements().not(nodes).not(parents).addClass('remove');
