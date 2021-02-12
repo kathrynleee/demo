@@ -16,10 +16,7 @@
 
 <body>
     <div>
-        <button id="reset">Reset</button>
-        <button id="in">in</button>
-        <button id="out">out</button>
-        <button id="inout">in & out</button>
+        <button id="reset">Back</button>
         <select name="role" id="role">
             <option value="">All roles</option>
             <option value="ServiceProvider">Service Provider</option>
@@ -35,6 +32,14 @@
         </select>
         <input type="text" id="search" name="search" placeholder="search class">
         <button id="confirm">Search</button>
+        <button id="in">in</button>
+        <button id="out">out</button>
+        <button id="inout">in & out</button>
+        <select name="hover" id="hover">
+            <option value="">No hover</option>
+            <option value="path">Show path</option>
+             <option value="dependency">Show dependencies</option>
+        </select>
     </div>
     <img src="role.png" style="max-height: 26px;padding-top: 8px;">
     <div id="cy"></div>
@@ -199,19 +204,23 @@
                     'background-color': 'white',
                     'border-color': '#ed5e53'
                 })
-                .selector('edge.hover')
-                .css({
-                    'target-arrow-color': '#a9b3cf',
-                    'line-color': '#a9b3cf'
-                })
-                .selector('node.hover')
-                .css({
-                    'background-color': '#a9b3cf',
-                    'color': '#a9b3cf'
-                })
+//                .selector('edge.hover')
+//                .css({
+//                    'target-arrow-color': '#a9b3cf',
+//                    'line-color': '#a9b3cf'
+//                })
+//                .selector('node.hover')
+//                .css({
+//                    'background-color': '#a9b3cf',
+//                    'color': '#a9b3cf'
+//                })
                 .selector('.hide')
                 .css({
-                    'opacity': 0
+                    'opacity': 0.1
+                })
+                .selector('node:parent.hide')
+                .css({
+                    'opacity': 1
                 })
                 .selector('.remove')
                 .css({
@@ -232,7 +241,8 @@
 
                     } else {
                         selected = target;
-                        var nodes = target.union(target.predecessors()).union(target.successors());
+                        var nodes = target.union(target.neighborhood());
+//                        var nodes = target.union(target.predecessors()).union(target.successors());
                         var parents = nodes.parent();
                         cy.elements().not(nodes).not(parents).addClass('remove');
                         target.addClass('target');
@@ -318,16 +328,20 @@
     });
 
     $('#confirm').click(function(){
+        remove();
+        setLayout();
         var input = $("#search").val();
         selected = cy.elements('node[name="'+ input + '"]'); 
         if(selected.length == 0) {
             alert("not found!");
         } else {
-            var nodes = selected.union(selected.predecessors()).union(selected.successors());
+            var nodes = selected.union(selected.neighborhood());
+//            var nodes = selected.union(selected.predecessors()).union(selected.successors());
             var parents = nodes.parent();
             cy.elements().not(nodes).not(parents).addClass('remove');
             selected.addClass('target');
         }
+        setLayout();
     });
 
     $('#in').click(function() {
@@ -378,6 +392,49 @@
         setLayout();
     });
 
+    var dependencyHover = function(e) {
+            var target = e.target;
+            if(target !== selected && selected !== undefined && !target.isParent()) {
+                target.neighborhood().addClass('hover');
+                cy.elements().not(target).not(target.neighborhood()).addClass('hide');
+            }
+        };
+        var removeDependencyHoverClass = function() {
+            cy.elements().removeClass(['hover','hide']);
+        };
+        
+        var pathHover = function(e) {
+            var target = e.target;
+            if(target !== selected && selected !== undefined && !target.isParent()) {
+                var aStar = cy.elements().aStar({ root: selected, goal: target });
+                var elementsInPath = aStar.path.select();       
+                elementsInPath.not(selected).addClass('path');
+                cy.elements().not(elementsInPath).not(selected).addClass('hide');
+            }
+        };
+        var removePathHoverClass = function() {
+            cy.elements().removeClass(['path','hide']);
+        };
+        
+        $('#hover').on('change', function() {
+            if(this.value == 'path') {
+                cy.removeListener('mouseover', 'node', dependencyHover);
+                cy.removeListener('mouseout', 'node', removeDependencyHoverClass);
+                cy.on('mouseover', 'node', pathHover);
+                cy.on('mouseout', 'node', removePathHoverClass);
+            } else if(this.value == 'dependency') {
+                cy.removeListener('mouseover', 'node', pathHover);
+                cy.removeListener('mouseout', 'node', removePathHoverClass);
+                cy.on('mouseover', 'node', dependencyHover);
+                cy.on('mouseout', 'node', removeDependencyHoverClass);
+            } else if(this.value == '') {
+                cy.removeListener('mouseover', 'node', dependencyHover);
+                cy.removeListener('mouseout', 'node', removeDependencyHoverClass);
+                cy.removeListener('mouseover', 'node', pathHover);
+                cy.removeListener('mouseout', 'node', removePathHoverClass);
+            }
+        });
+    
     var removeAll = function() {
         var all = cy.elements();
         cy.remove(all);

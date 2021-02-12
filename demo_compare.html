@@ -17,7 +17,7 @@
 
 <body>
     <div>
-        <button id="reset">Reset</button>
+        <button id="back">Back</button>
         <select name="version" id="version">
             <option value="">version</option>
             <option value="v1">7.07-prod</option>
@@ -202,6 +202,19 @@
                 ,
             elements: [],
             ready: function() {
+                this.on('tap', 'node', function(e) {
+                    var target = e.target;
+                    remove();
+                    if(!target.isParent()) {
+                        selected = target;
+                        selected.addClass('target');
+                        $("#search").val(selected._private.data.name);
+                        var current = $('#version').val();
+                        $('#from').val(current);
+                        $('#show, #get').removeAttr("disabled");
+                    }
+                    removeAll();
+                });
             }
         });
     });
@@ -215,7 +228,7 @@
     shape.set('Structurer', 'round-tag');
     
     var reset = function() {
-        selected = undefined;
+//        selected = undefined;
         var all = cy.elements();
         cy.remove(all);
     }
@@ -224,10 +237,14 @@
         cy.add(eles);
     }
     
+    $('#from, #to').on('change', function() {
+        reset();
+        $('#show, #get').removeAttr("disabled");
+    });
+    
     $('#version').on('change', function() {
         var from = $("#version").val();
-        var all = cy.elements();
-        cy.remove(all);
+        removeAll();
         
         if(from === 'v1') {
             addElements(v1)
@@ -248,10 +265,23 @@
         cy.elements().removeClass(['target','highlight', 'third', 'remove', 'added', 'removed', 'roleChanged']);
     }
 
-    $('#reset').click(function() {
-        reset();
+    $('#back').click(function() {
+        var from = $("#version").val();
+        removeAll();
         $('#show, #get').removeAttr("disabled");
-        $("#search").val('');
+        if(from === 'v1') {
+            addElements(v1)
+                .then(() => cy.layout(options).run());
+        } else if(from === 'v2') {
+            addElements(v2)
+                .then(() => cy.layout(options).run());
+        } else if(from === 'v3') {
+            addElements(v3)
+                .then(() => cy.layout(options).run());
+        } else if(from === 'v4') {
+            addElements(v4)
+                .then(() => cy.layout(options).run());
+        }
     });
 
     $('#show').click(function() {
@@ -306,7 +336,13 @@
         addElements(parents);
 
         cy.elements().removeClass(['target', 'highlight', 'third', 'remove', 'added', 'removed', 'roleChanged']);
-        var input = $("#search").val();
+        
+        var input;
+        if(selected != undefined) {
+            input = selected._private.data.name;
+        } else {
+            input = $("#search").val();
+        }
         
         var node = _.find(eval(from).nodes, function(d){
             return d.data.name == input;
@@ -334,16 +370,24 @@
             cy.elements('[status="added"]').addClass('added');
             cy.elements('[status="removed"]').addClass('removed');
             
-//            cy.layout(options).run();
+            cy.layout(options).run();
         } else {
             alert("not found!");
         }
     });
     
     $('#get').click(function(){
+        removeAll();
         $('#get').attr("disabled", true);
         remove();
-        var input = $("#search").val();
+        
+        var input;
+        if(selected != undefined) {
+            input = selected._private.data.name;
+        } else {
+            input = $("#search").val();
+        }
+        
         var from = $("#from").val();
         var to = $("#to").val();
         
