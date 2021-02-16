@@ -1,0 +1,376 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.1/cytoscape.min.js"></script>
+        <script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cytoscape-klay@3.1.4/cytoscape-klay.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cytoscape-expand-collapse@4.0.0/cytoscape-expand-collapse.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+            #cy {
+                height: 90%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 40;
+            }
+            
+            #helper {
+                padding: 10px;
+                width: 150px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                border: 2px solid #97bbc9;
+                border-radius: 5px;
+                border-right: 4px solid #97bbc9;
+                border-bottom: 4px solid #97bbc9;
+                z-index: 99999;
+                background: #FFF;
+            }
+            
+            .material-icons{
+                font-size: 13px;
+                padding: 3px 8px;
+                border: none;
+                background: none;
+            }
+            
+            #hint {
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+         <div style="padding-top: 10px; padding-left: 10px;">
+            <select name="version" id="version">
+                <option value="">version</option>
+                <option value="bitcoin-wallet-7.07-prod">7.07-prod</option>
+                <option value="bitcoin-wallet-7.12-prod">7.12-prod</option>
+                <option value="bitcoin-wallet-7.22-prod">7.22-prod</option>
+                <option value="bitcoin-wallet-7.44">7.44</option>
+            </select>
+            <button id="help" class="material-icons">help</button>
+        </div>
+        <div id="cy"></div>
+        <div id="helper">
+            <div>
+                <button id="close" class="material-icons" style="font-size: 15px;">close</button>
+            </div>
+            <div id="hint"></div>
+            <div id="options">
+                <select name="dependencies" id="dependencies">
+                    <option value="show">Show dependencies</option>
+                    <option value="hide">Hide dependencies</option>
+                </select>
+                <button id="collapse">Collapse all</button>
+                <button id="expand">Expand all</button>
+                <select name="role" id="role">
+                    <option value="">All roles</option>
+                    <option value="Service Provider">Service Provider</option>
+                    <option value="Information Holder">Information Holder</option>
+                    <option value="Coordinator">Coordinator</option>
+                    <option value="Interfacer">Interfacer</option>
+                    <option value="Controller">Controller</option>
+                    <option value="Structurer">Structurer</option>
+                </select>
+            </div>
+        </div>
+    </body>
+    
+<script>    
+    var original; // all data
+    var selected; // store selected node
+    var cy;
+    var currentData = { nodes: [], edges: [] };
+
+    $('#options, #help').hide();
+    
+    $('#help').on('click', function(e) {
+        $('#helper').show();
+    });
+ 
+    $('#role').on('change', function(e){
+        var role = $('#role').val();
+        cy.elements().removeClass('remove');
+        if(role != "") {
+            expandAll();
+            var nodes = cy.elements('node[role="'+ role + '"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            cy.layout(options).run();
+        } else {
+            cy.layout(options).run();
+            collapseAll();
+        }
+    });
+    
+    $('#close').on('click', function(e) {
+        $('#helper').hide();
+        $('#help').show();
+    });
+    
+    $('#help').on('click', function(e) {
+        $('#helper').show();
+        $('#help').hide();
+    });
+    
+    $('#collapse').on('click', function(e) {
+        collapseAll();
+    });
+    
+    $('#expand').on('click', function(e) {
+        expandAll();
+    });
+    
+    function expandAll(){
+        var api = cy.expandCollapse('get');
+        api.expandAll();
+        cy.layout(options).run();
+    }
+    
+    function collapseAll(){
+        var api = cy.expandCollapse('get');
+        api.collapseAll({
+            layoutBy: {
+                name: 'circle',
+                avoidOverlap: true
+            }
+        }); 
+        api.collapseAllEdges(); 
+    }
+    
+    $('#version').on('change', function() {
+        var version = $("#version").val();
+        $("#hint").html("Click on a node to expand the package.");
+        currentData = { nodes: [], edges: [] };
+        
+        _.forEach(original.nodes, function(d) {
+            if(d.data.version === version) {
+                currentData.nodes.push(d);
+            }
+        });
+
+        _.forEach(original.edges, function(d) {
+            if(d.data.version === version) {
+                currentData.edges.push(d);
+            }
+        });
+        
+        var all = cy.elements();
+        cy.remove(all);
+        addElements(currentData)
+            .then(() => collapseAll());
+        $('#options').show();
+    });
+    
+    $('#dependencies').on('change', function(e) {
+        if($('#dependencies').val() == 'show') {
+            cy.elements('edge').removeClass('remove');
+        } else {
+            cy.elements('edge').not('edge.cy-expand-collapse-collapsed-edge, edge.cy-expand-collapse-meta-edge').addClass('remove');
+            cy.layout(options).run();
+        }
+    });
+    
+        $.getJSON('https://raw.githubusercontent.com/kathrynleee/demo/main/data.json', function (data) {
+            original = data;
+
+            cy = cytoscape({
+                container: $('#cy'),
+                layout: options,
+                boxSelectionEnabled: true,
+                style: cytoscape.stylesheet()
+                    .selector('node')
+                    .css({
+                        'label': 'data(name)',
+                        'background-color': '#97bbc9',
+                        'text-valign': 'top',
+                        'text-halign': 'center',
+                        'color': '#3368a1',
+                        'font-size' : '20',
+                        'text-wrap': 'wrap',
+                        'text-max-width': '20',
+                        'width' : '30',
+                        'height': '30'
+                    })
+                    .selector('edge')
+                    .css({
+                        'line-color': '#97bbc9',
+                        'width': 3,
+                        'target-arrow-color': '#97bbc9',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 2,
+                        'curve-style': 'bezier',
+                        'opacity': 0.7
+                    })
+                    .selector('node:parent, node:parent.highlight, node:parent.target')
+                    .css({
+                        'text-valign': 'top',
+                        'text-halign': 'center',
+                        'background-color': 'white',
+                        'color': '#97bbc9',
+                        'border-color': '#97bbc9',
+                        'border-width': 2
+                    })
+                    .selector('node.cy-expand-collapse-collapsed-node')
+                    .css({
+                        'background-color': '#656bb5',
+                        'border-color': '#cbcde6',
+                        'border-width': 5,
+                        'color': '#656bb5'
+                    })     
+                    .selector('edge.cy-expand-collapse-collapsed-edge')
+                    .css({
+                        'line-color': '#cbcde6',
+                        'target-arrow-color': '#cbcde6',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 1,
+                        'curve-style': 'bezier',
+                        'width': function (edge) {
+                            var size = edge.data("collapsedEdges").length;
+                            var width = _.round((Math.log(size) / Math.log(1.5) + Number.EPSILON)) + 1;
+                            return width;
+                        }
+                    })
+                    .selector('edge.cy-expand-collapse-meta-edge')
+                    .css({
+                        'line-color': '#cbcde6',
+                        'target-arrow-color': '#cbcde6',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 1,
+                        'curve-style': 'bezier',
+                        'width': 3
+                    })
+                    .selector('.remove')
+                    .css({
+                        'display': 'none'
+                    })
+                    ,
+                elements: [],
+                ready: function() {
+                    
+                    $("#hint").html("Start by choosing one version.");
+                    
+                    var api = this.expandCollapse({
+                        layoutBy: options,
+                        animate: false,
+                        undoable: false
+                    });
+
+                    api.collapseAll({
+                        layoutBy: {
+                            name: 'circle',
+                            avoidOverlap: true
+                        }
+                    }); 
+
+                    api.collapseAllEdges(); 
+                    
+                    api.disableCue();
+
+                    this.on('tap', 'node.cy-expand-collapse-collapsed-node', function(e) {
+                        var target = e.target;
+                        var api = cy.expandCollapse('get');
+                        api.expand(target);
+                        selected = target;
+//                        alert(target._private.data.name)
+                        $('#collapse, #expand, #role').hide();
+                        $('#dependencies').show();
+                        $("#hint").html("Try to click on a node. Nodes are draggable.");
+                    });
+                    
+                    this.on('click', function(e) {
+                        if (e.target === cy) {
+                            
+                            var api = cy.expandCollapse('get');
+                            api.collapse(selected);
+                            cy.elements().removeClass('remove');
+                            
+                            cy.layout({
+                                name: 'circle',
+                                avoidOverlap: true
+                            }).run();
+                            
+                            api.collapseAll({
+                                layoutBy: {
+                                    name: 'circle',
+                                    avoidOverlap: true
+                                }
+                            }); 
+                            $('#dependencies').hide();
+                            $("#hint").html("Try to click on a node. Nodes are draggable.");
+                        }
+                    });
+                    
+                    $('#dependencies').hide();
+                    
+                    this.on('tap', 'node', function(e) {
+                        var target = e.target;
+                        remove();
+                        if(!target.hasClass('cy-expand-collapse-collapsed-node')) {
+                            // is parent node
+                            if(target.isParent()) {
+                                var nodes = target.union(target.children());
+                                var edges = nodes.connectedEdges();
+                                var parent = target.parent();
+                                cy.elements().not(nodes).not(parent).not(edges).addClass('remove');
+                                cy.layout(options).run();
+                                $('#collapse, #expand, #role').hide();
+                                $("#hint").html("Try to click on a node. Nodes are draggable.</br>Go back by clicking on background outside the package.");
+                            } else {
+                                selected = target._private.data.id;
+                                cy.destroy();
+                                window.location.href = "https://raw.githack.com/kathrynleee/demo/main/demo_sub.html?version=" + $('#version').val() + "&id=" + selected;
+//                                window.location.href = "https://raw.githack.com/kathrynleee/demo/main/demo_class.html?version=" + $('#version').val() + "&id=" + selected;
+                            }
+                        } else {
+                            $('#collapse, #expand, #role').show();
+                            $("#hint").html("Click on a node to expand the package.");
+                        }
+                    });
+                    
+                }
+            });
+        });
+    
+    function remove(){
+        cy.elements().removeClass(['target', 'highlight', 'third', 'remove', 'added', 'removed', 'roleChanged']);
+    }
+    
+    async function addElements(eles){
+        cy.add(eles);
+    }
+    
+    var options = {
+        name: 'klay',
+        nodeDimensionsIncludeLabels: true, 
+        fit: true, 
+        padding: 20,
+        transform: function( node, pos ){ return pos; }, 
+        klay: {
+            addUnnecessaryBendpoints: false,
+            aspectRatio: 1.6,
+            borderSpacing: 20,
+            compactComponents: true,
+            crossingMinimization: 'LAYER_SWEEP',
+            cycleBreaking: 'GREEDY',
+            direction: 'DOWN',
+            edgeRouting: 'ORTHOGONAL',
+            edgeSpacingFactor: 0.5,
+            feedbackEdges: true,
+            fixedAlignment: 'NONE',
+            mergeEdges: false,
+            nodeLayering:'NETWORK_SIMPLEX',
+            nodePlacement:'SIMPLE',
+            spacing: 10,
+            thoroughness: 7
+        }
+    };
+</script>
+</html>

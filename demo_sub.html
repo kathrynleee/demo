@@ -1,0 +1,676 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.1/cytoscape.min.js"></script>
+        <script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cytoscape-klay@3.1.4/cytoscape-klay.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cytoscape-expand-collapse@4.0.0/cytoscape-expand-collapse.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+            #cy {
+                height: 90%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 40;
+            }
+            
+            #helper {
+                padding: 10px;
+                width: 150px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                border: 2px solid #97bbc9;
+                border-radius: 5px;
+                border-right: 4px solid #97bbc9;
+                border-bottom: 4px solid #97bbc9;
+                z-index: 99999;
+                background: #FFF;
+            }
+            
+            .material-icons{
+                font-size: 13px;
+                padding: 3px 8px;
+                border: none;
+                background: none;
+            }
+            
+            #hint {
+                padding: 10px;
+                word-wrap: break-word;
+            }
+            
+            #animation {
+                position: absolute;
+                bottom: 0;
+                background: #FFF;
+                z-index: 9999;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+            
+            #animation div {
+                display: inline-block;
+            }
+            
+            #animation button {
+                padding: 5px;
+            }
+            
+            #progress {
+                height: 5px;
+                width: 0px;
+                background-color: black;
+/*                border: 1px solid black;*/
+                float: right;
+                margin-top: 14px;
+                margin-left: 25px;
+            }
+        </style>
+    </head>
+
+    <body>
+         <div style="padding-top: 10px; padding-left: 10px;">
+            <button id="help" class="material-icons">help</button>
+             <div id="title"></div>
+        </div>
+        <div id="cy"></div>
+        <div id="animation">
+            <div>
+                <button id="start" class="material-icons" style="font-size: 20px;">play_arrow</button>
+                <button id="pause" class="material-icons" style="font-size: 20px;">pause</button>
+                <button id="stop" class="material-icons" style="font-size: 20px;">stop</button>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="helper">
+            <div>
+                <button id="close" class="material-icons" style="font-size: 15px;">close</button>
+            </div>
+            <div id="hint">
+            </div>
+            <div class="rolePic"><img src="role_2.png" style="width: 130px; padding-left: 10px; padding-bottom: 15px;"></div>
+            <div id="options">
+                <select name="hover" id="hover">
+                    <option value="">No hover</option>
+                    <option value="path">Show path</option>
+                    <option value="dependency">Show dependencies</option>
+                </select>
+                <select name="edges" id="edges">
+                    <option value="" selected>Show all edges</option>
+                    <option value="in">Show incoming edges</option>
+                    <option value="out">Show outgoing edges</option>
+                </select>
+                <select name="dependencies" id="dependencies">
+                    <option value="">Show all dependencies</option>
+                    <option value="1" selected>Show first level</option>
+                    <option value="2">Show second level</option>
+                    <option value="3">Show third level</option>
+                </select>
+                <button id="slider">Show slider</button>
+                <button id="play">Show animation</button>
+            </div>
+        </div>
+    </body>
+    
+<script>    
+    var original; // all data
+    var selected; // store selected node
+    var cy;
+    var currentData;
+    var version;
+
+    var versions = ['bitcoin-wallet-7.07-prod', 'bitcoin-wallet-7.12-prod', 'bitcoin-wallet-7.22-prod', 'bitcoin-wallet-7.44'];
+    var versionData = [];
+    var changes = [];
+    
+    $('#back, #help, #helper, #animation').hide();
+
+    $('#close').on('click', function(e) {
+        $('#helper').hide();
+        $('#help').show();
+    });
+    
+    $('#help').on('click', function(e) {
+        $('#helper').show();
+        $('#help').hide();
+    });
+    
+    $('#play').on('click', function(e) {
+        $('#hint').html('Brown: added, green: removed, purple: role changed');
+        if($('#play').html() == 'Show animation') {
+            $('#animation').show();
+            $('#play').html('Hide animation');
+        } else {
+            $('#animation').hide();
+            $('#play').html('Show animation');
+        }
+    });
+    
+    var shape = new Map();
+    shape.set('Controller', 'round-diamond');
+    shape.set('Coordinator', 'round-pentagon');
+    shape.set('Interfacer', 'round-octagon');
+    shape.set('Information Holder', 'round-rectangle');
+    shape.set('Service Provider', 'ellipse');
+    shape.set('Structurer', 'round-tag');
+    
+    $('#pause, #stop').prop('disabled', true);
+    $('#start').on('click', function(e) {
+        $('#title').html(versions[0].name);
+        // previous data affects 
+//        cy.elements().remove();
+//        addElements(versionData[0].nodes);
+//        addElements(versionData[0].edges);
+        var nodes = selected.union(selected.incomers()).union(selected.outgoers());
+        var parents = nodes.parent();
+        cy.elements().not(nodes).not(parents).addClass('remove');
+        selected.addClass('target');
+        cy.layout(options).run();
+        
+        $('#pause, #stop').prop('disabled', false); 
+        $("#start").prop('disabled', true); 
+//        remove();
+        // show the class dependencies of first or current version
+        // need to handle when selected node has removed
+        _.forEach(changes, function(c, i) {
+            setTimeout(function(){
+                $('#title').html('From: ' + c.from + '</br>To: ' + c.to);
+                $("#progress").css('width', (i + 1) * 200 + "px"); 
+                
+                cy.elements().removeClass(['added', 'removed', 'roleChanged']);
+                addElements(c.addedNodes);
+                addElements(c.addedEdges);
+                addElements(c.removedNodes);
+                addElements(c.parents);
+
+                var nodes = selected.union(selected.incomers()).union(selected.outgoers());
+                cy.elements().not(nodes).not(nodes.parent()).addClass('remove');
+
+                _.forEach(c.addedNodes, d => d.data['status'] = 'added');
+                _.forEach(c.addedEdges, d => d.data['status'] = 'added');
+                _.forEach(c.removedNodes, d => d.data['status'] = 'removed');
+
+                _.forEach(c.changedRoles, d => {
+                    var s = shape.get(d.data.role);
+                    cy.elements('node[id="' + d.data.id + '"]').addClass('roleChanged').style('shape', s);
+                });
+
+                _.forEach(c.removedEdges, d => 
+                    cy.elements('edge[source="' + d.data.source + '"][target="' + d.data.target + '"]').addClass('removed')
+                );
+
+                cy.elements('[status="added"]').addClass('added');
+                cy.elements('[status="removed"]').addClass('removed');
+                
+                cy.layout(options).run();
+                
+            }, 5000 * (i + 1));
+            setTimeout(function(){
+                $("#start").prop('disabled', false); 
+                $('#pause, #stop').prop('disabled', true);
+                $("#progress").css('width', "0px"); 
+            }, 5000 * (changes.length) + 100);
+        });
+    });
+        
+        $.getJSON('https://raw.githubusercontent.com/kathrynleee/demo/main/data.json', function (data) {
+            original = data;
+            
+            version = getParam("version");
+            selected = getParam("id");
+ 
+            currentData = { nodes: [], edges: [] };
+        
+            _.forEach(original.nodes, function(d) {
+                if(d.data.version === version) {
+                    currentData.nodes.push(d);
+                }
+            });
+
+            _.forEach(original.edges, function(d) {
+                if(d.data.version === version) {
+                    currentData.edges.push(d);
+                }
+            });
+            
+            cy = cytoscape({
+                container: $('#cy'),
+                layout: options,
+                boxSelectionEnabled: true,
+                style: cytoscape.stylesheet()
+                    .selector('node')
+                    .css({
+                        'label': 'data(name)',
+                        'background-color': '#3368a1',
+                        'text-valign': 'top',
+                        'text-halign': 'center',
+                        'color': '#3368a1',
+                        'font-size' : '20',
+                        'text-wrap': 'wrap',
+                        'text-max-width': '20',
+                        'width' : '30',
+                        'height': '30'
+                    })
+                    .selector('edge')
+                    .css({
+                        'line-color': '#3368a1',
+                        'width': 3,
+                        'target-arrow-color': '#3368a1',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 2,
+                        'curve-style': 'bezier',
+                        'opacity': 0.7
+                    })
+                    .selector('node:parent, node:parent.highlight, node:parent.target')
+                    .css({
+                        'text-valign': 'top',
+                        'text-halign': 'center',
+                        'background-color': 'white',
+                        'color': '#3368a1',
+                        'border-color': '#3368a1',
+                        'border-width': 2
+                    })
+                    .selector('.remove')
+                    .css({
+                        'display': 'none'
+                    })
+                    .selector('.hide')
+                    .css({
+                        'opacity': 0
+                    })
+                    .selector('edge.second')
+                    .css({
+                        'target-arrow-color': '#97bbc9',
+                        'line-color': '#97bbc9'
+                    })
+                    .selector('node.second')
+                    .css({
+                        'background-color': '#97bbc9',
+                        'color': '#97bbc9'
+                    })
+                    .selector('node[role="Controller"]')
+                    .css({
+                        'shape': 'round-diamond'
+                    })
+                    .selector('node[role="Coordinator"]')
+                    .css({
+                        'shape': 'round-pentagon'
+                    })
+                    .selector('node[role="Interfacer"]')
+                    .css({
+                        'shape': 'round-octagon'
+                    })
+                    .selector('node[role="Information Holder"]')
+                    .css({
+                        'shape': 'round-rectangle',
+                        'background-color': 'white',
+                        'border-color': '#97bbc9',
+                        'border-width': 3,
+                        'width' : '27',
+                        'height': '27'
+                    })
+                    .selector('node[role="Service Provider"]')
+                    .css({
+                        'shape': 'ellipse',
+                        'background-color': 'white',
+                        'border-color': '#97bbc9',
+                        'border-width': 3,
+                        'width' : '27',
+                        'height': '27'
+                    })
+                    .selector('node[role="Structurer"]')
+                    .css({
+                        'shape': 'round-tag'
+                    })
+                    .selector('node.highlight')
+                    .css({
+                        'background-color': '#3368a1',
+                        'color': '#3368a1'
+                    })
+                    .selector('node[role="Information Holder"].highlight, node[role="Service Provider"].highlight')
+                    .css({
+                        'background-color': 'white',
+                        'border-color': '#3368a1'
+                    })
+                    .selector('edge.highlight')
+                    .css({
+                        'target-arrow-color': '#3368a1',
+                        'line-color': '#3368a1'
+                    })
+                    .selector('node.third')
+                    .css({
+                        'background-color': '#cbd18c',
+                        'color': '#cbd18c'
+                    })
+                    .selector('node[role="Information Holder"].third, node[role="Service Provider"].third')
+                    .css({
+                        'background-color': 'white',
+                        'border-color': '#cbd18c'
+                    })
+                    .selector('edge.third')
+                    .css({
+                        'target-arrow-color': '#cbd18c',
+                        'line-color': '#cbd18c'
+                    })
+                    .selector('node.second')
+                    .css({
+                        'background-color': '#97bbc9',
+                        'color': '#97bbc9'
+                    })
+                    .selector('node[role="Information Holder"].second, node[role="Service Provider"].second')
+                    .css({
+                        'background-color': 'white',
+                        'border-color': '#97bbc9'
+                    })
+                    .selector('node.target')
+                    .css({
+                        'width' : '60',
+                        'height': '60'
+                    })
+                    .selector('.remove')
+                    .css({
+                        'display': 'none'
+                    })
+                    .selector('node.added')
+                    .css({
+                        'background-color': '#cf8d51',
+                        'color': '#cf8d51'
+                    })
+                    .selector('edge.added')
+                    .css({
+                        'line-color': '#cf8d51',
+                        'target-arrow-color': '#cf8d51'
+                    })
+                    .selector('node[role="Information Holder"].added, node[role="Service Provider"].added')
+                    .css({
+                        'background-color': 'white',
+                        'border-color': '#cf8d51'
+                    })
+                    .selector('node.removed')
+                    .css({
+                        'background-color': '#18a878',
+                        'color': '#18a878',
+                        'opacity': 0.2
+                    })
+                    .selector('edge.removed')
+                    .css({
+                        'line-color': '#18a878',
+                        'target-arrow-color': '#18a878',
+                        'opacity': 0.1
+                    })
+                    .selector('node[role="Information Holder"].removed, node[role="Service Provider"].removed')
+                    .css({
+                        'background-color': 'white',
+                        'border-color': '#18a878'
+                    })
+                    .selector('node.roleChanged')
+                    .css({
+                        'background-color': '#a83273',
+                        'color': '#a83273'
+                    })
+                    ,
+                elements: currentData,
+                ready: function() {
+                    selected = this.elements('node[id="'+ selected + '"]'); 
+                    $("#hint").html("Class dependencies around the selected class: " + selected[0]._private.data.name);
+                    
+                    var tappedBefore;
+                    var tappedTimeout;
+
+                    this.on('tap', 'node', function(e) {
+                      var tappedNow = e.target;
+                      if (tappedTimeout && tappedBefore) {
+                        clearTimeout(tappedTimeout);
+                      }
+                      if(tappedBefore === tappedNow) {
+                        tappedNow.trigger('doubleTap', e);
+                        tappedBefore = null;
+                        originalTapEvent = null;
+                      } else {
+                        tappedTimeout = setTimeout(function(){ tappedBefore = null; }, 300);
+                        tappedBefore = tappedNow;
+                      }
+                    });
+                    
+                    this.on('doubleTap', 'node', function (e) {
+                        var target = e.target;
+                        var nodes = target.union(target.neighborhood());
+                        var parents = nodes.parent();
+                        cy.elements(nodes).not(selected).removeClass('remove').addClass('second');
+                        cy.layout(options).run();
+//                    alert(target._private.data.name)
+                    });
+
+                    this.on('tap', 'node', function(e) {
+                        var target = e.target;
+                    });
+                    
+//                    selected = this.elements('node[id="'+ selected + '"]'); 
+                    if(selected.length == 0) {
+                        alert("not found!");
+                    } else {
+//                        selected = selected;
+                        var nodes = selected.union(selected.incomers()).union(selected.outgoers());
+                        var parents = nodes.parent();
+                        this.elements().not(nodes).not(parents).addClass('remove');
+                        selected.addClass('target');
+                        this.layout(options).run();
+                    }
+                    
+                    $('#helper').show();
+                    
+                    this.on('click', function(e) {
+                        if (e.target === cy) {
+                            window.location.href = "https://raw.githack.com/kathrynleee/demo/main/demo_home.html";
+                        }
+                    });
+                }
+            });
+            
+            findChanges(data);
+        });
+    
+//    function refreshLayout() {
+//        var layout = cy.layout(options);
+//        layout.stop();
+//        layout.run();
+//    }
+//    $('#dependencies').on('change', function() {
+//        remove();
+//        var level = $('#dependencies').val();
+//        var firstLvlNodes = selected.outgoers().union(selected.incomers());
+//        var secondLvlNodes = firstLvlNodes.outgoers().union(firstLvlNodes.incomers());
+//        var thirdLvlNodes = secondLvlNodes.outgoers().union(secondLvlNodes.incomers());
+//        selected.addClass('target');
+//        
+//        if(level == '') {
+//            var nodes = cy.elements(selected).union(firstLvlNodes).union(secondLvlNodes).union(thirdLvlNodes);
+//            var parents = nodes.parent();
+//            cy.elements().not(nodes).not(parents).addClass('remove');
+//
+//            thirdLvlNodes.not(selected).not(firstLvlNodes).not(secondLvlNodes).addClass('third');
+//            secondLvlNodes.not(selected).not(firstLvlNodes).not(thirdLvlNodes).addClass('second');
+//        } else if(level == '1') {
+//            var parents = firstLvlNodes.parent();
+//            cy.elements().not(firstLvlNodes).not(parents).addClass('remove');
+//        } else if(level == '2') {
+//            var parents = secondLvlNodes.parent();
+//            cy.elements().not(selected).not(secondLvlNodes).not(parents).addClass('remove');
+//            secondLvlNodes.not(selected).not(firstLvlNodes).not(thirdLvlNodes).addClass('second');
+//        } else {
+//            var parents = thirdLvlNodes.parent();
+//            cy.elements().not(selected).not(thirdLvlNodes).not(parents).addClass('remove');
+//            thirdLvlNodes.not(selected).not(firstLvlNodes).not(secondLvlNodes).addClass('third');
+//        }
+//        refreshLayout();
+//    });
+    var dependencyHover = function(e) {
+        var target = e.target;
+        if(!target.isParent()) {
+            var nodes = target.union(target.incomers()).union(target.outgoers());
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('hide');
+        }
+    };
+    var removeDependencyHoverClass = function() {
+        cy.elements().removeClass(['hover', 'hide']);
+    };
+
+    var pathHover = function(e) {
+        var target = e.target;
+        if(target !== selected && selected !== undefined && !target.isParent()) {
+            var aStar = cy.elements().aStar({ root: selected, goal: target });
+//            var elementsInPath = aStar.path.select();       
+            elementsInPath.not(selected).addClass('path');
+            cy.elements().not(elementsInPath).not(selected).addClass('hide');
+        }
+    };
+    var removePathHoverClass = function() {
+        cy.elements().removeClass(['path', 'hide']);
+    };
+
+    $('#hover').on('change', function() {
+        if(this.value == 'path') {
+            cy.removeListener('mouseover', 'node', dependencyHover);
+            cy.removeListener('mouseout', 'node', removeDependencyHoverClass);
+            cy.on('mouseover', 'node', pathHover);
+            cy.on('mouseout', 'node', removePathHoverClass);
+        } else if(this.value == 'dependency') {
+            cy.removeListener('mouseover', 'node', pathHover);
+            cy.removeListener('mouseout', 'node', removePathHoverClass);
+            cy.on('mouseover', 'node', dependencyHover);
+            cy.on('mouseout', 'node', removeDependencyHoverClass);
+        } else if(this.value == '') {
+            cy.removeListener('mouseover', 'node', dependencyHover);
+            cy.removeListener('mouseout', 'node', removeDependencyHoverClass);
+            cy.removeListener('mouseover', 'node', pathHover);
+            cy.removeListener('mouseout', 'node', removePathHoverClass);
+        }
+    });
+    
+    function getParam(k){
+        var p = {};
+        location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(s,k,v){ p[k]=v });
+        return k?p[k]:p;
+    }
+    
+    function remove(){
+        cy.elements().removeClass(['target', 'highlight', 'second', 'third', 'remove', 'added', 'removed', 'roleChanged', 'hide']);
+    }
+    
+    async function addElements(eles){
+        cy.add(eles);
+    }
+    
+    var options = {
+        name: 'klay',
+        nodeDimensionsIncludeLabels: true, 
+        fit: true, 
+        padding: 20,
+        transform: function( node, pos ){ return pos; }, 
+        klay: {
+            addUnnecessaryBendpoints: false,
+            aspectRatio: 1.6,
+            borderSpacing: 20,
+            compactComponents: true,
+            crossingMinimization: 'LAYER_SWEEP',
+            cycleBreaking: 'GREEDY',
+            direction: 'DOWN',
+            edgeRouting: 'ORTHOGONAL',
+            edgeSpacingFactor: 0.5,
+            feedbackEdges: true,
+            fixedAlignment: 'NONE',
+            mergeEdges: false,
+            nodeLayering:'NETWORK_SIMPLEX',
+            nodePlacement:'SIMPLE',
+            spacing: 10,
+            thoroughness: 7
+        }
+    };
+    
+    function findChanges(data) {
+        _.forEach(versions, function(v) {
+            var obj = { name: v, nodes: [], edges: [] };
+            versionData.push(obj);
+        });
+
+        _.forEach(data.nodes, function(d) {
+             _.forEach(versions, function(v, i) {
+                if(d.data.version === v) {
+                    versionData[i].nodes.push(d);
+                }
+            });
+        });
+        
+        _.forEach(data.edges, function(d) {
+             _.forEach(versions, function(v, i) {
+                if(d.data.version === v) {
+                    versionData[i].edges.push(d);
+                }
+            });
+        });
+
+        _.forEach(versionData, function(v, i) {
+            if(i !== versionData.length - 1) {
+                var to = versionData[i+1];
+
+                var addedNodes = _.differenceBy(to.nodes, v.nodes, 'data.id');
+                var removedNodes = _.differenceBy(v.nodes, to.nodes, 'data.id');
+                
+                /* find newly added and removed edges */
+                var fromEdges =[], toEdges = [];
+                _.forEach(v.edges, function(d) {
+                    var obj = _.pick(d, ['data.source', 'data.target']);
+                    fromEdges.push(obj);
+                });
+                _.forEach(to.edges, function(d) {
+                    var obj = _.pick(d, ['data.source', 'data.target']);
+                    toEdges.push(obj);
+                });
+
+                var removedEdges = _.differenceWith(fromEdges, toEdges, _.isEqual);
+                var addedEdges = _.differenceWith(toEdges, fromEdges, _.isEqual);
+
+                /* find change of roles and store the later version in changedRoles */
+                var fromObjects =[], toObjects = [];
+                _.forEach(v.nodes, function(d) {
+                    var obj = _.pick(d, ['data.id', 'data.role']);
+                    fromObjects.push(obj);
+                });
+                _.forEach(to.nodes, function(d) {
+                    var obj = _.pick(d, ['data.id', 'data.role']);
+                    toObjects.push(obj);
+                });
+                var fromChangedRolesPlusRemovedNodes = _.differenceWith(fromObjects, toObjects, _.isEqual);
+                var toChangedRolesPlusAddedNodes = _.differenceWith(toObjects, fromObjects, _.isEqual);
+
+                var changedRoles = _.intersectionBy(toChangedRolesPlusAddedNodes, fromChangedRolesPlusRemovedNodes, 'data.id');
+
+                // get all package nodes
+                var parents = v.nodes.filter(n => n.data.role === undefined);
+                
+                var changeObj = { 
+                    from: v.name, 
+                    to: to.name, 
+                    addedNodes: addedNodes, 
+                    removedNodes: removedNodes, 
+                    addedEdges: addedEdges, 
+                    removedEdges: removedEdges, 
+                    changedRoles: changedRoles, 
+                    parents: parents
+                };
+                changes.push(changeObj);
+            }
+        });
+        
+        console.log(changes)
+    
+    }
+</script>
+</html>
