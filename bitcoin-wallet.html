@@ -1,0 +1,516 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.1/cytoscape.min.js"></script>
+        <script src="https://unpkg.com/klayjs@0.4.1/klay.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cytoscape-klay@3.1.4/cytoscape-klay.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cytoscape-expand-collapse@4.0.0/cytoscape-expand-collapse.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+            #cy {
+                height: 90%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 40;
+            }
+            
+            #helper {
+                padding: 10px;
+                width: 150px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                border: 2px solid #97bbc9;
+                border-radius: 5px;
+                border-right: 4px solid #97bbc9;
+                border-bottom: 4px solid #97bbc9;
+                z-index: 99999;
+                background: #FFF;
+            }
+            
+            .material-icons{
+                font-size: 13px;
+                padding: 3px 8px;
+                border: none;
+                background: none;
+            }
+            
+            #hint {
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+         <div style="padding-top: 10px; padding-left: 10px;">
+            <select name="version" id="version">
+                <option value="">version</option>
+                <option value="2011-03-26-bitcoin-wallet-0739f762da6005db447c8f5feffca65a8c7480f2">2011-03-26</option>
+                <option value="2011-07-02-bitcoin-wallet-33d1e8946a6356686916b124770725f52b4bb8fc">2011-07-02</option>
+                <option value="2012-01-01-bitcoin-wallet-b419a9f80a007c9b805aa581d8125d751aeb2011">2012-01-01</option>
+                <option value="2012-04-02-bitcoin-wallet-fe59b121d241ec50bd366e35231fd316f249a365">2012-04-02</option>
+                <option value="2012-07-02-bitcoin-wallet-77fc50b01fa2d55e4882f371864eaa93b261ae3d">2012-07-02</option>
+                <option value="2012-10-02-bitcoin-wallet-dde385ca3aec2949df57747286b772a22d617b8a">2012-10-02</option>
+                <option value="2013-01-01-bitcoin-wallet-0a1c9ccc6c7cc84149cb3e44c3d08bba04076b80">2013-01-01</option>
+                <option value="2013-04-01-bitcoin-wallet-daee57a5b79b37aee8d6e00fb752fae0e0d21276">2013-04-01</option>
+                <option value="2013-07-01-bitcoin-wallet-92d0e1cb058628a0c505b0425e15aadf07fc23ea">2013-07-01</option>
+                <option value="2013-10-20-bitcoin-wallet-c8f54d077c9c921e8ed6bce9d8157e1b04b454c4">2013-10-20</option>
+                <option value="2014-01-01-bitcoin-wallet-483e0227dd9a10bdbe65686245904033eaeb4ae8">2014-01-01</option>
+                <option value="2014-04-01-bitcoin-wallet-167bfef352c056c46f16ae4d56aff250a544bf82">2014-04-01</option>
+                <option value="2014-07-02-bitcoin-wallet-f739bc8c80de46bea2d03d757bee0909bbfc751c">2014-07-02</option>
+                <option value="2014-10-03-bitcoin-wallet-5276722f9c73e540b9bbb128c37783bfd173af4a">2014-10-03</option>
+                <option value="2015-01-22-bitcoin-wallet-be3f8e40c845854011e6cbdfceea751af7f43826">2015-01-22</option>
+                <option value="2015-04-03-bitcoin-wallet-7bacad228fd5850ed574c071348364905ef8ddf2">2015-04-03</option>
+                <option value="2015-07-04-bitcoin-wallet-455fde33125aa7d10fbab1c0cfaeb069c06c09d2">2015-07-04</option>
+                <option value="2015-10-02-bitcoin-wallet-4e83c925ed02dcab97de548921f910ed046d601a">2015-10-02</option>
+                <option value="2016-01-01-bitcoin-wallet-a74b313e9b954d76106c0714fba0d567c4aef6c4">2016-01-01</option>
+                <option value="2016-04-01-bitcoin-wallet-03ca762a00ac34caa191458c638bf8bc2b2ce962">2016-04-01</option>
+                <option value="2016-07-12-bitcoin-wallet-178bf84cce5a49662c83ae890fba7a25533d3c57">2016-07-12</option>
+                <option value="2016-10-05-bitcoin-wallet-08a58502d14ff0db9a4db1621dcde48126b1eea6">2016-10-05</option>
+                <option value="2017-01-03-bitcoin-wallet-0abcd38bace227775a8d6952c4aa9c1e929ff6b4">2017-01-03</option>
+                <option value="2017-04-16-bitcoin-wallet-7cdf4735aa06686af08c6471e01e2e8da400f638">2017-04-16</option>
+                <option value="2017-07-02-bitcoin-wallet-e1babde766e07255ecaab0797247a38524071354">2017-07-02</option>
+                <option value="2017-10-10-bitcoin-wallet-42be4a1f34ba041f0e50a5dd96a96cbc536763a7">2017-10-10</option>
+                <option value="2018-01-11-bitcoin-wallet-5730c1c6982bc46ca3df1db1396eec1e6141c3da">2018-01-11</option>
+                <option value="2018-04-01-bitcoin-wallet-5a079e6fdef5495d710e78c5231e87ad3ccefc05">2018-04-01</option>
+                <option value="2018-07-06-bitcoin-wallet-a0b116d2a9e808c44e3a723cca9ec347597a788d">2018-07-06</option>
+                <option value="2018-10-01-bitcoin-wallet-e2a051190060d5ad93f0823e5b4da7b44f99d2bb">2018-10-01</option>
+                <option value="2019-01-18-bitcoin-wallet-ce1a108766aea934d102dede3285d392a088c71e">2019-01-18</option>
+                <option value="2019-04-01-bitcoin-wallet-1ee32ccb6bfb38ac43b81e50c2926d939dc72a42">2019-04-01</option>
+                <option value="2019-07-04-bitcoin-wallet-d9a58e72cf33565f0e939bc2cb90eeae5ea8f36d">2019-07-04</option>
+                <option value="2019-10-02-bitcoin-wallet-68ade8ff0a561aab05d4e079bb31ff25f9c30380">2019-10-02</option>
+                <option value="2020-01-06-bitcoin-wallet-1b30fd5f58fb2b2df189eedd7b1d7858d8fbe80f">2020-01-06</option>
+
+            </select>
+            <button id="help" class="material-icons">help</button>
+        </div>
+        <div id="cy"></div>
+        <div id="helper">
+            <div>
+                <button id="close" class="material-icons" style="font-size: 15px;">close</button>
+            </div>
+            <div id="hint"></div>
+            <div id="options">
+                <select name="dependencies" id="dependencies">
+                    <option value="show">Show dependencies</option>
+                    <option value="hide">Hide dependencies</option>
+                </select>
+                <button id="collapse">Collapse all</button>
+                <button id="expand">Expand all</button>
+                <div id="roles">
+                    <div class="role">
+                        <input type="checkbox" checked id="Controller" value="Controller">
+                        <label for="Controller">Controller</label>
+                    </div>
+                    <div class="role">
+                        <input type="checkbox" checked id="Coordinator" value="Coordinator">
+                        <label for="Coordinator">Coordinator</label>
+                    </div>
+                    <div class="role">
+                        <input type="checkbox" checked id="Interfacer" value="Interfacer">
+                        <label for="Interfacer">Interfacer</label>
+                    </div>
+                    <div class="role">
+                        <input type="checkbox" checked id="InformationHolder" value="Information Holder">
+                        <label for="InformationHolder">Information Holder</label>
+                    </div>
+                    <div class="role">
+                        <input type="checkbox" checked id="ServiceProvider" value="Service Provider">
+                        <label for="ServiceProvider">Service Provider</label>
+                    </div>
+                    <div class="role">
+                        <input type="checkbox" checked id="Structurer" value="Structurer">
+                        <label for="Structurer">Structurer</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+<script>    
+    var original; // all data
+    var selected; // store selected node
+    var cy;
+    var currentData = { nodes: [], edges: [] };
+
+    $('#options, #help').hide();
+    
+    $('#help').on('click', function(e) {
+        $('#helper').show();
+    });
+ 
+    $('#role').on('change', function(e){
+        var role = $('#role').val();
+        cy.elements().removeClass('remove');
+        if(role != "") {
+            expandAll();
+            var nodes = cy.elements('node[role="'+ role + '"]');
+            var parents = nodes.parent();
+            cy.elements().not(nodes).not(parents).addClass('remove');
+            cy.layout(options).run();
+        } else {
+            cy.layout(options).run();
+            collapseAll();
+        }
+    });
+    
+    $('#Controller').change(function() {
+        if(!$(this).is(":checked")) {
+            cy.elements('node[role="Controller"]').addClass('remove');
+        } else {
+            cy.elements('node[role="Controller"]').removeClass('remove');
+        }       
+    });
+    
+    $('#Coordinator').change(function() {
+        if(!$(this).is(":checked")) {
+            cy.elements('node[role="Coordinator"]').addClass('remove');
+        } else {
+            cy.elements('node[role="Coordinator"]').removeClass('remove');
+        }       
+    });
+    
+    $('#Interfacer').change(function() {
+        if(!$(this).is(":checked")) {
+            cy.elements('node[role="Interfacer"]').addClass('remove');
+        } else {
+            cy.elements('node[role="Interfacer"]').removeClass('remove');
+        }       
+    });
+    
+    $('#InformationHolder').change(function() {
+        if(!$(this).is(":checked")) {
+            cy.elements('node[role="Information Holder"]').addClass('remove');
+        } else {
+            cy.elements('node[role="Information Holder"]').removeClass('remove');
+        }       
+    });
+    
+    $('#ServiceProvider').change(function() {
+        if(!$(this).is(":checked")) {
+            cy.elements('node[role="Service Provider"]').addClass('remove');
+        } else {
+            cy.elements('node[role="Service Provider"]').removeClass('remove');
+        }       
+    });
+    
+    $('#Structurer').change(function() {
+        if(!$(this).is(":checked")) {
+            cy.elements('node[role="Structurer"]').addClass('remove');
+        } else {
+            cy.elements('node[role="Structurer"]').removeClass('remove');
+        }       
+    });
+    
+    $('#close').on('click', function(e) {
+        $('#helper').hide();
+        $('#help').show();
+    });
+    
+    $('#help').on('click', function(e) {
+        $('#helper').show();
+        $('#help').hide();
+    });
+    
+    $('#collapse').on('click', function(e) {
+        collapseAll();
+    });
+    
+    $('#expand').on('click', function(e) {
+        expandAll();
+    });
+
+    function expandAll(){
+        var api = cy.expandCollapse('get');
+        api.expandAll();
+        cy.layout(options).run();
+    }
+    
+    function collapseAll(){
+        var api = cy.expandCollapse('get');
+        api.collapseAll({
+            layoutBy: {
+                name: 'circle',
+                avoidOverlap: true
+            }
+        }); 
+        api.collapseAllEdges(); 
+    }
+    
+    $('#version').on('change', function() {
+        var version = $("#version").val();
+        $('#Controller, #Coordinator, #Interfacer, #InformationHolder, #ServiceProvider, #Structurer').prop("checked", true);
+        
+        $("#hint").html("Click on a node to expand the package.");
+        currentData = { nodes: [], edges: [] };
+        
+        _.forEach(original.nodes, function(d) {
+            if(d.data.version === version) {
+                currentData.nodes.push(d);
+            }
+        });
+
+        _.forEach(original.edges, function(d) {
+            if(d.data.version === version) {
+                currentData.edges.push(d);
+            }
+        });
+        
+        var all = cy.elements();
+        cy.remove(all);
+        addElements(currentData)
+            .then(() => collapseAll());
+        $('#options, #collapse, #expand, #role').show();
+    });
+    
+    $('#dependencies').on('change', function(e) {
+        if($('#dependencies').val() == 'show') {
+            cy.elements('edge').removeClass('remove');
+        } else {
+            cy.elements('edge').not('edge.cy-expand-collapse-collapsed-edge, edge.cy-expand-collapse-meta-edge').addClass('remove');
+            cy.layout(options).run();
+        }
+    });
+    
+        $.getJSON('https://raw.githubusercontent.com/kathrynleee/demo/main/bitcoin-wallet-data.json', function (data) {
+            original = data;
+            
+            cy = cytoscape({
+                container: $('#cy'),
+                layout: options,
+                boxSelectionEnabled: true,
+                style: cytoscape.stylesheet()
+                    .selector('node')
+                    .css({
+                        'label': 'data(name)',
+                        'background-color': '#a9b6c2',
+                        'text-valign': 'top',
+                        'text-halign': 'center',
+                        'color': '#3b444d',
+                        'font-size' : '20',
+                        'text-wrap': 'wrap',
+                        'text-max-width': '20',
+                        'width' : '30',
+                        'height': '30'
+                    })
+                    .selector('edge')
+                    .css({
+                        'line-color': '#a9b6c2',
+                        'width': 3,
+                        'target-arrow-color': '#a9b6c2',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 2,
+                        'curve-style': 'bezier',
+                        'opacity': 0.7
+                    })
+                    .selector('node:parent, node:parent.highlight, node:parent.target')
+                    .css({
+                        'text-valign': 'top',
+                        'text-halign': 'center',
+                        'background-color': 'white',
+                        'color': '#3b444d',
+                        'border-color': '#a9b6c2',
+                        'border-width': 2
+                    })
+                    .selector('node.cy-expand-collapse-collapsed-node')
+                    .css({
+                        'background-color': '#a9b6c2',
+//                        'border-color': '#cbcde6',
+//                        'border-width': 5,
+                        'color': '#3b444d',
+                        'shape': 'square',
+                        'width' : '40',
+                        'height': '40'
+                    })     
+                    .selector('edge.cy-expand-collapse-collapsed-edge')
+                    .css({
+                        'line-color': '#a9b6c2',
+                        'target-arrow-color': '#a9b6c2',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 1,
+                        'opacity': 0.7,
+                        'curve-style': 'bezier',
+                        'width': function (edge) {
+                            var size = edge.data("collapsedEdges").length;
+                            var width = _.round((Math.log(size) / Math.log(1.5) + Number.EPSILON)) + 1;
+                            return width;
+                        }
+                    })
+                    .selector('edge.cy-expand-collapse-meta-edge')
+                    .css({
+                        'line-color': '#a9b6c2',
+                        'target-arrow-color': '#a9b6c2',
+                        'target-arrow-shape': 'triangle',
+                        'arrow-scale': 1,
+                        'curve-style': 'bezier',
+                        'width': 3,
+                        'opacity': 0.7,
+                    })
+                    .selector('.remove')
+                    .css({
+                        'display': 'none'
+                    })
+                    .selector('node[role="Controller"]')
+                    .css({
+                        'background-color': '#9174ab',
+                        'color': '#9174ab',
+                        'shape' : 'ellipse',
+                    })
+                    .selector('node[role="Coordinator"]')
+                    .css({
+                        'background-color': '#568563',
+                        'color': '#568563',
+                        'shape' : 'ellipse',
+                    })
+                    .selector('node[role="Interfacer"]')
+                    .css({
+                        'background-color': '#E9AB45',
+                        'color': '#E9AB45',
+                        'shape' : 'ellipse',
+                    })
+                    .selector('node[role="Information Holder"]')
+                    .css({
+                        'background-color': '#a63a5e',
+                        'color': '#a63a5e',
+                        'shape' : 'ellipse',
+                    })
+                    .selector('node[role="Service Provider"]')
+                    .css({
+                        'background-color': '#4d82b0',
+                        'color': '#4d82b0',
+                        'shape' : 'ellipse',
+                    })
+                    .selector('node[role="Structurer"]')
+                    .css({
+                        'background-color': '#e6a1b2',
+                        'color': '#e6a1b2',
+                        'shape' : 'ellipse',
+                    })
+                    ,
+                elements: [],
+                ready: function() {
+                    
+                    $("#hint").html("Start by choosing one version.");
+                    
+                    var api = this.expandCollapse({
+                        layoutBy: options,
+                        animate: false,
+                        undoable: false
+                    });
+
+                    api.collapseAll({
+                        layoutBy: {
+                            name: 'circle',
+                            avoidOverlap: true
+                        }
+                    }); 
+
+                    api.collapseAllEdges(); 
+                    
+                    api.disableCue();
+
+                    this.on('tap', 'node.cy-expand-collapse-collapsed-node', function(e) {
+                        var target = e.target;
+                        var api = cy.expandCollapse('get');
+                        api.expand(target);
+                        selected = target;
+//                        alert(target._private.data.name)
+                        $('#collapse, #expand, #role').hide();
+                        $('#dependencies').show();
+                        $("#hint").html("Try to click on a node. Nodes are draggable.");
+                    });
+                    
+                    this.on('click', function(e) {
+                        if (e.target === cy) {
+                            
+                            var api = cy.expandCollapse('get');
+                            api.collapse(selected);
+                            cy.elements().removeClass('remove');
+                            
+                            cy.layout({
+                                name: 'circle',
+                                avoidOverlap: true
+                            }).run();
+                            
+                            api.collapseAll({
+                                layoutBy: {
+                                    name: 'circle',
+                                    avoidOverlap: true
+                                }
+                            }); 
+                            $('#dependencies').hide();
+                            $('#collapse, #expand').show();
+                            $("#hint").html("Try to click on a node. Nodes are draggable.");
+                        }
+                    });
+                    
+                    $('#dependencies').hide();
+                    
+                    this.on('tap', 'node', function(e) {
+                        var target = e.target;
+                        remove();
+                        if(!target.hasClass('cy-expand-collapse-collapsed-node')) {
+                            // is parent node
+                            if(target.isParent()) {
+                                var nodes = target.union(target.children());
+                                var edges = nodes.connectedEdges();
+                                var parent = target.parent();
+                                cy.elements().not(nodes).not(parent).not(edges).addClass('remove');
+                                cy.layout(options).run();
+                                $('#collapse, #expand, #role').hide();
+                                $("#hint").html("Try to click on a node. Nodes are draggable.</br>Go back by clicking on background outside the package.");
+                            } else {
+                                selected = target._private.data.id;
+                                cy.destroy();
+                            }
+                        } else {
+                            
+                            $('#collapse, #expand, #role').show();
+                            $("#hint").html("Click on a node to expand the package.");
+                        }
+                    });
+                    
+                }
+            });
+        });
+    
+    function remove(){
+        cy.elements().removeClass(['target', 'highlight', 'third', 'remove', 'added', 'removed', 'roleChanged']);
+    }
+    
+    async function addElements(eles){
+        cy.add(eles);
+    }
+    
+    var options = {
+        name: 'klay',
+        nodeDimensionsIncludeLabels: true, 
+        fit: true, 
+        padding: 20,
+        transform: function( node, pos ){ return pos; }, 
+        klay: {
+            addUnnecessaryBendpoints: false,
+            aspectRatio: 1.6,
+            borderSpacing: 20,
+            compactComponents: true,
+            crossingMinimization: 'LAYER_SWEEP',
+            cycleBreaking: 'GREEDY',
+            direction: 'DOWN',
+            edgeRouting: 'ORTHOGONAL',
+            edgeSpacingFactor: 0.5,
+            feedbackEdges: true,
+            fixedAlignment: 'NONE',
+            mergeEdges: false,
+            nodeLayering:'NETWORK_SIMPLEX',
+            nodePlacement:'SIMPLE',
+            spacing: 10,
+            thoroughness: 7
+        }
+    };
+</script>
+</html>
