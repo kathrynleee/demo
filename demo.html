@@ -9,11 +9,11 @@
 
 <style>
     #cy {
-        height: 90%;
+        height: calc(100% - 100px);
         width: 100%;
     }
     #buttons {
-        height: 10%;
+        height: 100px;
         padding: 0 10px;
     }
     #buttons .irs--flat .irs-bar {
@@ -28,11 +28,47 @@
     #buttons .irs--flat .irs-single:before {
         border-top-color: #3b444d;
     }
+    .legend {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .legend div {
+        padding: 5px;
+        color: white;
+    }
+    .con {
+        background-color: #755194;
+    }
+    .coo {
+        background-color: #539967;
+    }
+    .int {
+        background-color: #E9AB45;
+    }
+    .inf {
+        background-color: #bf3f6a;
+    }
+    .ser {
+        background-color: #4d82b0;
+    }
+    .str {
+        background-color: #e6a1b2;
+    }
 </style>
 
 <body>
     <div id="buttons">
         <div class="slider"><input type="text" id="slider" class="js-range-slider" name="slider" value="" /></div>
+        <div class="legend">
+            <div class="con">Controller</div>
+            <div class="coo">Coordinator</div>
+            <div class="int">Interfacer</div>
+            <div class="inf">Information Holder</div>
+            <div class="ser">Service Provider</div>
+            <div class="str">Structurer</div>
+        </div>
     </div>
     <div id="cy"></div>
 </body>
